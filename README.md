@@ -18,7 +18,7 @@
 - 奇安信：https://ti.qianxin.com/advisory/
 - 红后：https://redqueen.tj-un.com/IntelHome.html
 - 绿盟：http://www.nsfocus.net/index.php
-- 斗象：https://vas.riskivy.com/vuln
+- 斗象：https://vip.tophant.com/
 - NVD：https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml
 - CNNVD：http://www.cnnvd.org.cn/web/vulnerability/querylist.tag
 - Tenable (Nessus)：https://www.tenable.com/cve/feeds?sort=newest
