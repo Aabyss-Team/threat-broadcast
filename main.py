@@ -86,7 +86,7 @@ def main(top, auto_commit, gtk, mail_smtp, mail_user, mail_pass, qq_user, qq_pas
         Vas(), 
         NVD(), 
         # CNVD(),       # 不断升级反爬机制，尊重平台
-        CNNVD(), 
+        #CNNVD(), 
         Tenable() 
     ]
     for src in srcs:
