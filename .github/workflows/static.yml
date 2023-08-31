@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 
 on:
   schedule:
-    - cron: '0 0/30 * * *' # 每小时运行
+    - cron: '*/30 * * * *' # 每小时运行
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
