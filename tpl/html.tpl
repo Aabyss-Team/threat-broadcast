@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="https://www.aabyss.cn/favicon.ico"/>
   <meta name="author" content="Team: www.aabyss.cn" />
   <link rel="stylesheet" type="text/css" href="./css/page.css" />
-  <title>Threat-Broadcast</title>
+  <title>威胁情报自动播报-渊龙Sec安全团队</title>
  </head>
 
  <body class="html">
