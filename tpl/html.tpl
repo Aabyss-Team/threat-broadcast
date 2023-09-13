@@ -3,6 +3,7 @@
 
  <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
   <meta name="robots" content="noarchive" />
   <link rel="shortcut icon" href="https://www.aabyss.cn/favicon.ico"/>
   <meta name="author" content="Team: www.aabyss.cn" />
