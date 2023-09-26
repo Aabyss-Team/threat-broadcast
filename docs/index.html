@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-09-26 16:30:24 -->
+<!-- RELEASE TIME : 2023-09-26 17:25:12 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>6ca126e0c0ef5582d3c8dc25fe70dfbf</td>
+       <td>CVE-2023-43325</td>
+       <td>2023-09-26 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>A reflected cross-site scripting (XSS) vulnerability in the data[redirect_url] parameter of mooSocial v3.1.8 allows attackers to steal user's session cookies and impersonate their account via a crafted URL.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43325">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>94a00061fadcef694b3fe144ea514352</td>
+       <td>CVE-2023-4259</td>
+       <td>2023-09-26 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>Two potential buffer overflow vulnerabilities at the following locations in the Zephyr eS-WiFi driver source code.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4259">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e4dae046425a7f9c881eb0e2c575fd42</td>
+       <td>CVE-2023-5176</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>Memory safety bugs present in Firefox 117, Firefox ESR 115.2, and Thunderbird 115.2. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5176">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2334088ddbe12fe26fbf0c143970af98</td>
+       <td>CVE-2023-5175</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>During process shutdown, it was possible that an <code>ImageBitmap</code> was created that would later be used after being freed from a different codepath, leading to a potentially exploitable crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5175">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>af0a8b9ddc2ec226d9c40e6b963d3123</td>
+       <td>CVE-2023-5174</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>If Windows failed to duplicate a handle during process creation, the sandbox code may have inadvertently freed a pointer twice, resulting in a use-after-free and a potentially exploitable crash. This bug only affects Firefox on Windows when run in non-standard configurations (such as using <code>runas</code>). Other operating systems are unaffected.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5174">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>901b7e64b55ddf18c3eb4701da5cbfec</td>
+       <td>CVE-2023-5173</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>In a non-standard configuration of Firefox, an integer overflow could have occurred based on network traffic (possibly under influence of a local unprivileged webpage), leading to an out-of-bounds write to privileged process memory.  This bug only affects Firefox if a non-standard preference allowing non-HTTPS Alternate Services (<code>network.http.altsvc.oe</code>) is enabled.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5173">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>832295f942ce284eb9c18c62572c92a8</td>
+       <td>CVE-2023-5172</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>A hashtable  in the Ion Engine could have been mutated while there was a live interior reference, leading to a potential use-after-free and exploitable crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5172">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>1fb752e8abf33c31bd2b0595be0341a3</td>
+       <td>CVE-2023-5171</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>During Ion compilation, a Garbage Collection could have resulted in a use-after-free condition, allowing an attacker to write two NUL bytes, and cause a potentially exploitable crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5171">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>49ae44d682e1640ec6faa637950432db</td>
+       <td>CVE-2023-5170</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>In canvas rendering, a compromised content process could have caused a surface to change unexpectedly, leading to a memory leak of a privileged process. This memory leak could be used to effect a sandbox escape if the correct data was leaked.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5170">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>1276656175991a04dc30804d7d5d3d67</td>
+       <td>CVE-2023-5169</td>
+       <td>2023-09-26 00:00:00 <img src="imgs/new.gif" /></td>
+       <td>A compromised content process could have provided malicious data in a <code>PathRecording</code> resulting in an out-of-bounds write, leading to a potentially exploitable crash in a privileged process.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5169">详情</a></td>
+      </tr>
+
+      <tr>
        <td>044fab7c833f1af6ac82268c278d7418</td>
        <td>CVE-2023-43278</td>
        <td>2023-09-25 23:15:00 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2023-09-25 01:15:00 <img src="imgs/new.gif" /></td>
        <td>** UNSUPPPORTED WHEN ASSIGNED ** ** UNSUPPORTED WHEN ASSIGNED ** A vulnerability was found in D-Link DAR-7000 up to 20151231. It has been rated as critical. This issue affects some unknown processing of the file /useratte/userattestation.php. The manipulation of the argument web_img leads to unrestricted upload. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-240245 was assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer. NOTE: Vendor was contacted early and confirmed immediately that the product is end-of-life. It should be retired and replaced.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5149">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d32dfc62286f6b938d5550a5589c03f6</td>
-       <td>CVE-2023-1636</td>
-       <td>2023-09-24 01:15:00</td>
-       <td>A vulnerability was found in OpenStack Barbican containers. This vulnerability is only applicable to deployments that utilize an all-in-one configuration. Barbican containers share the same CGROUP, USER, and NET namespace with the host system and other OpenStack services. If any service is compromised, it could gain access to the data transmitted to and from Barbican.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-1636">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d229a7b2b7b6b05f41c942379c1ff4ba</td>
-       <td>CVE-2023-1633</td>
-       <td>2023-09-24 01:15:00</td>
-       <td>A credentials leak flaw was found in OpenStack Barbican. This flaw allows a local authenticated attacker to read the configuration file, gaining access to sensitive credentials.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-1633">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7498bb8cf4748b8a3119620f2f638258</td>
-       <td>CVE-2023-1625</td>
-       <td>2023-09-24 01:15:00</td>
-       <td>An information leak was discovered in OpenStack heat. This issue could allow a remote, authenticated attacker to use the 'stack show' command to reveal parameters which are supposed to remain hidden. This has a low impact to the confidentiality, integrity, and availability of the system.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-1625">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>202bb0781cf63935eec6506b9a66e2f5</td>
-       <td>CVE-2023-1260</td>
-       <td>2023-09-24 01:15:00</td>
-       <td>An authentication bypass vulnerability was discovered in kube-apiserver. This issue could allow a remote, authenticated attacker who has been given permissions "update, patch" the "pods/ephemeralcontainers" subresource beyond what the default is. They would then need to create a new pod or patch one that they already have access to. This might allow evasion of SCC admission restrictions, thereby gaining control of a privileged pod.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-1260">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1c50f07859e6799f9b100e6ec8c257e4</td>
-       <td>CVE-2022-3962</td>
-       <td>2023-09-23 20:15:00</td>
-       <td>A content spoofing vulnerability was found in Kiali. It was discovered that Kiali does not implement error handling when the page or endpoint being accessed cannot be found. This issue allows an attacker to perform arbitrary text injection when an error response is retrieved from the URL being accessed.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2022-3962">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f075b0d36fb37b3bf9df72be90ccd8b2</td>
-       <td>CVE-2023-5134</td>
-       <td>2023-09-23 08:15:00</td>
-       <td>The Easy Registration Forms for WordPress is vulnerable to Information Disclosure via the 'erforms_user_meta' shortcode in versions up to, and including, 2.1.1 due to insufficient controls on the information retrievable via the shortcode. This makes it possible for authenticated attackers, with subscriber-level capabilities or above, to retrieve arbitrary sensitive user meta.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5134">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>71d29572d22b90aca64e607709688ff2</td>
-       <td>CVE-2023-5125</td>
-       <td>2023-09-23 05:15:00</td>
-       <td>The Contact Form by FormGet plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'formget' shortcode in versions up to, and including, 5.5.5 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5125">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>951fee3e47ca6d659477dfbe36b1ab4a</td>
-       <td>CVE-2023-43470</td>
-       <td>2023-09-23 00:15:00</td>
-       <td>SQL injection vulnerability in janobe Online Voting System v.1.0 allows a remote attacker to execute arbitrary code via the checklogin.php component.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43470">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6850dfd4b5938b1f0e0cceafa5138060</td>
-       <td>CVE-2023-43469</td>
-       <td>2023-09-23 00:15:00</td>
-       <td>SQL injection vulnerability in janobe Online Job Portal v.2020 allows a remote attacker to execute arbitrary code via the ForPass.php component.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43469">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d70d1ee0b74600ed401dd2808901256d</td>
-       <td>CVE-2023-43468</td>
-       <td>2023-09-23 00:15:00</td>
-       <td>SQL injection vulnerability in janobe Online Job Portal v.2020 allows a remote attacker to execute arbitrary code via the login.php component.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43468">详情</a></td>
       </tr>
 
      </tbody>
