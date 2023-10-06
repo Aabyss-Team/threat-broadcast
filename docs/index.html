@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-10-06 22:25:20 -->
+<!-- RELEASE TIME : 2023-10-06 23:21:02 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>e3ec2575a1c23253b20fdaedcdfff5cf</td>
+       <td>CVE-2023-45303</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>ThingsBoard before 3.5 allows Server-Side Template Injection if users are allowed to modify an email template, because Apache FreeMarker supports freemarker.template.utility.Execute (for content sent to the /api/admin/settings endpoint).</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45303">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>004d187d4b6141a1cf6956d672706151</td>
+       <td>CVE-2023-45282</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In NASA Open MCT (aka openmct) 2.2.5 before 545a177, prototype pollution can occur via an import action.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45282">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>6169bf7cae366b6512189c64dcd8c422</td>
+       <td>CVE-2023-21291</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In visitUris of Notification.java, there is a possible way to reveal image contents from another user due to a missing permission check. This could lead to local information disclosure with User execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-21291">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>92a867aecc05624c8bbf1e77aa9ccec9</td>
+       <td>CVE-2023-21266</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In killBackgroundProcesses of ActivityManagerService.java, there is a possible way to escape Google Play protection due to a permissions bypass. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-21266">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f31d2388c525bd75f3b04ef00ac874a9</td>
+       <td>CVE-2023-21253</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In multiple locations, there is a possible way to crash multiple system services due to resource exhaustion. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-21253">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b7cd828c20f2ec48441517a5d9cb9539</td>
+       <td>CVE-2023-21252</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In validatePassword of WifiConfigurationUtil.java, there is a possible way to get the device into a boot loop due to improper input validation. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-21252">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>501f917969d8677450afad8668b0ca98</td>
+       <td>CVE-2023-21244</td>
+       <td>2023-10-06 19:15:00 <img src="imgs/new.gif" /></td>
+       <td>In visitUris of Notification.java, there is a possible bypass of user profile boundaries due to a missing permission check. This could lead to local escalation of privilege with User execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-21244">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7126c63f2dfe3b0a76d3e6d332caccaf</td>
+       <td>CVE-2023-5366</td>
+       <td>2023-10-06 18:15:00 <img src="imgs/new.gif" /></td>
+       <td>A flaw was found in Open vSwitch that allows ICMPv6 Neighbor Advertisement packets between virtual machines to bypass OpenFlow rules. This issue may allow a local attacker to create specially crafted packets with a modified or spoofed target IP address field that can redirect ICMPv6 traffic to arbitrary IP addresses.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5366">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>33d427c1dd782d342c194fc5cf16636d</td>
+       <td>CVE-2023-5214</td>
+       <td>2023-10-06 18:15:00 <img src="imgs/new.gif" /></td>
+       <td>In Puppet Bolt versions prior to 3.27.4, a path to escalate privileges was identified.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5214">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8196d85b4375094ccc4503f1b70c83e1</td>
+       <td>CVE-2023-45239</td>
+       <td>2023-10-06 18:15:00 <img src="imgs/new.gif" /></td>
+       <td>A lack of input validation exists in tac_plus prior to commit 4fdf178 which, when pre or post auth commands are enabled, allows an attacker who can control the username, rem-addr, or NAC address sent to tac_plus to inject shell commands and gain remote code execution on the tac_plus server.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45239">详情</a></td>
+      </tr>
+
+      <tr>
        <td>b420af749341f0985c0391242f2a7eee</td>
        <td>CVE-2015-10125</td>
        <td>2023-10-05 23:15:00 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2023-10-04 22:15:00</td>
        <td>Rite CMS 3.0 has Multiple Cross-Site scripting (XSS) vulnerabilities that allow attackers to execute arbitrary code via a payload crafted in the Home Page fields in the Administration menu.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43877">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b7fd6fc4c3e8c4948273869e8c66879a</td>
-       <td>CVE-2023-5113</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>Certain HP Enterprise LaserJet and HP LaserJet Managed Printers are potentially vulnerable to denial of service due to WS-Print request and potential injections of Cross Site Scripting via jQuery-UI.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5113">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5e7f36df37204fe37d07f6b5ada9e266</td>
-       <td>CVE-2023-4380</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>A logic flaw exists in Ansible. Whenever a private project is created with incorrect credentials, they are logged in plaintext. This flaw allows an attacker to retrieve the credentials from the log, resulting in the loss of confidentiality, integrity, and availability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4380">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6fab12144981d37256ca2c221445242d</td>
-       <td>CVE-2023-4237</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>A flaw was found in the Ansible Automation Platform. When creating a new keypair, the ec2_key module prints out the private key directly to the standard output. This flaw allows an attacker to fetch those keys from the log files, compromising the system's confidentiality, integrity, and availability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4237">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2f5f19fb8937462d8e15e0fbd9ffdad6</td>
-       <td>CVE-2023-40559</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in theDotstore Dynamic Pricing and Discount Rules for WooCommerce plugin <= 2.4.0 versions.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-40559">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7f08bbd3f0fe27840639e9fc057e1340</td>
-       <td>CVE-2023-3971</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>An HTML injection flaw was found in Controller in the user interface settings. This flaw allows an attacker to capture credentials by creating a custom login page by injecting HTML, resulting in a complete compromise.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-3971">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>72d552c7c785386775e75ec09fdcb0f3</td>
-       <td>CVE-2023-3665</td>
-       <td>2023-10-04 15:15:00</td>
-       <td>A code injection vulnerability in Trellix ENS 10.7.0 April 2023 release and earlier, allowed a local user to disable the ENS AMSI component via environment variables, leading to denial of service and or the execution of arbitrary code.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-3665">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>77b1d4a5ec2a1bd182ea1262212b1379</td>
-       <td>CVE-2023-5374</td>
-       <td>2023-10-04 14:15:00</td>
-       <td>A vulnerability classified as critical was found in SourceCodester Online Computer and Laptop Store 1.0. Affected by this vulnerability is an unknown functionality of the file products.php. The manipulation of the argument c leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-241255.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5374">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d406ddaaaac5ed03e6306153aa849528</td>
-       <td>CVE-2023-4567</td>
-       <td>2023-10-04 14:15:00</td>
-       <td>** REJECT ** Issue has been found to be non-reproducible, therefore not a viable flaw.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4567">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1c6fb3ce0e4b5c62ee1e7d8e47331e77</td>
-       <td>CVE-2023-40684</td>
-       <td>2023-10-04 14:15:00</td>
-       <td>IBM Content Navigator 3.0.11, 3.0.13, and 3.0.14 with IBM Daeja ViewOne Virtual is vulnerable to cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session. IBM X-Force ID: 264019.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-40684">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>22b9dc196821fc9c0e322316be8e10d1</td>
-       <td>CVE-2023-40561</td>
-       <td>2023-10-04 14:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in theDotstore Enhanced Ecommerce Google Analytics for WooCommerce plugin <= 3.7.1 versions.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-40561">详情</a></td>
       </tr>
 
      </tbody>
