@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-10-18 07:21:37 -->
+<!-- RELEASE TIME : 2023-10-18 09:23:07 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>abfefed17be6ae94bb86bd8a3a83f867</td>
+       <td>CVE-2023-45811</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>Synchrony deobfuscator is a javascript cleaner & deobfuscator. A `__proto__` pollution vulnerability exists in versions before v2.4.4. Successful exploitation could lead to arbitrary code execution. A `__proto__` pollution vulnerability exists in the `LiteralMap` transformer allowing crafted input to modify properties in the Object prototype. A fix has been released in `deobfuscator@2.4.4`. Users are advised to upgrade. Users unable to upgrade should launch node with the [--disable-proto=delete][disable-proto] or [--disable-proto=throw][disable-proto] flags</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45811">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4462e3afee73e2796bd8302f8f730ee6</td>
+       <td>CVE-2023-45810</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>OpenFGA is a flexible authorization/permission engine built for developers and inspired by Google Zanzibar. Affected versions of OpenFGA are vulnerable to a denial of service attack. When a number of `ListObjects` calls are executed, in some scenarios, those calls are not releasing resources even after a response has been sent, and given a sufficient call volume the service as a whole becomes unresponsive. This issue has been addressed in version 1.3.4 and the upgrade is considered backwards compatible. There are no known workarounds for this vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45810">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b9b3235b501c79108f7b96e5e2c54449</td>
+       <td>CVE-2023-42507</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>Stack-based buffer overflow vulnerability exists in OnSinView2 versions 2.0.1 and earlier. If this vulnerability is exploited, information may be disclosed or arbitrary code may be executed by having a user open a specially crafted OnSinView2 project file.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-42507">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2b745326fb1ae1102bfd4aa79d19a997</td>
+       <td>CVE-2023-42506</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>Improper restriction of operations within the bounds of a memory buffer issue exists in OnSinView2 versions 2.0.1 and earlier. If this vulnerability is exploited, information may be disclosed or arbitrary code may be executed by having a user open a specially crafted OnSinView2 project file.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-42506">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>6ebc40786ecc41385bcdd76b6db1e48d</td>
+       <td>CVE-2023-41715</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS post-authentication Improper Privilege Management vulnerability in the SonicOS SSL VPN Tunnel allows users to elevate their privileges inside the tunnel.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-41715">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f700d5d171947e2f9614f3b65170fc5a</td>
+       <td>CVE-2023-41713</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS Use of Hard-coded Password vulnerability in the 'dynHandleBuyToolbar' demo function.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-41713">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>26cb9ba01708cf9afac835cf0deb946a</td>
+       <td>CVE-2023-41712</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS post-authentication Stack-Based Buffer Overflow Vulnerability in the SSL VPN plainprefs.exp URL endpoint leads to a firewall crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-41712">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>62942e25c05f4fb3f6e6764b25344844</td>
+       <td>CVE-2023-41711</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS post-authentication Stack-Based Buffer Overflow Vulnerability in the sonicwall.exp, prefs.exp URL endpoints lead to a firewall crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-41711">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>9142b0e3f63e645798e18eb0fd88b604</td>
+       <td>CVE-2023-39280</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS p ost-authentication Stack-Based Buffer Overflow vulnerability in the ssoStats-s.xml, ssoStats-s.wri URL endpoints leads to a firewall crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39280">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>43d18dd0aa8f052a07a161e673a5083f</td>
+       <td>CVE-2023-39279</td>
+       <td>2023-10-17 23:15:00 <img src="imgs/new.gif" /></td>
+       <td>SonicOS post-authentication Stack-Based Buffer Overflow vulnerability in the getPacketReplayData.json URL endpoint leads to a firewall crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39279">详情</a></td>
+      </tr>
+
+      <tr>
        <td>f6983cf6acc5639c739e84e16294a108</td>
        <td>CVE-2023-27133</td>
        <td>2023-10-17 16:15:00 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2023-10-17 02:15:00 <img src="imgs/new.gif" /></td>
        <td>IBM Security Verify Privilege On-Premises 11.5 could allow a remote authenticated attacker to execute arbitrary commands on the system by sending a specially crafted request. IBM X-Force ID: 221681.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2022-22375">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1dbcb87a082e482cf25b38e3e6e4dc66</td>
-       <td>CVE-2023-45683</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>github.com/crewjam/saml is a saml library for the go language. In affected versions the package does not validate the ACS Location URI according to the SAML binding being parsed. If abused, this flaw allows attackers to register malicious Service Providers at the IdP and inject Javascript in the ACS endpoint definition, achieving Cross-Site-Scripting (XSS) in the IdP context during the redirection at the end of a SAML SSO Flow. Consequently, an attacker may perform any authenticated action as the victim once the victim’s browser loaded the SAML IdP initiated SSO link for the malicious service provider. Note: SP registration is commonly an unrestricted operation in IdPs, hence not requiring particular permissions or publicly accessible to ease the IdP interoperability. This issue is fixed in version 0.4.14. Users unable to upgrade may perform external validation of URLs provided in SAML metadata, or restrict the ability for end-users to upload arbitrary metadata.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45683">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>063a052d6b2b829a61f50f0ad311caa7</td>
-       <td>CVE-2023-45669</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>WebAuthn4J Spring Security provides Web Authentication specification support for Spring applications. Affected versions are subject to improper signature counter value handling. A flaw was found in webauthn4j-spring-security-core. When an authneticator returns an incremented signature counter value during authentication, webauthn4j-spring-security-core does not properly persist the value, which means cloned authenticator detection does not work. An attacker who cloned valid authenticator in some way can use the cloned authenticator without being detected. This issue has been addressed in version `0.9.1.RELEASE`. Users are advised to upgrade. There are no known workarounds for this vulnerability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45669">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>60299a30474a67f4835d43d12ebaebd4</td>
-       <td>CVE-2023-45660</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>Nextcloud mail is an email app for the Nextcloud home server platform. In affected versions a missing check of origin, target and cookies allows for an attacker to abuse the proxy endpoint to denial of service a third server. It is recommended that the Nextcloud Mail is upgraded to 2.2.8 or 3.3.0. There are no known workarounds for this vulnerability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45660">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>17236910e1ff3ff4d6fc1b6aaff9c373</td>
-       <td>CVE-2023-45151</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>Nextcloud server is an open source home cloud platform. Affected versions of Nextcloud stored OAuth2 tokens in plaintext which allows an attacker who has gained access to the server to potentially elevate their privilege. This issue has been addressed and users are recommended to upgrade their Nextcloud Server to version 25.0.8, 26.0.3 or 27.0.1. There are no known workarounds for this vulnerability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45151">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e6b230eb4a433286bd2bb4c7141514da</td>
-       <td>CVE-2023-45148</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>Nextcloud is an open source home cloud server. When Memcached is used as `memcache.distributed` the rate limiting in Nextcloud Server could be reset unexpectedly resetting the rate count earlier than intended. Users are advised to upgrade to versions 25.0.11, 26.0.6 or 27.1.0. Users unable to upgrade should change their config setting `memcache.distributed` to `\OC\Memcache\Redis` and install Redis instead of Memcached.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45148">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2fe099730cc38d16a1f8584dc02bcc7f</td>
-       <td>CVE-2023-43120</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>An issue discovered in Extreme Networks Switch Engine (EXOS) before 32.5.1.5, before 22.7 and before 31.7.1 allows attackers to gain escalated privileges via crafted HTTP request.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43120">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>92f4b87635a0e7d2830ebdfd113ac090</td>
-       <td>CVE-2023-40180</td>
-       <td>2023-10-16 19:15:00</td>
-       <td>silverstripe-graphql is a package which serves Silverstripe data in GraphQL representations. An attacker could use a recursive graphql query to execute a Distributed Denial of Service attack (DDOS attack) against a website. This mostly affects websites with publicly exposed graphql schemas. If your Silverstripe CMS project does not expose a public facing graphql schema, a user account is required to trigger the DDOS attack. If your site is hosted behind a content delivery network (CDN), such as Imperva or CloudFlare, this may further mitigate the risk. This issue has been addressed in versions 3.8.2, 4.1.3, 4.2.5, 4.3.4, and 5.0.3. Users are advised to upgrade. There are no known workarounds for this vulnerability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-40180">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b4c265358c55b6c5f2fd3e2191655be8</td>
-       <td>CVE-2023-45985</td>
-       <td>2023-10-16 18:15:00</td>
-       <td>TOTOLINK X5000R V9.1.0u.6118_B20201102 and TOTOLINK A7000R V9.1.0u.6115_B20201022 were discovered to contain a stack overflow in the function setParentalRules. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted POST request.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45985">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e3742b44de2533ae53535984be4beb50</td>
-       <td>CVE-2023-45984</td>
-       <td>2023-10-16 18:15:00</td>
-       <td>TOTOLINK X5000R V9.1.0u.6118_B20201102 and TOTOLINK A7000R V9.1.0u.6115_B20201022 was discovered to contain a stack overflow via the lang parameter in the function setLanguageCfg.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45984">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3b48559c8f8db9fa8d6636ee726646ed</td>
-       <td>CVE-2023-45690</td>
-       <td>2023-10-16 17:15:00</td>
-       <td>Default file permissions on South River Technologies' Titan MFT and Titan SFTP servers on Linux allows a user that's authentication to the OS to read sensitive files on the filesystem</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45690">详情</a></td>
       </tr>
 
      </tbody>
