@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-10-31 05:25:24 -->
+<!-- RELEASE TIME : 2023-10-31 07:21:25 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>e58370483c464fc4be10ea7347a89289</td>
+       <td>CVE-2023-47174</td>
+       <td>2023-10-31 04:15:00 <img src="imgs/new.gif" /></td>
+       <td>Thorn SFTP gateway 3.4.x before 3.4.4 uses Pivotal Spring Framework for Java deserialization of untrusted data, which is not supported by Pivotal, a related issue to CVE-2016-1000027. Also, within the specific context of Thorn SFTP gateway, this leads to remote code execution.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47174">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b8bb8eee862d477dd7c895e2ca1dc2c2</td>
+       <td>CVE-2023-46356</td>
+       <td>2023-10-31 04:15:00 <img src="imgs/new.gif" /></td>
+       <td>In the module "CSV Feeds PRO" (csvfeeds) before 2.6.1 from Bl Modules for PrestaShop, a guest can perform SQL injection. The method `SearchApiCsv::getProducts()` has sensitive SQL call that can be executed with a trivial http call and exploited to forge a SQL injection.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46356">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>41c8a88a3bcdebba6023b52fde027bc1</td>
+       <td>CVE-2023-45378</td>
+       <td>2023-10-31 04:15:00 <img src="imgs/new.gif" /></td>
+       <td>In the module "PrestaBlog" (prestablog) version 4.4.7 and before from HDclic for PrestaShop, a guest can perform SQL injection. The script ajax slider_positions.php has a sensitive SQL call that can be executed with a trivial http call and exploited to forge a SQL injection.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45378">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c9641d1073792c547e3f9d5394ddcb3a</td>
+       <td>CVE-2023-27846</td>
+       <td>2023-10-31 04:15:00 <img src="imgs/new.gif" /></td>
+       <td>SQL injection vulnerability found in PrestaShop themevolty v.4.0.8 and before allow a remote attacker to gain privileges via the tvcmsblog, tvcmsvideotab, tvcmswishlist, tvcmsbrandlist, tvcmscategorychainslider, tvcmscategoryproduct, tvcmscategoryslider, tvcmspaymenticon, tvcmstestimonial components.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-27846">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>20b4c55a000ce4221ad81f7d9f91a78f</td>
+       <td>CVE-2015-20110</td>
+       <td>2023-10-31 03:15:00 <img src="imgs/new.gif" /></td>
+       <td>JHipster generator-jhipster before 2.23.0 allows a timing attack against validateToken due to a string comparison that stops at the first character that is different. Attackers can guess tokens by brute forcing one character at a time and observing the timing. This of course drastically reduces the search space to a linear amount of guesses based on the token length times the possible characters.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2015-20110">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ce88995627362562a5fa2aa2e1187778</td>
+       <td>CVE-2023-46040</td>
+       <td>2023-10-31 02:15:00 <img src="imgs/new.gif" /></td>
+       <td>Cross Site Scripting vulnerability in GetSimpleCMS v.3.4.0a allows a remote attacker to execute arbitrary code via the a crafted payload to the components.php function.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46040">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c42b7d79f16b7054aafe7b6921c99134</td>
+       <td>CVE-2023-45899</td>
+       <td>2023-10-31 02:15:00 <img src="imgs/new.gif" /></td>
+       <td>An issue in the component SuperUserSetuserModuleFrontController:init() of idnovate superuser before v2.4.2 allows attackers to bypass authentication via a crafted HTTP call.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-45899">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f499f60a201f2ea6a38c03c87cdd44e0</td>
+       <td>CVE-2023-5867</td>
+       <td>2023-10-31 01:15:00 <img src="imgs/new.gif" /></td>
+       <td>Cross-site Scripting (XSS) - Stored in GitHub repository thorsten/phpmyfaq prior to 3.2.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5867">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0f19bcac8bb1c36842824b5dd9602a86</td>
+       <td>CVE-2023-5866</td>
+       <td>2023-10-31 01:15:00 <img src="imgs/new.gif" /></td>
+       <td>Sensitive Cookie in HTTPS Session Without 'Secure' Attribute in GitHub repository thorsten/phpmyfaq prior to 3.2.1.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5866">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f76960707f6e132f842475e15332cf67</td>
+       <td>CVE-2023-5865</td>
+       <td>2023-10-31 01:15:00 <img src="imgs/new.gif" /></td>
+       <td>Insufficient Session Expiration in GitHub repository thorsten/phpmyfaq prior to 3.2.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5865">详情</a></td>
+      </tr>
+
+      <tr>
        <td>1e3320b80c3b3b8bd6fd48be719ce7e1</td>
        <td>CVE-2021-33638</td>
        <td>2023-10-29 08:15:00</td>
@@ -442,86 +522,6 @@
        <td>2023-10-27 22:15:00</td>
        <td>HashiCorp Vagrant's Windows installer targeted a custom location with a non-protected path that could be junctioned, introducing potential for unauthorized file system writes. Fixed in Vagrant 2.4.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5834">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>12be577c13ba835bf30871fbbd39b0f2</td>
-       <td>CVE-2023-46604</td>
-       <td>2023-10-27 15:15:00</td>
-       <td>Apache ActiveMQ is vulnerable to Remote Code Execution.The vulnerability may allow a remote attacker with network access to a broker to run arbitrary shell commands by manipulating serialized class types in the OpenWire protocol to cause the broker to instantiate any class on the classpath. Users are recommended to upgrade to version 5.15.16, 5.16.7, 5.17.6, or 5.18.3, which fixes this issue.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46604">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fca24790fb9e42e452a341c6e68f9f3b</td>
-       <td>CVE-2023-5443</td>
-       <td>2023-10-27 14:15:00</td>
-       <td>Improper Protection for Outbound Error Messages and Alert Signals vulnerability in EDM Informatics E-invoice allows Account Footprinting.This issue affects E-invoice: before 2.1.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5443">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6277ca082c3f7cc203c13c7dfb9ccf03</td>
-       <td>CVE-2023-46394</td>
-       <td>2023-10-27 14:15:00</td>
-       <td>A stored cross-site scripting (XSS) vulnerability in /home/user/edit_submit of gougucms v4.08.18 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the headimgurl parameter.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46394">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0ef1bbe55a1e0b27931975e45c6eedc2</td>
-       <td>CVE-2023-46393</td>
-       <td>2023-10-27 14:15:00</td>
-       <td>gougucms v4.08.18 was discovered to contain a password reset poisoning vulnerability which allows attackers to arbitrarily reset users' passwords via a crafted packet.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46393">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1b5dc7acb75103cec4d5eca7cd3b73db</td>
-       <td>CVE-2023-5807</td>
-       <td>2023-10-27 13:15:00</td>
-       <td>Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in TRtek Software Education Portal allows SQL Injection.This issue affects Education Portal: before 3.2023.29.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5807">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b89abecafca5219dbc0c8cf122897d65</td>
-       <td>CVE-2023-44377</td>
-       <td>2023-10-27 13:15:00</td>
-       <td>Online Art Gallery v1.0 is vulnerable to multiple Unauthenticated SQL Injection vulnerabilities. The 'add3' parameter of the header.php resource does not validate the characters received and they are sent unfiltered to the database.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-44377">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f9008697825f0dbbf8a1d9e902d7a164</td>
-       <td>CVE-2023-44376</td>
-       <td>2023-10-27 13:15:00</td>
-       <td>Online Art Gallery v1.0 is vulnerable to multiple Unauthenticated SQL Injection vulnerabilities. The 'add2' parameter of the header.php resource does not validate the characters received and they are sent unfiltered to the database.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-44376">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b231cdc27be30d12984a3703c1334359</td>
-       <td>CVE-2023-5821</td>
-       <td>2023-10-27 12:15:00</td>
-       <td>The Thumbnail carousel slider plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 1.0. This is due to missing nonce validation on the deleteselected function. This makes it possible for unauthenticated attackers to delete sliders in bulk via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5821">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d889995319a8621f5e6f050e2973c0d6</td>
-       <td>CVE-2023-5820</td>
-       <td>2023-10-27 12:15:00</td>
-       <td>The Thumbnail Slider With Lightbox plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 1.0. This is due to missing or incorrect nonce validation on the addedit functionality. This makes it possible for unauthenticated attackers to upload arbitrary files via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5820">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>313f77b0c6a6692a00777ffec988a419</td>
-       <td>CVE-2023-5705</td>
-       <td>2023-10-27 12:15:00</td>
-       <td>The VK Filter Search plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'vk_filter_search' shortcode in all versions up to, and including, 2.3.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5705">详情</a></td>
       </tr>
 
      </tbody>
