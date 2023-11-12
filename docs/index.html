@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-11-12 17:23:25 -->
+<!-- RELEASE TIME : 2023-11-12 23:21:37 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,38 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>708e7bb02839f4693fda9f78cfd82a6b</td>
+       <td>CVE-2023-47037</td>
+       <td>2023-11-12 14:15:00 <img src="imgs/new.gif" /></td>
+       <td>We failed to apply CVE-2023-40611 in 2.7.1 and this vulnerability was marked as fixed then. Apache Airflow, versions before 2.7.3, is affected by a vulnerability that allows authenticated and DAG-view authorized Users to modify some DAG run detail values when submitting notes. This could have them alter details such as configuration parameters, start date, etc. Users should upgrade to version 2.7.3 or later which has removed the vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47037">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d630820d2e93170e1be7683a5c53ecd5</td>
+       <td>CVE-2023-42781</td>
+       <td>2023-11-12 14:15:00 <img src="imgs/new.gif" /></td>
+       <td>Apache Airflow, versions before 2.7.3, has a vulnerability that allows an authorized user who has access to read specific DAGs only, to read information about task instances in other DAGs. This is a different issue than CVE-2023-42663 but leading to similar outcome. Users of Apache Airflow are advised to upgrade to version 2.7.3 or newer to mitigate the risk associated with this vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-42781">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8519f20792177aeea2bf068ebf4e2014</td>
+       <td>CVE-2023-6084</td>
+       <td>2023-11-12 11:15:00 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was found in Tongda OA 2017 up to 11.9 and classified as critical. Affected by this issue is some unknown functionality of the file general/vehicle/checkup/delete.php. The manipulation of the argument VU_ID leads to sql injection. The exploit has been disclosed to the public and may be used. Upgrading to version 11.10 is able to address this issue. It is recommended to upgrade the affected component. VDB-244994 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6084">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>9b47aa023a827d297f4d42eedbc32b9f</td>
+       <td>CVE-2023-47390</td>
+       <td>2023-11-11 18:15:00 <img src="imgs/new.gif" /></td>
+       <td>Headscale through 0.22.3 writes bearer tokens to info-level logs.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47390">详情</a></td>
+      </tr>
+
+      <tr>
        <td>76f620633b2145ebfdec75c56cb1c440</td>
        <td>CVE-2023-43057</td>
        <td>2023-11-11 16:15:00 <img src="imgs/new.gif" /></td>
@@ -490,38 +522,6 @@
        <td>2023-11-09 05:15:00</td>
        <td>Cross Site Scripting vulnerability in MLDB.ai v.2017.04.17.0 allows a remote attacker to execute arbitrary code via a crafted payload to the public_html/doc/index.html.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46492">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>914e9afa1fa700e181dcc899c7761bcf</td>
-       <td>CVE-2023-26156</td>
-       <td>2023-11-09 05:15:00</td>
-       <td>Versions of the package chromedriver before 119.0.1 are vulnerable to Command Injection when setting the chromedriver.path to an arbitrary system binary. This could lead to unauthorized access and potentially malicious actions on the host system. **Note:** An attacker must have access to the system running the vulnerable chromedriver library to exploit it. The success of exploitation also depends on the permissions and privileges of the process running chromedriver.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-26156">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>43721fd23e054874a4afec9cde65f8cf</td>
-       <td>CVE-2023-47008</td>
-       <td>2023-11-09 01:15:00</td>
-       <td>An issue in ASUS RT-AX57 v.3.0.0.4_386_52041 allows a remote attacker to execute arbitrary code via a crafted request to the ifname field in the sub_4CCE4 function.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47008">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d2b7068f5deb6155b6eb73e62f724763</td>
-       <td>CVE-2023-47007</td>
-       <td>2023-11-09 01:15:00</td>
-       <td>An issue in ASUS RT-AX57 v.3.0.0.4_386_52041 allows a remote attacker to execute arbitrary code via a crafted request to the lan_ifname field in the sub_391B8 function.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47007">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c01d2f7f171a74bbff42a8c65637b953</td>
-       <td>CVE-2023-47006</td>
-       <td>2023-11-09 01:15:00</td>
-       <td>An issue in ASUS RT-AX57 v.3.0.0.4_386_52041 allows a remote attacker to execute arbitrary code via a crafted request to the lan_ipaddr field in the sub_6FC74 function.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47006">详情</a></td>
       </tr>
 
      </tbody>
