@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-11-15 16:31:46 -->
+<!-- RELEASE TIME : 2023-11-16 03:23:39 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>e8e430cb471db6b18d2d0afc7a8a4e96</td>
+       <td>CVE-2023-48089</td>
+       <td>2023-11-15 15:15:00 <img src="imgs/new.gif" /></td>
+       <td>xxl-job-admin 2.4.0 is vulnerable to Remote Code Execution (RCE) via /xxl-job-admin/jobcode/save.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48089">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>740a695d08aea1a82fc34d7413fa11c1</td>
+       <td>CVE-2023-48088</td>
+       <td>2023-11-15 15:15:00 <img src="imgs/new.gif" /></td>
+       <td>xxl-job-admin 2.4.0 is vulnerable to Cross Site Scripting (XSS) via /xxl-job-admin/joblog/logDetailPage.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48088">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>09165acb21f42aaf941a4786d59b006f</td>
+       <td>CVE-2023-48087</td>
+       <td>2023-11-15 15:15:00 <img src="imgs/new.gif" /></td>
+       <td>xxl-job-admin 2.4.0 is vulnerable to Insecure Permissions via /xxl-job-admin/joblog/clearLog and /xxl-job-admin/joblog/logDetailCat.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48087">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e4ce7c165ca8963d6e306f907bc2fc30</td>
+       <td>CVE-2023-5720</td>
+       <td>2023-11-15 14:15:00 <img src="imgs/new.gif" /></td>
+       <td>A flaw was found in Quarkus, where it does not properly sanitize artifacts created using the Gradle plugin, allowing certain build system information to remain. This flaw allows an attacker to access potentially sensitive information from the build system within the application.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5720">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>eeee0e733d583a11388840e72e5248a1</td>
+       <td>CVE-2023-5676</td>
+       <td>2023-11-15 14:15:00 <img src="imgs/new.gif" /></td>
+       <td>In Eclipse OpenJ9 before version 0.41.0, the JVM can be forced into an infinite busy hang on a spinlock or a segmentation fault if a shutdown signal (SIGTERM, SIGINT or SIGHUP) is received before the JVM has finished initializing.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5676">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>15eabae1cebf51bd6469f1bf540a6f50</td>
+       <td>CVE-2023-5245</td>
+       <td>2023-11-15 13:15:00 <img src="imgs/new.gif" /></td>
+       <td>FileUtil.extract() enumerates all zip file entries and extracts each file without validating whether file paths in the archive are outside the intended directory. When creating an instance of TensorflowModel using the saved_model format and an exported tensorflow model, the apply() function invokes the vulnerable implementation of FileUtil.extract(). Arbitrary file creation can directly lead to code execution</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5245">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>00d3a7040c03760292377392082a8a02</td>
+       <td>CVE-2023-4602</td>
+       <td>2023-11-15 13:15:00 <img src="imgs/new.gif" /></td>
+       <td>The Namaste! LMS plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'course_id' parameter in versions up to, and including, 2.6.1.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4602">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>fc99a42733a8ed022f571ab1b1c38363</td>
+       <td>CVE-2023-23549</td>
+       <td>2023-11-15 11:15:00 <img src="imgs/new.gif" /></td>
+       <td>Improper Input Validation in Checkmk <2.2.0p15, <2.1.0p37, <=2.0.0p39 allows priviledged attackers to cause partial denial of service of the UI via too long hostnames.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-23549">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bd5361e01f8b75b6059c9d3d67d2cc78</td>
+       <td>CVE-2023-34062</td>
+       <td>2023-11-15 10:15:00 <img src="imgs/new.gif" /></td>
+       <td>In Reactor Netty HTTP Server, versions 1.1.x prior to 1.1.13 and versions 1.0.x prior to 1.0.39, a malicious user can send a request using a specially crafted URL that can lead to a directory traversal attack. Specifically, an application is vulnerable if Reactor Netty HTTP Server is configured to serve static resources.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-34062">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>aded0c763a9666bc54e667134fee57ab</td>
+       <td>CVE-2023-46672</td>
+       <td>2023-11-15 08:15:00 <img src="imgs/new.gif" /></td>
+       <td>An issue was identified by Elastic whereby sensitive information is recorded in Logstash logs under specific circumstances. The prerequisites for the manifestation of this issue are: * Logstash is configured to log in JSON format https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html , which is not the default logging format. * Sensitive data is stored in the Logstash keystore and referenced as a variable in Logstash configuration.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46672">详情</a></td>
+      </tr>
+
+      <tr>
        <td>736890e63ac7080810c266881de4fe91</td>
        <td>CVE-2023-46121</td>
        <td>2023-11-15 00:15:00 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>fa8d0f24ee79706b1f05c49fd31054b3</td>
        <td>CVE-2023-6115</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: DUPLICATE CVE</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6115">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>7c5c53ee2692433205925462ba5aaa3f</td>
        <td>CVE-2023-6107</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental Request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6107">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>6e15f3f0f215e118eb4bebd7163eb386</td>
        <td>CVE-2023-6106</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6106">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>78ebb19a3afc76c03fa6bec139b9b3f7</td>
        <td>CVE-2023-6092</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: DUPLICATE, accidental request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6092">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>475d6a4eef4eaeaf15462d75daba33df</td>
        <td>CVE-2023-6089</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental Request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6089">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>d028b99b7e525a596b4e7ccf8e74a9e0</td>
        <td>CVE-2023-6088</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental Request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6088">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>cd028f68cbd7532a66b46fd81a808c41</td>
        <td>CVE-2023-6087</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental Request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6087">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>fcc4215b90ea062f9655e5249877d88f</td>
        <td>CVE-2023-6086</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6086">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>d4c5beb24a956b50f27ad664a9f31adb</td>
        <td>CVE-2023-6085</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6085">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>43c7fd46a527406120b7c036e9077f57</td>
        <td>CVE-2023-6083</td>
-       <td>2023-11-14 00:15:00 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 00:15:00</td>
        <td>Rejected reason: Accidental Request.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6083">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f1a4d8e03915f796872fc590a345810c</td>
-       <td>CVE-2023-6103</td>
-       <td>2023-11-13 18:15:00</td>
-       <td>A vulnerability has been found in Intelbras RX 1500 1.1.9 and classified as problematic. Affected by this vulnerability is an unknown functionality of the file /WiFi.html of the component SSID Handler. The manipulation leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-245065 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6103">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9179947f447fe027e09c60b188fb8148</td>
-       <td>CVE-2023-6102</td>
-       <td>2023-11-13 18:15:00</td>
-       <td>A vulnerability, which was classified as problematic, was found in Maiwei Safety Production Control Platform 4.1. Affected is an unknown function of the file /Content/Plugins/uploader/FileChoose.html?fileUrl=/Upload/File/Pics/&parent. The manipulation leads to unrestricted upload. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-245064. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6102">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a984d89a86b187f274e3f59941653234</td>
-       <td>CVE-2023-32123</td>
-       <td>2023-11-13 18:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in Dream-Theme The7 allows Stored XSS.This issue affects The7: from n/a through 11.7.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-32123">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>49d2e7bdae94453720f3a8f37a3b85e1</td>
-       <td>CVE-2023-31230</td>
-       <td>2023-11-13 18:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in Haoqisir Baidu Tongji generator allows Stored XSS.This issue affects Baidu Tongji generator: from n/a through 1.0.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-31230">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4388875b84e8d6d5d4182bda077d3017</td>
-       <td>CVE-2023-39166</td>
-       <td>2023-11-13 17:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in tagDiv tagDiv Composer allows Cross-Site Scripting (XSS).This issue affects tagDiv Composer: from n/a before 4.4.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39166">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1d7a16d758a93dd757054c841f14d564</td>
-       <td>CVE-2023-35877</td>
-       <td>2023-11-13 17:15:00</td>
-       <td>Cross-Site Request Forgery (CSRF) vulnerability in Vadym K. Extra User Details allows Stored XSS.This issue affects Extra User Details: from n/a through 0.5.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-35877">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9d4df145a406f6be01f7f619341178e6</td>
-       <td>CVE-2023-6101</td>
-       <td>2023-11-13 16:15:00</td>
-       <td>A vulnerability, which was classified as problematic, has been found in Maiwei Safety Production Control Platform 4.1. This issue affects some unknown processing of the file /TC/V2.7/ha.html of the component Intelligent Monitoring. The manipulation leads to information disclosure. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-245063. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6101">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1dd72113a15886f6f1ef09fc94dc4236</td>
-       <td>CVE-2023-6100</td>
-       <td>2023-11-13 16:15:00</td>
-       <td>A vulnerability classified as problematic was found in Maiwei Safety Production Control Platform 4.1. This vulnerability affects unknown code of the file /api/DataDictionary/GetItemList. The manipulation leads to information disclosure. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-245062 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6100">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d48ac52db785e46ec3edb35e5f594a8c</td>
-       <td>CVE-2023-6099</td>
-       <td>2023-11-13 16:15:00</td>
-       <td>A vulnerability classified as critical has been found in Shenzhen Youkate Industrial Facial Love Cloud Payment System up to 1.0.55.0.0.1. This affects an unknown part of the file /SystemMng.ashx of the component Account Handler. The manipulation of the argument operatorRole with the input 00 leads to improper privilege management. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-245061 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6099">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6e71b0e92c5726f1a5335987a80b02d1</td>
-       <td>CVE-2023-48068</td>
-       <td>2023-11-13 16:15:00</td>
-       <td>DedeCMS v6.2 was discovered to contain a Cross-site Scripting (XSS) vulnerability via spec_add.php.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48068">详情</a></td>
       </tr>
 
      </tbody>
@@ -1903,7 +1903,7 @@
       <tr>
        <td>3fe751ba7cbd2dc4512cad75250e0388</td>
        <td>CVE-2022-28236</td>
-       <td>2023-11-14 23:18:37 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 23:18:37</td>
        <td>多款Adobe产品缓冲区错误漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=02b81840ddfe4c7683722c84e2f7dd55">详情</a></td>
       </tr>
@@ -1911,7 +1911,7 @@
       <tr>
        <td>63f1807781e54b89f19e0502a6ccc21a</td>
        <td>CVE-2021-26353</td>
-       <td>2023-11-14 23:18:31 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 23:18:31</td>
        <td>AMD EPYC DRTM UApp 安全漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=f73b50d9e497475dacff9f6d0b6f2f4f">详情</a></td>
       </tr>
@@ -1919,7 +1919,7 @@
       <tr>
        <td>4f6dfc19051dcdf72c16d59539dedba4</td>
        <td>CVE-2022-1620</td>
-       <td>2023-11-14 23:18:15 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 23:18:15</td>
        <td>Vim 代码问题漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=7d13501ab4cb45fca785cea34161f277">详情</a></td>
       </tr>
@@ -1927,7 +1927,7 @@
       <tr>
        <td>fa84e6d5828f3f3b62b36405c9584369</td>
        <td>CVE-2021-30951</td>
-       <td>2023-11-14 22:22:57 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 22:22:57</td>
        <td>Apple iOS 和 iPadOS 资源管理错误漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=fb195c754e564500b0b86722b11c43a5">详情</a></td>
       </tr>
@@ -1935,7 +1935,7 @@
       <tr>
        <td>ac9bcf1cf58c02494064c8959e321164</td>
        <td>CVE-2021-30954</td>
-       <td>2023-11-14 22:22:56 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 22:22:56</td>
        <td>Apple tvOS 安全漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=8dd4d8b225d44798b551c42738591c98">详情</a></td>
       </tr>
@@ -1943,7 +1943,7 @@
       <tr>
        <td>44003627167e55630b661a8004d888af</td>
        <td>CVE-2022-27337</td>
-       <td>2023-11-14 22:22:55 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 22:22:55</td>
        <td>Freedesktop Poppler 安全漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=4d98c8f4fc904efcab08fe508e286000">详情</a></td>
       </tr>
@@ -1951,7 +1951,7 @@
       <tr>
        <td>7418a5a676031b70b1fccc71dabbc1b3</td>
        <td>CVE-2021-30958</td>
-       <td>2023-11-14 22:22:54 <img src="imgs/new.gif" /></td>
+       <td>2023-11-14 22:22:54</td>
        <td>Apple iOS 和 iPadOS 缓冲区错误漏洞</td>
        <td><a target="_blank" href="https://redqueen.tj-un.com/IntelDetails.html?id=51c8b37d1e11455881050d8f1629f161">详情</a></td>
       </tr>
