@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-12-08 03:23:50 -->
+<!-- RELEASE TIME : 2023-12-08 05:26:40 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>456a1aba1dd1120102e5a8a306afdd36</td>
+       <td>CVE-2023-43305</td>
+       <td>2023-12-08 02:15:06 <img src="imgs/new.gif" /></td>
+       <td>An issue in studio kent mini-app on Line v13.6.1 allows attackers to send crafted malicious notifications via leakage of the channel access token.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43305">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b9c988c961b0657044c6b0c182927c57</td>
+       <td>CVE-2023-43744</td>
+       <td>2023-12-08 01:15:07 <img src="imgs/new.gif" /></td>
+       <td>An OS command injection vulnerability in Zultys MX-SE, MX-SE II, MX-E, MX-Virtual, MX250, and MX30 with firmware versions prior to 17.0.10 patch 17161 and 16.04 patch 16109 allows an administrator to execute arbitrary OS commands via a file name parameter in a patch application function. The Zultys MX Administrator client has a "Patch Manager" section that allows administrators to apply patches to the device. The user supplied filename for the patch file is passed to a shell script without validation. Including bash command substitution characters in a patch file name results in execution of the provided command.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43744">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>98f68502ce57687cc4f241f7ad77ae8d</td>
+       <td>CVE-2023-43743</td>
+       <td>2023-12-08 01:15:07 <img src="imgs/new.gif" /></td>
+       <td>A SQL injection vulnerability in Zultys MX-SE, MX-SE II, MX-E, MX-Virtual, MX250, and MX30 with firmware versions prior to 17.0.10 patch 17161 and 16.04 patch 16109 allows an authenticated attacker to execute arbitrary SQL queries on the backend database via the filter parameter in requests to the /newapi/ endpoint in the Zultys MX web interface.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43743">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b6ae804cc344bdddae872eb7854f9a1a</td>
+       <td>CVE-2023-43742</td>
+       <td>2023-12-08 01:15:07 <img src="imgs/new.gif" /></td>
+       <td>An authentication bypass in Zultys MX-SE, MX-SE II, MX-E, MX-Virtual, MX250, and MX30 with firmware versions prior to 17.0.10 patch 17161 and 16.04 patch 16109 allows an unauthenticated attacker to obtain an administrative session via a protection mechanism failure in the authentication function. In normal operation, the Zultys MX Administrator Windows client connects to port 7505 and attempts authentication, submitting the administrator username and password to the server. Upon authentication failure, the server sends a login failure message prompting the client to disconnect. However, if the client ignores the failure message instead and attempts to continue, the server does not forcibly close the connection and processes all subsequent requests from the client as if authentication had been successful.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-43742">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b54aa4a49d3110e8ceb9ff556e305c93</td>
+       <td>CVE-2023-6599</td>
+       <td>2023-12-08 00:15:08 <img src="imgs/new.gif" /></td>
+       <td>Missing Standardized Error Handling Mechanism in GitHub repository microweber/microweber prior to 2.0.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6599">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>10da1d192e93ec698f81e7e8ab4fc99e</td>
+       <td>CVE-2023-6061</td>
+       <td>2023-12-08 00:15:07 <img src="imgs/new.gif" /></td>
+       <td>Multiple components of Iconics SCADA Suite are prone to a Phantom DLL loading vulnerability. This issue arises from the applications improperly searching for and loading dynamic link libraries, potentially allowing an attacker to execute malicious code via a DLL with a matching name in an accessible search path. The affected components are: * MMXFax.exe * winfax.dll * MelSim2ComProc.exe * Sim2ComProc.dll * MMXCall_in.exe * libdxxmt.dll * libsrlmt.dll</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6061">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8005e506ebdf82b08184240523f22d26</td>
+       <td>CVE-2023-5008</td>
+       <td>2023-12-08 00:15:07 <img src="imgs/new.gif" /></td>
+       <td>Student Information System v1.0 is vulnerable to an unauthenticated SQL Injection vulnerability on the 'regno' parameter of index.php page, allowing an external attacker to dump all the contents of the database contents and bypass the login control.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5008">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b5497aee4ae2f8a6454232d3df9de619</td>
+       <td>CVE-2023-5058</td>
+       <td>2023-12-07 23:15:07 <img src="imgs/new.gif" /></td>
+       <td>Improper Input Validation in the processing of user-supplied splash screen during system boot in Phoenix SecureCore™ Technology™ 4 potentially allows denial-of-service attacks or arbitrary code execution.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-5058">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2e94721a23822eb0bfb397a6ae232136</td>
+       <td>CVE-2023-4122</td>
+       <td>2023-12-07 23:15:07 <img src="imgs/new.gif" /></td>
+       <td>Student Information System v1.0 is vulnerable to an Insecure File Upload vulnerability on the 'photo' parameter of my-profile page, allowing an authenticated attacker to obtain Remote Code Execution on the server hosting the application.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-4122">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b9bed39cd24c228ccd2949ac2df696f7</td>
+       <td>CVE-2023-6581</td>
+       <td>2023-12-07 22:15:08 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability has been found in D-Link DAR-7000 up to 20231126 and classified as critical. This vulnerability affects unknown code of the file /user/inc/workidajax.php. The manipulation of the argument id leads to sql injection. The exploit has been disclosed to the public and may be used. VDB-247162 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6581">详情</a></td>
+      </tr>
+
+      <tr>
        <td>9d5b6c351b849976f6d5111a3b6bd1ee</td>
        <td>CVE-2023-6333</td>
        <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2023-12-06 17:15:07</td>
        <td>A malicious HTTP sender can use chunk extensions to cause a receiver reading from a request or response body to read many more bytes from the network than are in the body. A malicious HTTP client can further exploit this to cause a server to automatically read a large amount of data (up to about 1GiB) when a handler fails to read the entire body of a request. Chunk extensions are a little-used HTTP feature which permit including additional metadata in a request or response body sent using the chunked encoding. The net/http chunked encoding reader discards this metadata. A sender can exploit this by inserting a large metadata segment with each byte transferred. The chunk reader now produces an error if the ratio of real body to encoded bytes grows too small.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39326">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b2a876a3a0afcefd496ee46178716064</td>
-       <td>CVE-2023-39539</td>
-       <td>2023-12-06 16:15:07</td>
-       <td>AMI AptioV contains a vulnerability in BIOS where a User may cause an unrestricted upload of a PNG Logo file with dangerous type by Local access. A successful exploit of this vulnerability may lead to a loss of Confidentiality, Integrity, and/or Availability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39539">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6dd8e427de70f56e9f5a33375b5b9c10</td>
-       <td>CVE-2023-39538</td>
-       <td>2023-12-06 16:15:07</td>
-       <td>AMI AptioV contains a vulnerability in BIOS where a User may cause an unrestricted upload of a BMP Logo file with dangerous type by Local access. A successful exploit of this vulnerability may lead to a loss of Confidentiality, Integrity, and/or Availability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-39538">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>229402b3cfdb30f6343605440b22c721</td>
-       <td>CVE-2023-36655</td>
-       <td>2023-12-06 16:15:07</td>
-       <td>The login REST API in ProLion CryptoSpike 3.0.15P2 (when LDAP or Active Directory is used as the users store) allows a remote blocked user to login and obtain an authentication token by specifying a username with different uppercase/lowercase character combination.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-36655">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1fd9a442ff6fcd669331c8a2e43becb2</td>
-       <td>CVE-2023-48859</td>
-       <td>2023-12-06 15:15:06</td>
-       <td>TOTOLINK A3002RU version 2.0.0-B20190902.1958 has a post-authentication RCE due to incorrect access control, allows attackers to bypass front-end security restrictions and execute arbitrary code.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48859">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>297f2dba01606413f747265f6a59994b</td>
-       <td>CVE-2023-6527</td>
-       <td>2023-12-06 05:15:10</td>
-       <td>The Email Subscription Popup plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the HTTP_REFERER header in all versions up to, and including, 1.2.18 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6527">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>96b9a4e0f0bc259ece054e4803192dd2</td>
-       <td>CVE-2023-26154</td>
-       <td>2023-12-06 05:15:10</td>
-       <td>Versions of the package pubnub before 7.4.0; all versions of the package com.pubnub:pubnub; versions of the package pubnub before 6.19.0; all versions of the package github.com/pubnub/go; versions of the package github.com/pubnub/go/v7 before 7.2.0; versions of the package pubnub before 7.3.0; versions of the package pubnub/pubnub before 6.1.0; versions of the package pubnub before 5.3.0; versions of the package pubnub before 0.4.0; versions of the package pubnub/c-core before 4.5.0; versions of the package com.pubnub:pubnub-kotlin before 7.7.0; versions of the package pubnub/swift before 6.2.0; versions of the package pubnub before 5.2.0; versions of the package pubnub before 4.3.0 are vulnerable to Insufficient Entropy via the getKey function, due to inefficient implementation of the AES-256-CBC cryptographic algorithm. The provided encrypt function is less secure when hex encoding and trimming are applied, leaving half of the bits in the key always the same for every encoded message or file. **Note:** In order to exploit this vulnerability, the attacker needs to invest resources in preparing the attack and brute-force the encryption.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-26154">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c7c800440c57d7ebf691681fd7515162</td>
-       <td>CVE-2023-22524</td>
-       <td>2023-12-06 05:15:10</td>
-       <td>Certain versions of the Atlassian Companion App for MacOS were affected by a remote code execution vulnerability. An attacker could utilize WebSockets to bypass Atlassian Companion’s blocklist and MacOS Gatekeeper to allow execution of code.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-22524">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6bbed3412a21539b5e0533869e8d18ca</td>
-       <td>CVE-2023-22523</td>
-       <td>2023-12-06 05:15:10</td>
-       <td>This vulnerability, if exploited, allows an attacker to perform privileged RCE (Remote Code Execution) on machines with the Assets Discovery agent installed. The vulnerability exists between the Assets Discovery application (formerly known as Insight Discovery) and the Assets Discovery agent. Assets Discovery, which can be downloaded via Atlassian Marketplace, is a network scanning tool that can be used with or without an agent with Jira Service Management Cloud, Data Center or Server. It detects hardware and software that is connected to your local network and extracts detailed information about each asset. This data can then be imported into Assets in Jira Service Management to help you manage all of the devices and configuration items within your local network.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-22523">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>15d4e3db4b91186a87e8f80a6817ef32</td>
-       <td>CVE-2023-22522</td>
-       <td>2023-12-06 05:15:09</td>
-       <td>This Template Injection vulnerability allows an authenticated attacker, including one with anonymous access, to inject unsafe user input into a Confluence page. Using this approach, an attacker is able to achieve Remote Code Execution (RCE) on an affected instance. Publicly accessible Confluence Data Center and Server versions as listed below are at risk and require immediate attention. See the advisory for additional details Atlassian Cloud sites are not affected by this vulnerability. If your Confluence site is accessed via an atlassian.net domain, it is hosted by Atlassian and is not vulnerable to this issue.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-22522">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d2f0aee1c51eaba54c9441244186761e</td>
-       <td>CVE-2023-41268</td>
-       <td>2023-12-06 04:15:07</td>
-       <td>Improper input validation vulnerability in Samsung Open Source Escargot allows stack overflow and segmentation fault. This issue affects Escargot: from 3.0.0 through 4.0.0.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-41268">详情</a></td>
       </tr>
 
      </tbody>
