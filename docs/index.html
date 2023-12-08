@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-12-08 16:30:57 -->
+<!-- RELEASE TIME : 2023-12-08 21:21:08 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>830e25ee8c0831aa43dc03d5a6c74d0e</td>
+       <td>CVE-2023-49788</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Collabora Online is a collaborative online office suite based on LibreOffice technology. Unlike a standalone dedicated Collabora Online server, the Built-in CODE Server (richdocumentscode) is run without chroot sandboxing. Vulnerable versions of the richdocumentscode app can be susceptible to attack via modified client->server commands to overwrite files outside the sub directory the server has provided for the transient session. Files which can be accessed are limited to those that the server process has access to. The bug was fixed in Collabora Online - Built-in CODE Server (richdocumentscode) release 23.5.602. Users are advised to upgrade. There are no known workarounds for this vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49788">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b396191fd1b0bb37d1d80af229740e7b</td>
+       <td>CVE-2023-49782</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Collabora Online is a collaborative online office suite based on LibreOffice technology. Users of Nextcloud with `Collabora Online - Built-in CODE Server` app can be vulnerable to attack via proxy.php. The bug was fixed in Collabora Online - Built-in CODE Server (richdocumentscode) release 23.5.601. Users are advised to upgrade. There are no known workarounds for this vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49782">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bac6a836cf0f8d788ea11f86584d4e2a</td>
+       <td>CVE-2023-48311</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>dockerspawner is a tool to spawn JupyterHub single user servers in Docker containers. Users of JupyterHub deployments running DockerSpawner starting with 0.11.0 without specifying `DockerSpawner.allowed_images` configuration allow users to launch _any_ pullable docker image, instead of restricting to only the single configured image, as intended. This issue has been addressed in commit `3ba4b665b` which has been included in dockerspawner release version 13. Users are advised to upgrade. Users unable to upgrade should explicitly set `DockerSpawner.allowed_images` to a non-empty list containing only the default image will result in the intended default behavior.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48311">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d24a618ab35d06280c8f8db49ebdc147</td>
+       <td>CVE-2023-46499</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Cross Site Scripting vulnerability in EverShop NPM versions before v.1.0.0-rc.5 allows a remote attacker to obtain sensitive information via a crafted scripts to the Admin Panel.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46499">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>89a6c33138e46811687b3b14e3b4b618</td>
+       <td>CVE-2023-46498</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>An issue in EverShop NPM versions before v.1.0.0-rc.8 allows a remote attacker to obtain sensitive information and execute arbitrary code via the /deleteCustomer/route.json file.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46498">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3564eac4b8859f01e7f7823b43fab2d4</td>
+       <td>CVE-2023-46497</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Directory Traversal vulnerability in EverShop NPM versions before v.1.0.0-rc.8 allows a remote attacker to obtain sensitive information via a crafted request to the mkdirSync function in the folderCreate/createFolder.js endpoint.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46497">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c69c0d5387a6a5e86ed265eac6b5fefe</td>
+       <td>CVE-2023-46496</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Directory Traversal vulnerability in EverShop NPM versions before v.1.0.0-rc.8 allows a remote attacker to obtain sensitive information via a crafted request to the DELETE function in api/files endpoint.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46496">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f0ea83df7853cdbee08b64161856c952</td>
+       <td>CVE-2023-46495</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Cross Site Scripting vulnerability in EverShop NPM versions before v.1.0.0-rc.8 allows a remote attacker to obtain sensitive information via a crafted request to the sortBy parameter.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46495">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7e01173d5b596ddf7ef09fd65acd5445</td>
+       <td>CVE-2023-46494</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Cross Site Scripting vulnerability in EverShop NPM versions before v.1.0.0-rc.5 allows a remote attacker to obtain sensitive information via a crafted request to the ProductGrid function in admin/productGrid/Grid.jsx.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46494">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a968ce247ed3423b25d1ebb31faff41a</td>
+       <td>CVE-2023-46493</td>
+       <td>2023-12-08 20:15:07 <img src="imgs/new.gif" /></td>
+       <td>Directory Traversal vulnerability in EverShop NPM versions before v.1.0.0-rc.8 allows a remote attacker to obtain sensitive information via a crafted request to the readDirSync function in fileBrowser/browser.js.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46493">详情</a></td>
+      </tr>
+
+      <tr>
        <td>575b84277afdefc31a34d8ed8fc87b9d</td>
        <td>CVE-2023-46157</td>
        <td>2023-12-08 13:15:07 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
        <td>Tenda W30E V16.01.0.12(4843) contains a stack overflow vulnerability via the function formDeleteMeshNode.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49411">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>29a2559c080bd2e9de6341c8565ba07c</td>
-       <td>CVE-2023-49409</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Tenda AX3 V16.03.12.11 was discovered to contain a Command Execution vulnerability via the function /goform/telnet.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49409">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6c802ca1449dc75a902dee18cd6f7c1b</td>
-       <td>CVE-2023-49408</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Tenda AX3 V16.03.12.11 was discovered to contain a stack overflow via the function set_device_name.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49408">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2a0bf29a1821b7c75e29f6a9b98089ce</td>
-       <td>CVE-2023-49406</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Tenda W30E V16.01.0.12(4843) was discovered to contain a Command Execution vulnerability via the function /goform/telnet.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49406">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>112115b3c2eecd72b47aa03523ba2409</td>
-       <td>CVE-2023-49405</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Tenda W30E V16.01.0.12(4843) was discovered to contain a stack overflow via the function UploadCfg.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49405">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>60a2f57c08c1d69be46a4cf3b3369191</td>
-       <td>CVE-2023-49404</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Tenda W30E V16.01.0.12(4843) was discovered to contain a stack overflow via the function formAdvancedSetListSet.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-49404">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f2da95f8d774b2e4ac29166fda806c47</td>
-       <td>CVE-2023-48958</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>gpac 2.3-DEV-rev617-g671976fcc-master contains memory leaks in gf_mpd_resolve_url media_tools/mpd.c:4589.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-48958">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>45f57ff1330c4c9ee596cec4c815c3f0</td>
-       <td>CVE-2023-47440</td>
-       <td>2023-12-07 18:15:08 <img src="imgs/new.gif" /></td>
-       <td>Gladys Assistant v4.27.0 and prior is vulnerable to Directory Traversal. The patch of CVE-2023-43256 was found to be incomplete, allowing authenticated attackers to extract sensitive files in the host machine.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47440">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e44632fbdceb84715c3c8695e30bf6f9</td>
-       <td>CVE-2023-46218</td>
-       <td>2023-12-07 01:15:07 <img src="imgs/new.gif" /></td>
-       <td>This flaw allows a malicious HTTP server to set "super cookies" in curl that are then passed back to more origins than what is otherwise allowed or possible. This allows a site to set cookies that then would get sent to different and unrelated sites and domains. It could do this by exploiting a mixed case flaw in curl's function that verifies a given cookie domain against the Public Suffix List (PSL). For example a cookie could be set with `domain=co.UK` when the URL used a lower case hostname `curl.co.uk`, even though `co.uk` is listed as a PSL domain.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46218">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9645c5496a03242b6a0f84fc66aa639a</td>
-       <td>CVE-2023-6566</td>
-       <td>2023-12-07 00:15:07 <img src="imgs/new.gif" /></td>
-       <td>Business Logic Errors in GitHub repository microweber/microweber prior to 2.0.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-6566">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7e3587c664786f23f74c0bc01f29e5e5</td>
-       <td>CVE-2023-46354</td>
-       <td>2023-12-06 23:15:07</td>
-       <td>In the module "Orders (CSV, Excel) Export PRO" (ordersexport) < 5.2.0 from MyPrestaModules for PrestaShop, a guest can download personal information without restriction. Due to a lack of permissions control, a guest can access exports from the module which can lead to a leak of personal information from ps_customer/ps_address tables such as name / surname / email / phone number / full postal address.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-46354">详情</a></td>
       </tr>
 
      </tbody>
