@@ -77,12 +77,12 @@ threat-broadcast
 
 ## Stargazers
 
-[![Stargazers repo roster for @Aabyss-Team/threat-broadcast](https://reporoster.com/stars/Aabyss-Team/threat-broadcast)](https://github.com/Aabyss-Team/threat-broadcast/stargazers)
+[![Stargazers repo roster for @Aabyss-Team/threat-broadcast](http://reporoster.com/stars/Aabyss-Team/threat-broadcast)](https://github.com/Aabyss-Team/threat-broadcast/stargazers)
 
 
 ## Forkers
 
-[![Forkers repo roster for @Aabyss-Team/threat-broadcast](https://reporoster.com/forks/Aabyss-Team/threat-broadcast)](https://github.com/Aabyss-Team/threat-broadcast/network/members)
+[![Forkers repo roster for @Aabyss-Team/threat-broadcast](http://reporoster.com/forks/Aabyss-Team/threat-broadcast)](https://github.com/Aabyss-Team/threat-broadcast/network/members)
 
 
 ## Star History
