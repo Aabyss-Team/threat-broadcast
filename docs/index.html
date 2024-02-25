@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-02-24 23:24:58 -->
+<!-- RELEASE TIME : 2024-02-25 17:25:55 -->
 <html lang="zh-cn">
 
  <head>
@@ -31,7 +31,7 @@
       <tr>
        <td>55c72f6f2af616fbddbb643df06c3b3a</td>
        <td>CVE-2024-21413</td>
-       <td>2024-02-23 06:57:46 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 06:57:46</td>
        <td>CVE-2024-21413：Microsoft Outlook 远程代码执行漏洞通告</td>
        <td><a target="_blank" href="https://cert.360.cn/warning/detail?id=65d841e7c09f255b91b17dd7">详情</a></td>
       </tr>
@@ -285,6 +285,30 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>d5f2ea064dd354098873ef40f528fee2</td>
+       <td>CVE-2024-21502</td>
+       <td>2024-02-24 05:15:44 <img src="imgs/new.gif" /></td>
+       <td>Versions of the package fastecdsa before 2.3.2 are vulnerable to Use of Uninitialized Variable on the stack, via the curvemath_mul function in src/curveMath.c, due to being used and interpreted as user-defined type. Depending on the variable's actual value it could be arbitrary free(), arbitrary realloc(), null pointer dereference and other. Since the stack can be controlled by the attacker, the vulnerability could be used to corrupt allocator structure, leading to possible heap exploitation. The attacker could cause denial of service by exploiting this vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21502">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>44456e2fe953f67d8b1826b8889d54da</td>
+       <td>CVE-2024-21501</td>
+       <td>2024-02-24 05:15:44 <img src="imgs/new.gif" /></td>
+       <td>Versions of the package sanitize-html before 2.12.1 are vulnerable to Information Exposure when used on the backend and with the style attribute allowed, allowing enumeration of files in the system (including project dependencies). An attacker could exploit this vulnerability to gather details about the file system structure and dependencies of the targeted server.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21501">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b66b8cef44c3dd75e1a1f19fda5cdb08</td>
+       <td>CVE-2024-1810</td>
+       <td>2024-02-24 05:15:43 <img src="imgs/new.gif" /></td>
+       <td>The Archivist – Custom Archive Templates plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘shortcode_attributes' parameter in all versions up to, and including, 1.7.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1810">详情</a></td>
+      </tr>
+
+      <tr>
        <td>6ef3af727eb04d9fb4c43ad16e6db9df</td>
        <td>CVE-2024-22395</td>
        <td>2024-02-24 00:15:45 <img src="imgs/new.gif" /></td>
@@ -295,7 +319,7 @@
       <tr>
        <td>9aa20a833c520e03bd522cadda9df036</td>
        <td>CVE-2024-26192</td>
-       <td>2024-02-23 23:15:09 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 23:15:09</td>
        <td>Microsoft Edge (Chromium-based) Information Disclosure Vulnerability</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-26192">详情</a></td>
       </tr>
@@ -303,7 +327,7 @@
       <tr>
        <td>217cfaa9e6233a04fc43cc8767962c90</td>
        <td>CVE-2024-26188</td>
-       <td>2024-02-23 23:15:09 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 23:15:09</td>
        <td>Microsoft Edge (Chromium-based) Spoofing Vulnerability</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-26188">详情</a></td>
       </tr>
@@ -311,7 +335,7 @@
       <tr>
        <td>3d74df6ef9f8eddaf7c49c733f4db9fa</td>
        <td>CVE-2024-25469</td>
-       <td>2024-02-23 23:15:09 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 23:15:09</td>
        <td>SQL Injection vulnerability in CRMEB crmeb_java v.1.3.4 and before allows a remote attacker to obtain sensitive information via the latitude and longitude parameters in the api/front/store/list component.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25469">详情</a></td>
       </tr>
@@ -319,7 +343,7 @@
       <tr>
        <td>072a54c202441464684878bf29a5d7ff</td>
        <td>CVE-2024-24681</td>
-       <td>2024-02-23 23:15:09 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 23:15:09</td>
        <td>Insecure AES key in Yealink Configuration Encrypt Tool below verrsion 1.2. A single, vendorwide, hardcoded AES key in the configuration tool used to encrypt provisioning documents was leaked leading to a compromise of confidentiality of provisioning documents.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-24681">详情</a></td>
       </tr>
@@ -327,7 +351,7 @@
       <tr>
        <td>b59997fd2729c49c1b31a22454c521ab</td>
        <td>CVE-2024-22988</td>
-       <td>2024-02-23 23:15:09 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 23:15:09</td>
        <td>An issue in zkteco zkbio WDMS v.8.0.5 allows an attacker to execute arbitrary code via the /files/backup/ component.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-22988">详情</a></td>
       </tr>
@@ -335,7 +359,7 @@
       <tr>
        <td>36f430982d18bed4c07cf445a1584d55</td>
        <td>CVE-2024-27133</td>
-       <td>2024-02-23 22:15:55 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 22:15:55</td>
        <td>Insufficient sanitization in MLflow leads to XSS when running a recipe that uses an untrusted dataset. This issue leads to a client-side RCE when running the recipe in Jupyter Notebook. The vulnerability stems from lack of sanitization over dataset table fields.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27133">详情</a></td>
       </tr>
@@ -343,7 +367,7 @@
       <tr>
        <td>861e51f51a27d948f55a498515fc2508</td>
        <td>CVE-2024-27132</td>
-       <td>2024-02-23 22:15:55 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 22:15:55</td>
        <td>Insufficient sanitization in MLflow leads to XSS when running an untrusted recipe. This issue leads to a client-side RCE when running an untrusted recipe in Jupyter Notebook. The vulnerability stems from lack of sanitization over template variables.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27132">详情</a></td>
       </tr>
@@ -351,7 +375,7 @@
       <tr>
        <td>593fbe0d06bb1faad6234fa9429028aa</td>
        <td>CVE-2024-25730</td>
-       <td>2024-02-23 22:15:55 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 22:15:55</td>
        <td>Hitron CODA-4582 and CODA-4589 devices have default PSKs that are generated from 5-digit hex values concatenated with a "Hitron" substring, resulting in insufficient entropy (only about one million possibilities).</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25730">详情</a></td>
       </tr>
@@ -359,7 +383,7 @@
       <tr>
        <td>66e7d9be46166f8da63f26bf33f82f79</td>
        <td>CVE-2024-24310</td>
-       <td>2024-02-23 22:15:54 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 22:15:54</td>
        <td>In the module "Generate barcode on invoice / delivery slip" (ecgeneratebarcode) from Ether Creation <= 1.2.0 for PrestaShop, a guest can perform SQL injection.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-24310">详情</a></td>
       </tr>
@@ -367,7 +391,7 @@
       <tr>
        <td>9b8817a4cdf6c801151b440311017df3</td>
        <td>CVE-2024-23320</td>
-       <td>2024-02-23 17:15:08 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 17:15:08</td>
        <td>Improper Input Validation vulnerability in Apache DolphinScheduler. An authenticated user can cause arbitrary, unsandboxed javascript to be executed on the server. This issue is a legacy of CVE-2023-49299. We didn't fix it completely in CVE-2023-49299, and we added one more patch to fix it. This issue affects Apache DolphinScheduler: until 3.2.1. Users are recommended to upgrade to version 3.2.1, which fixes the issue.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-23320">详情</a></td>
       </tr>
@@ -375,7 +399,7 @@
       <tr>
        <td>32b1ca8f45d24a947afe0b07870edaf7</td>
        <td>CVE-2024-1826</td>
-       <td>2024-02-23 17:15:08 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 17:15:08</td>
        <td>A vulnerability has been found in code-projects Library System 1.0 and classified as critical. This vulnerability affects unknown code of the file Source/librarian/user/student/login.php. The manipulation of the argument username/password leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-254614 is the identifier assigned to this vulnerability.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1826">详情</a></td>
       </tr>
@@ -383,7 +407,7 @@
       <tr>
        <td>cd2eda644a58b4e98c24a1d1f715f522</td>
        <td>CVE-2024-1825</td>
-       <td>2024-02-23 17:15:08 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 17:15:08</td>
        <td>A vulnerability, which was classified as problematic, was found in CodeAstro House Rental Management System 1.0. This affects an unknown part of the component User Registration Page. The manipulation of the argument address with the input <img src="1" onerror="console.log(1)"> leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-254613 was assigned to this vulnerability.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1825">详情</a></td>
       </tr>
@@ -391,7 +415,7 @@
       <tr>
        <td>56ea13d548d8fa29fa485bfdf788fff6</td>
        <td>CVE-2023-51392</td>
-       <td>2024-02-23 17:15:07 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 17:15:07</td>
        <td>Ember ZNet between v7.2.0 and v7.4.0 used software AES-CCM instead of integrated hardware cryptographic accelerators, potentially increasing risk of electromagnetic and differential power analysis sidechannel attacks.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-51392">详情</a></td>
       </tr>
@@ -399,7 +423,7 @@
       <tr>
        <td>ad33e796ae44947a713600f703b5a4b8</td>
        <td>CVE-2024-26150</td>
-       <td>2024-02-23 16:15:48 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:48</td>
        <td>`@backstage/backend-common` is a common functionality library for backends for Backstage, an open platform for building developer portals. In `@backstage/backend-common` prior to versions 0.21.1, 0.20.2, and 0.19.10, paths checks with the `resolveSafeChildPath` utility were not exhaustive enough, leading to risk of path traversal vulnerabilities if symlinks can be injected by attackers. This issue is patched in `@backstage/backend-common` versions 0.21.1, 0.20.2, and 0.19.10.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-26150">详情</a></td>
       </tr>
@@ -407,7 +431,7 @@
       <tr>
        <td>be6d551f744835946998a7219c67f895</td>
        <td>CVE-2024-1824</td>
-       <td>2024-02-23 16:15:48 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:48</td>
        <td>A vulnerability, which was classified as critical, has been found in CodeAstro House Rental Management System 1.0. Affected by this issue is some unknown functionality of the file signing.php. The manipulation of the argument uname/password leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-254612.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1824">详情</a></td>
       </tr>
@@ -415,7 +439,7 @@
       <tr>
        <td>5e24a7c124f3418627295d9222b83500</td>
        <td>CVE-2024-1823</td>
-       <td>2024-02-23 16:15:48 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:48</td>
        <td>A vulnerability classified as critical was found in CodeAstro Simple Voting System 1.0. Affected by this vulnerability is an unknown functionality of the file users.php of the component Backend. The manipulation leads to improper access controls. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-254611.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1823">详情</a></td>
       </tr>
@@ -423,7 +447,7 @@
       <tr>
        <td>bffb1850509bf03cb97fefe7c5b83687</td>
        <td>CVE-2024-1822</td>
-       <td>2024-02-23 16:15:47 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:47</td>
        <td>A vulnerability classified as problematic has been found in PHPGurukul Tourism Management System 1.0. Affected is an unknown function of the file user-bookings.php. The manipulation of the argument Full Name leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-254610 is the identifier assigned to this vulnerability.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1822">详情</a></td>
       </tr>
@@ -431,7 +455,7 @@
       <tr>
        <td>4571101982628b560ac359d9fed57057</td>
        <td>CVE-2024-1821</td>
-       <td>2024-02-23 16:15:47 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:47</td>
        <td>A vulnerability was found in code-projects Crime Reporting System 1.0. It has been rated as critical. This issue affects some unknown processing of the file police_add.php. The manipulation of the argument police_name/police_id/police_spec/password leads to sql injection. The exploit has been disclosed to the public and may be used. The identifier VDB-254609 was assigned to this vulnerability.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1821">详情</a></td>
       </tr>
@@ -439,7 +463,7 @@
       <tr>
        <td>75508d355027c666c98c0eea80a9b34e</td>
        <td>CVE-2024-1820</td>
-       <td>2024-02-23 16:15:47 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 16:15:47</td>
        <td>A vulnerability was found in code-projects Crime Reporting System 1.0. It has been declared as critical. This vulnerability affects unknown code of the file inchargelogin.php. The manipulation of the argument email/password leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-254608.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1820">详情</a></td>
       </tr>
@@ -498,30 +522,6 @@
        <td>2024-02-22 19:15:09</td>
        <td>An issue in flvmeta v.1.2.2 allows a local attacker to cause a denial of service via the flvmeta/src/flv.c:375:21 function in flv_close.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25385">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a4770c76867b938e81ac939fb06bbfb4</td>
-       <td>CVE-2024-25130</td>
-       <td>2024-02-22 19:15:08</td>
-       <td>Tuleap is an open source suite to improve management of software developments and collaboration. Prior to version 15.5.99.76 of Tuleap Community Edition and prior to versions 15.5-4 and 15.4-7 of Tuleap Enterprise Edition, users with a read access to a tracker where the mass update feature is used might get access to restricted information. Tuleap Community Edition 15.5.99.76, Tuleap Enterprise Edition 15.5-4, and Tuleap Enterprise Edition 15.4-7 contain a patch for this issue.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25130">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>887296b79ffe8fbe2f8fbdf283a99d76</td>
-       <td>CVE-2024-25129</td>
-       <td>2024-02-22 19:15:08</td>
-       <td>The CodeQL CLI repo holds binaries for the CodeQL command line interface (CLI). Prior to version 2.16.3, an XML parser used by the CodeQL CLI to read various auxiliary files is vulnerable to an XML External Entity attack. If a vulnerable version of the CLI is used to process either a maliciously modified CodeQL database, or a specially prepared set of QL query sources, the CLI can be made to make an outgoing HTTP request to an URL that contains material read from a local file chosen by the attacker. This may result in a loss of privacy of exfiltration of secrets. Security researchers and QL authors who receive databases or QL source files from untrusted sources may be impacted. A single untrusted `.ql` or `.qll` file cannot be affected, but a zip archive or tarball containing QL sources may unpack auxiliary files that will trigger an attack when CodeQL sees them in the file system. Those using CodeQL for routine analysis of source trees with a preselected set of trusted queries are not affected. In particular, extracting XML files from a source tree into the CodeQL database does not make one vulnerable. The problem is fixed in release 2.16.3 of the CodeQL CLI. Other than upgrading, workarounds include not accepting CodeQL databases or queries from untrusted sources, or only processing such material on a machine without an Internet connection. Customers who use older releases of CodeQL for security scanning in an automated CI system and cannot upgrade for compliance reasons can continue using that version. That use case is safe. If such customers have a private query pack and use the `codeql pack create` command to precompile them before using them in the CI system, they should be using the production CodeQL release to run `codeql pack create`. That command is safe as long as the QL source it precompiled is trusted. All other development of the query pack should use an upgraded CLI.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25129">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f2eaa4c0536ce4835fbb01d24d1c48c0</td>
-       <td>CVE-2024-22547</td>
-       <td>2024-02-22 19:15:08</td>
-       <td>WayOS IBR-7150 <17.06.23 is vulnerable to Cross Site Scripting (XSS).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-22547">详情</a></td>
       </tr>
 
      </tbody>
@@ -1975,7 +1975,7 @@
       <tr>
        <td>602b668838f330dc75e26735a625502d</td>
        <td>CVE-2022-29262</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Intel Server Board BIOS Firmware缓冲区溢出漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90762">详情</a></td>
       </tr>
@@ -1983,7 +1983,7 @@
       <tr>
        <td>7892b925aa8ace0a5968eda6a74e9ca1</td>
        <td>CVE-2023-44248</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiEDR访问控制错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90761">详情</a></td>
       </tr>
@@ -1991,7 +1991,7 @@
       <tr>
        <td>c4e0f173e60db4d1b44a81dcb7d995b7</td>
        <td>CVE-2023-45582</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiMail身份认证错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90760">详情</a></td>
       </tr>
@@ -1999,7 +1999,7 @@
       <tr>
        <td>ab26b78785db5203ec0871a97d8c7a5e</td>
        <td>CVE-2023-42783</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiWLM路径遍历漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90759">详情</a></td>
       </tr>
@@ -2007,7 +2007,7 @@
       <tr>
        <td>846016d38ce5d85dabfc9739023cf711</td>
        <td>CVE-2023-41840</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiClient不受信搜索路径漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90758">详情</a></td>
       </tr>
@@ -2015,7 +2015,7 @@
       <tr>
        <td>2bacc0c50e220d39256fc2d496025324</td>
        <td>CVE-2023-41676</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiSIEM信息泄露漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90757">详情</a></td>
       </tr>
@@ -2023,7 +2023,7 @@
       <tr>
        <td>06b9e58f2d98fe817102cb4b04e440e9</td>
        <td>CVE-2023-36633</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiMail授权错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90756">详情</a></td>
       </tr>
@@ -2031,7 +2031,7 @@
       <tr>
        <td>3bc2611e133547b0d3a56fc74e90d7ce</td>
        <td>CVE-2023-36641</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiProxy和FortiOS数值截断错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90755">详情</a></td>
       </tr>
@@ -2039,7 +2039,7 @@
       <tr>
        <td>a7d0cf942bab17ae57fb2562592edd05</td>
        <td>CVE-2023-36553</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiSIEM操作系统命令注入漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90754">详情</a></td>
       </tr>
@@ -2047,7 +2047,7 @@
       <tr>
        <td>b36cd41a09d31a84550e6b5a1cb62ea0</td>
        <td>CVE-2023-34991</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiWLM SQL注入漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90753">详情</a></td>
       </tr>
@@ -2055,7 +2055,7 @@
       <tr>
        <td>16a4843e27791694b051d01ae5b06abe</td>
        <td>CVE-2023-28002</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiProxy和FortiOS完整性检查值验证错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90752">详情</a></td>
       </tr>
@@ -2063,7 +2063,7 @@
       <tr>
        <td>120bec4a3f5569a830cd324eba98aee3</td>
        <td>CVE-2023-33304</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiClient硬编码凭据使用漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90751">详情</a></td>
       </tr>
@@ -2071,7 +2071,7 @@
       <tr>
        <td>b4cd40bafb7dc438d00e9c9809743bfb</td>
        <td>CVE-2023-6111</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Linux Kernel内存错误引用漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90750">详情</a></td>
       </tr>
@@ -2079,7 +2079,7 @@
       <tr>
        <td>6e0fa27c0d7dd182b1a7febdab52290d</td>
        <td>CVE-2023-26205</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Fortinet FortiADC访问控制错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90749">详情</a></td>
       </tr>
@@ -2087,7 +2087,7 @@
       <tr>
        <td>b2144541809cb327e7a0c09a7f1f18f5</td>
        <td>CVE-2023-46601</td>
-       <td>2024-02-23 09:21:25 <img src="imgs/new.gif" /></td>
+       <td>2024-02-23 09:21:25</td>
        <td>Siemens COMOS访问控制错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/90748">详情</a></td>
       </tr>
