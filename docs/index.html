@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-03-08 23:23:01 -->
+<!-- RELEASE TIME : 2024-03-09 01:17:50 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,9 +285,89 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>0bb6b86a87b4b436c66ef7e9a56b3f02</td>
+       <td>CVE-2023-32264</td>
+       <td>2024-03-08 21:15:06 <img src="imgs/new.gif" /></td>
+       <td>CWE-1385 vulnerability in OpenText Documentum D2 affecting versions16.5.1 to CE 23.2. The vulnerability could allow upload arbitrary code and execute it on the client's computer.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-32264">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0f13caeb50eb6935982375c68a48b69d</td>
+       <td>CVE-2024-2339</td>
+       <td>2024-03-08 20:15:46 <img src="imgs/new.gif" /></td>
+       <td>PostgreSQL Anonymizer v1.2 contains a vulnerability that allows a user who owns a table to elevate to superuser. A user can define a masking function for a column and place malicious code in that function. When a privileged user applies the masking rules using the static masking or the anonymous dump method, the malicious code is executed and can grant escalated privileges to the malicious user. PostgreSQL Anonymizer v1.2 does provide a protection against this risk with the restrict_to_trusted_schemas option, but that protection is incomplete. Users that don't own a table, especially masked users cannot exploit this vulnerability. The problem is resolved in v1.3.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2339">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5f61571643a0a8502b8ee5a2f2464ba9</td>
+       <td>CVE-2024-2338</td>
+       <td>2024-03-08 20:15:45 <img src="imgs/new.gif" /></td>
+       <td>PostgreSQL Anonymizer v1.2 contains a SQL injection vulnerability that allows a user who owns a table to elevate to superuser when dynamic masking is enabled. PostgreSQL Anonymizer enables users to set security labels on tables to mask specified columns. There is a flaw that allows complex expressions to be provided as a value. This expression is then later used as it to create the masked views leading to SQL Injection. If dynamic masking is enabled, this will lead to privilege escalation to superuser after the label is created. Users that don't own a table, especially masked users cannot exploit this vulnerability. The problem is resolved in v1.3.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2338">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>968b5997044c506b853ea1f7f76580f0</td>
+       <td>CVE-2022-43855</td>
+       <td>2024-03-08 18:15:48 <img src="imgs/new.gif" /></td>
+       <td>IBM SPSS Statistics 26.0, 27.0.1, and 28.0 could allow a local user to create multiple files that could exhaust the file handles capacity and cause a denial of service. IBM X-Force ID: 230235.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2022-43855">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c6ffe0c96c1ac3e96e52ef8eeb05fa54</td>
+       <td>CVE-2024-21901</td>
+       <td>2024-03-08 17:15:23 <img src="imgs/new.gif" /></td>
+       <td>A SQL injection vulnerability has been reported to affect myQNAPcloud. If exploited, the vulnerability could allow authenticated administrators to inject malicious code via a network. We have already fixed the vulnerability in the following versions: myQNAPcloud 1.0.52 ( 2023/11/24 ) and later QTS 4.5.4.2627 build 20231225 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21901">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>839b35f73137874fad7c1bea310660c0</td>
+       <td>CVE-2024-21900</td>
+       <td>2024-03-08 17:15:22 <img src="imgs/new.gif" /></td>
+       <td>An injection vulnerability has been reported to affect several QNAP operating system versions. If exploited, the vulnerability could allow authenticated users to execute commands via a network. We have already fixed the vulnerability in the following versions: QTS 5.1.3.2578 build 20231110 and later QuTS hero h5.1.3.2578 build 20231110 and later QuTScloud c5.1.5.2651 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21900">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5ef65a838951ed7d41460d987aa2e1f3</td>
+       <td>CVE-2024-21899</td>
+       <td>2024-03-08 17:15:22 <img src="imgs/new.gif" /></td>
+       <td>An improper authentication vulnerability has been reported to affect several QNAP operating system versions. If exploited, the vulnerability could allow users to compromise the security of the system via a network. We have already fixed the vulnerability in the following versions: QTS 5.1.3.2578 build 20231110 and later QTS 4.5.4.2627 build 20231225 and later QuTS hero h5.1.3.2578 build 20231110 and later QuTS hero h4.5.4.2626 build 20231225 and later QuTScloud c5.1.5.2651 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21899">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>044aa3fd5f9922c2cf1bd1db16a6a032</td>
+       <td>CVE-2023-47221</td>
+       <td>2024-03-08 17:15:22 <img src="imgs/new.gif" /></td>
+       <td>A path traversal vulnerability has been reported to affect Photo Station. If exploited, the vulnerability could allow authenticated administrators to read the contents of unexpected files and expose sensitive data via a network. We have already fixed the vulnerability in the following version: Photo Station 6.4.2 ( 2023/12/15 ) and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47221">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>10358e6b04c0e803ee5a415306f57d15</td>
+       <td>CVE-2023-34980</td>
+       <td>2024-03-08 17:15:22 <img src="imgs/new.gif" /></td>
+       <td>An OS command injection vulnerability has been reported to affect several QNAP operating system versions. If exploited, the vulnerability could allow authenticated administrators to execute commands via a network. We have already fixed the vulnerability in the following versions: QTS 4.5.4.2627 build 20231225 and later QuTS hero h4.5.4.2626 build 20231225 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-34980">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e743e265de1c061983e3791b03592b7b</td>
+       <td>CVE-2023-32969</td>
+       <td>2024-03-08 17:15:21 <img src="imgs/new.gif" /></td>
+       <td>A cross-site scripting (XSS) vulnerability has been reported to affect Network & Virtual Switch. If exploited, the vulnerability could allow authenticated administrators to inject malicious code via a network. We have already fixed the vulnerability in the following versions: QuTScloud c5.1.5.2651 and later QTS 5.1.4.2596 build 20231128 and later QuTS hero h5.1.4.2596 build 20231128 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-32969">详情</a></td>
+      </tr>
+
+      <tr>
        <td>0537b98aec6bbb0bab47810d126902ad</td>
        <td>CVE-2023-47691</td>
-       <td>2024-03-07 14:15:46 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 14:15:46</td>
        <td>Missing Authorization vulnerability in Podlove Podlove Web Player.This issue affects Podlove Web Player: from n/a through 5.7.3.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-47691">详情</a></td>
       </tr>
@@ -295,7 +375,7 @@
       <tr>
        <td>3860e721e3e256b94bef5f36af77f05d</td>
        <td>CVE-2023-42661</td>
-       <td>2024-03-07 14:15:46 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 14:15:46</td>
        <td>JFrog Artifactory prior to version 7.76.2 is vulnerable to Arbitrary File Write of untrusted data, which may lead to DoS or Remote Code Execution when a specially crafted series of requests is sent by an authenticated user. This is due to insufficient validation of artifacts.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-42661">详情</a></td>
       </tr>
@@ -303,7 +383,7 @@
       <tr>
        <td>8954807484e8ae260e5478030e4584bc</td>
        <td>CVE-2023-42509</td>
-       <td>2024-03-07 14:15:46 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 14:15:46</td>
        <td>JFrog Artifactory later than version 7.17.4 but prior to version 7.77.0 is vulnerable to an issue whereby a sequence of improperly handled exceptions in repository configuration initialization steps may lead to exposure of sensitive data.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-42509">详情</a></td>
       </tr>
@@ -311,7 +391,7 @@
       <tr>
        <td>af4e8a6df3c3365549c7e7724f3fbf48</td>
        <td>CVE-2024-2245</td>
-       <td>2024-03-07 13:15:07 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 13:15:07</td>
        <td>Cross-Site Scripting vulnerability in moziloCMS version 2.0. By sending a POST request to the '/install.php' endpoint, a JavaScript payload could be executed in the 'username' parameter.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2245">详情</a></td>
       </tr>
@@ -319,7 +399,7 @@
       <tr>
        <td>94d10c883b2d9b8c7775d2db80e89247</td>
        <td>CVE-2024-2241</td>
-       <td>2024-03-07 13:15:07 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 13:15:07</td>
        <td>Improper access control in the user interface in Devolutions Workspace 2024.1.0 and earlier allows an authenticated user to perform unintended actions via specific permissions</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2241">详情</a></td>
       </tr>
@@ -327,7 +407,7 @@
       <tr>
        <td>48d0f2bccdedc74099f530c59db08f1a</td>
        <td>CVE-2024-0818</td>
-       <td>2024-03-07 13:15:07 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 13:15:07</td>
        <td>confirmed</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-0818">详情</a></td>
       </tr>
@@ -335,7 +415,7 @@
       <tr>
        <td>e6a55f3d471e165d5315fad8e7121dbf</td>
        <td>CVE-2024-28230</td>
-       <td>2024-03-07 12:15:47 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 12:15:47</td>
        <td>In JetBrains YouTrack before 2024.1.25893 attaching/detaching workflow to a project was possible without project admin permissions</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28230">详情</a></td>
       </tr>
@@ -343,7 +423,7 @@
       <tr>
        <td>8bc662c4fe8bc31a4ea175160d885279</td>
        <td>CVE-2024-28229</td>
-       <td>2024-03-07 12:15:47 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 12:15:47</td>
        <td>In JetBrains YouTrack before 2024.1.25893 user without appropriate permissions could restore issues and articles</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28229">详情</a></td>
       </tr>
@@ -351,7 +431,7 @@
       <tr>
        <td>c8be9c868a87e971805c84a37edd3641</td>
        <td>CVE-2024-28228</td>
-       <td>2024-03-07 12:15:46 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 12:15:46</td>
        <td>In JetBrains YouTrack before 2024.1.25893 creation comments on behalf of an arbitrary user in HelpDesk was possible</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28228">详情</a></td>
       </tr>
@@ -359,7 +439,7 @@
       <tr>
        <td>9f0523fed1f182ffe7f7a34b01cd0d72</td>
        <td>CVE-2024-1170</td>
-       <td>2024-03-07 11:15:07 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 11:15:07</td>
        <td>The Post Form – Registration Form – Profile Form for User Profiles – Frontend Content Forms for User Submissions (UGC) plugin for WordPress is vulnerable to unauthorized media file deletion due to a missing capability check on the handle_deleted_media function in all versions up to, and including, 2.8.7. This makes it possible for unauthenticated attackers to delete arbitrary media files.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1170">详情</a></td>
       </tr>
@@ -442,86 +522,6 @@
        <td>2024-03-06 19:15:08</td>
        <td>go-zero is a web and rpc framework. Go-zero allows user to specify a CORS Filter with a configurable allows param - which is an array of domains allowed in CORS policy. However, the `isOriginAllowed` uses `strings.HasSuffix` to check the origin, which leads to bypass via a malicious domain. This vulnerability is capable of breaking CORS policy and thus allowing any page to make requests and/or retrieve data on behalf of other users. Version 1.4.4 fixes this issue.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27302">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a12e6709f2372fba2bedeb76e6ee98f1</td>
-       <td>CVE-2024-27289</td>
-       <td>2024-03-06 19:15:08</td>
-       <td>pgx is a PostgreSQL driver and toolkit for Go. Prior to version 4.18.2, SQL injection can occur when all of the following conditions are met: the non-default simple protocol is used; a placeholder for a numeric value must be immediately preceded by a minus; there must be a second placeholder for a string value after the first placeholder; both must be on the same line; and both parameter values must be user-controlled. The problem is resolved in v4.18.2. As a workaround, do not use the simple protocol or do not place a minus directly before a placeholder.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27289">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1bde3a0016dbe1bffed80582b4a87f29</td>
-       <td>CVE-2024-2173</td>
-       <td>2024-03-06 19:15:08</td>
-       <td>Out of bounds memory access in V8 in Google Chrome prior to 122.0.6261.111 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2173">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>881f070e95c767cf158ee51c5fb3fecc</td>
-       <td>CVE-2024-27288</td>
-       <td>2024-03-06 19:15:07</td>
-       <td>1Panel is an open source Linux server operation and maintenance management panel. Prior to version 1.10.1-lts, users can use Burp to obtain unauthorized access to the console page. The vulnerability has been fixed in v1.10.1-lts. There are no known workarounds.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27288">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fa72333eeec3853c565bbd783727f727</td>
-       <td>CVE-2024-27287</td>
-       <td>2024-03-06 19:15:07</td>
-       <td>ESPHome is a system to control your ESP8266/ESP32 for Home Automation systems. Starting in version 2023.12.9 and prior to version 2024.2.2, editing the configuration file API in dashboard component of ESPHome version 2023.12.9 (command line installation and Home Assistant add-on) serves unsanitized data with `Content-Type: text/html; charset=UTF-8`, allowing a remote authenticated user to inject arbitrary web script and exfiltrate session cookies via Cross-Site scripting. It is possible for a malicious authenticated user to inject arbitrary Javascript in configuration files using a POST request to the /edit endpoint, the configuration parameter allows to specify the file to write. To trigger the XSS vulnerability, the victim must visit the page` /edit?configuration=[xss file]`. Abusing this vulnerability a malicious actor could perform operations on the dashboard on the behalf of a logged user, access sensitive information, create, edit and delete configuration files and flash firmware on managed boards. In addition to this, cookies are not correctly secured, allowing the exfiltration of session cookie values. Version 2024.2.2 contains a patch for this issue.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-27287">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>98af55805385d19566f4abc70c0dd3e6</td>
-       <td>CVE-2024-25111</td>
-       <td>2024-03-06 19:15:07</td>
-       <td>Squid is a web proxy cache. Starting in version 3.5.27 and prior to version 6.8, Squid may be vulnerable to a Denial of Service attack against HTTP Chunked decoder due to an uncontrolled recursion bug. This problem allows a remote attacker to cause Denial of Service when sending a crafted, chunked, encoded HTTP Message. This bug is fixed in Squid version 6.8. In addition, patches addressing this problem for the stable releases can be found in Squid's patch archives. There is no workaround for this issue.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25111">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>76fe749e528b0e0ba03347d2879ef0d0</td>
-       <td>CVE-2024-25858</td>
-       <td>2024-03-05 21:15:09</td>
-       <td>In Foxit PDF Reader before 2024.1 and PDF Editor before 2024.1, code execution via JavaScript could occur because of an unoptimized prompt message for users to review parameters of commands.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25858">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c7582ee4f5d6421d0d4b5f101909241c</td>
-       <td>CVE-2024-2179</td>
-       <td>2024-03-05 21:15:09</td>
-       <td>Concrete CMS version 9 before 9.2.7 is vulnerable to Stored XSS via the Name field of a Group type since there is insufficient validation of administrator provided data for that field. A rogue administrator could inject malicious code into the Name field which might be executed when users visit the affected page. The Concrete CMS security team gave this vulnerability a CVSS v3.1 score of 2.2 with a vector of AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N Concrete versions below 9 do not include group types so they are not affected by this vulnerability. Thanks Luca Fuda for reporting.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2179">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c01f995d91e3d4add2ffe5dcf5720d77</td>
-       <td>CVE-2024-25616</td>
-       <td>2024-03-05 21:15:08</td>
-       <td>Aruba has identified certain configurations of ArubaOS that can lead to partial disclosure of sensitive information in the IKE_AUTH negotiation process. The scenarios in which disclosure of potentially sensitive information can occur are complex, and depend on factors beyond the control of attackers.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25616">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4c64d1c8ff764f6a383dc6c3838eecd1</td>
-       <td>CVE-2024-25615</td>
-       <td>2024-03-05 21:15:08</td>
-       <td>An unauthenticated Denial-of-Service (DoS) vulnerability exists in the Spectrum service accessed via the PAPI protocol in ArubaOS 8.x. Successful exploitation of this vulnerability results in the ability to interrupt the normal operation of the affected service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25615">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d2ba4c9f567c010245c39bd0260ab3e7</td>
-       <td>CVE-2024-25614</td>
-       <td>2024-03-05 21:15:08</td>
-       <td>There is an arbitrary file deletion vulnerability in the CLI used by ArubaOS. Successful exploitation of this vulnerability results in the ability to delete arbitrary files on the underlying operating system, which could lead to denial-of-service conditions and impact the integrity of the controller.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25614">详情</a></td>
       </tr>
 
      </tbody>
@@ -2095,7 +2095,7 @@
       <tr>
        <td>3960340b5c16c358132edd0a94178647</td>
        <td>CVE-2023-43076</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Dell PowerScale OneFS拒绝服务漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91250">详情</a></td>
       </tr>
@@ -2103,7 +2103,7 @@
       <tr>
        <td>d49d4d58f044486082b752f62d7d42d3</td>
        <td>CVE-2023-5920</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Mattermost Desktop for MacOS信息泄露漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91249">详情</a></td>
       </tr>
@@ -2111,7 +2111,7 @@
       <tr>
        <td>cce946c4c12d419aae9e6679f2da4818</td>
        <td>CVE-2023-5178</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Linux Kernel内存错误引用漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91248">详情</a></td>
       </tr>
@@ -2119,7 +2119,7 @@
       <tr>
        <td>e30114125bb55f09f8af5dfb9c41cf53</td>
        <td>CVE-2023-46595</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>AlgoSec FireFlow跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91247">详情</a></td>
       </tr>
@@ -2127,7 +2127,7 @@
       <tr>
        <td>d8954fff0941fad81f336198c5a11f42</td>
        <td>CVE-2023-5876</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Mattermost Desktop for MacOS不受控制的资源消耗漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91246">详情</a></td>
       </tr>
@@ -2135,7 +2135,7 @@
       <tr>
        <td>0995fcf957e7952e067db4265b49ce03</td>
        <td>CVE-2023-5875</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Mattermost Desktop for MacOS保护机制错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91245">详情</a></td>
       </tr>
@@ -2143,7 +2143,7 @@
       <tr>
        <td>aecec7b0089178d738ab25e8c9f763a7</td>
        <td>CVE-2023-45019</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Online Bus Booking System SQL注入漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91244">详情</a></td>
       </tr>
@@ -2151,7 +2151,7 @@
       <tr>
        <td>fbf6d16fb813095bb8ae0b0e5aee42a3</td>
        <td>CVE-2023-3164</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>LibTIFF堆缓冲区溢出漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91243">详情</a></td>
       </tr>
@@ -2159,7 +2159,7 @@
       <tr>
        <td>758f3b97d966904ebd44c30f8140644b</td>
        <td>CVE-2023-5408</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Red Hat OpenShif权限管理错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91242">详情</a></td>
       </tr>
@@ -2167,7 +2167,7 @@
       <tr>
        <td>c0f38af3a625c1a3d0099df51e6b29cb</td>
        <td>CVE-2023-45018</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Online Bus Booking System SQL注入漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91241">详情</a></td>
       </tr>
@@ -2175,7 +2175,7 @@
       <tr>
        <td>8a02463727011534c202ecb45f04538f</td>
        <td>CVE-2023-20031</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Cisco Firepower Threat Defense拒绝服务漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91240">详情</a></td>
       </tr>
@@ -2183,7 +2183,7 @@
       <tr>
        <td>d454d7c03032845f66f1f4eed84cbd5d</td>
        <td>CVE-2023-46695</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Django拒绝服务漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91239">详情</a></td>
       </tr>
@@ -2191,7 +2191,7 @@
       <tr>
        <td>3a16c2ec191ac225ce71ac604357b3dd</td>
        <td>CVE-2023-43087</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Dell PowerScale OneFS异常情况处理错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91238">详情</a></td>
       </tr>
@@ -2199,7 +2199,7 @@
       <tr>
        <td>e02c870254280616d565ad736a443fb7</td>
        <td>CVE-2023-20048</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Cisco Firepower Management Center权限管理错误漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91237">详情</a></td>
       </tr>
@@ -2207,7 +2207,7 @@
       <tr>
        <td>c2b821400252b3dfd463d36ce179cb7b</td>
        <td>CVE-2023-20063</td>
-       <td>2024-03-07 09:20:51 <img src="imgs/new.gif" /></td>
+       <td>2024-03-07 09:20:51</td>
        <td>Cisco Firepower Threat Defense和Management Center代码注入漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/91236">详情</a></td>
       </tr>
