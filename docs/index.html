@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-05-24 11:22:25 -->
+<!-- RELEASE TIME : 2024-05-24 17:27:39 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>54bab2a36410d7fcc7530eac17a4fef6</td>
+       <td>CVE-2024-35618</td>
+       <td>2024-05-24 15:15:24 <img src="imgs/new.gif" /></td>
+       <td>PingCAP TiDB v7.5.1 was discovered to contain a NULL pointer dereference via the component SortedRowContainer.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35618">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>65af4ab5521a977955ce8e80391b0887</td>
+       <td>CVE-2024-35340</td>
+       <td>2024-05-24 15:15:24 <img src="imgs/new.gif" /></td>
+       <td>Tenda FH1206 V1.2.0.8(8155) was discovered to contain a command injection vulnerability via the cmdinput parameter at ip/goform/formexeCommand.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35340">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>942800735a01fe88dfa69af2e32c1a67</td>
+       <td>CVE-2024-35339</td>
+       <td>2024-05-24 15:15:24 <img src="imgs/new.gif" /></td>
+       <td>Tenda FH1206 V1.2.0.8(8155) was discovered to contain a command injection vulnerability via the mac parameter at ip/goform/WriteFacMac.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35339">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>722dd54d08cc5e3a95339bb7e47bc792</td>
+       <td>CVE-2024-33809</td>
+       <td>2024-05-24 15:15:24 <img src="imgs/new.gif" /></td>
+       <td>PingCAP TiDB v7.5.1 was discovered to contain a buffer overflow vulnerability, which could lead to database crashes and denial of service attacks.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33809">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b88558ee0323ee23f0cfc62398c0a268</td>
+       <td>CVE-2024-33470</td>
+       <td>2024-05-24 15:15:23 <img src="imgs/new.gif" /></td>
+       <td>An issue in the SMTP Email Settings of AVTECH Room Alert 4E v4.4.0 allows attackers to gain access to credentials in plaintext via a passback attack. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33470">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>cec3c94f2e5d4b96c5a756ab6bcc8d8c</td>
+       <td>CVE-2024-31510</td>
+       <td>2024-05-24 15:15:23 <img src="imgs/new.gif" /></td>
+       <td>An issue in Open Quantum Safe liboqs v.10.0 allows a remote attacker to escalate privileges via the crypto_sign_signature parameter in the /pqcrystals-dilithium-standard_ml-dsa-44-ipd_avx2/sign.c component.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-31510">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c519161d468261c9d83db48b2d78cdd5</td>
+       <td>CVE-2024-22588</td>
+       <td>2024-05-24 15:15:23 <img src="imgs/new.gif" /></td>
+       <td>Kwik commit 745fd4e2 does not discard unused encryption keys.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-22588">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d966fc4d3a469b3f98fe82495bd83a77</td>
+       <td>CVE-2021-47572</td>
+       <td>2024-05-24 15:15:22 <img src="imgs/new.gif" /></td>
+       <td>In the Linux kernel, the following vulnerability has been resolved: net: nexthop: fix null pointer dereference when IPv6 is not enabled When we try to add an IPv6 nexthop and IPv6 is not enabled (!CONFIG_IPV6) we'll hit a NULL pointer dereference[1] in the error path of nh_create_ipv6() due to calling ipv6_stub->fib6_nh_release. The bug has been present since the beginning of IPv6 nexthop gateway support. Commit 1aefd3de7bc6 ("ipv6: Add fib6_nh_init and release to stubs") tells us that only fib6_nh_init has a dummy stub because fib6_nh_release should not be called if fib6_nh_init returns an error, but the commit below added a call to ipv6_stub->fib6_nh_release in its error path. To fix it return the dummy stub's -EAFNOSUPPORT error directly without calling ipv6_stub->fib6_nh_release in nh_create_ipv6()'s error path. [1] Output is a bit truncated, but it clearly shows the error. BUG: kernel NULL pointer dereference, address: 000000000000000000 #PF: supervisor instruction fetch in kernel modede #PF: error_code(0x0010) - not-present pagege PGD 0 P4D 0 Oops: 0010 [#1] PREEMPT SMP NOPTI CPU: 4 PID: 638 Comm: ip Kdump: loaded Not tainted 5.16.0-rc1+ #446 Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.14.0-4.fc34 04/01/2014 RIP: 0010:0x0 Code: Unable to access opcode bytes at RIP 0xffffffffffffffd6. RSP: 0018:ffff888109f5b8f0 EFLAGS: 00010286^Ac RAX: 0000000000000000 RBX: ffff888109f5ba28 RCX: 0000000000000000 RDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff8881008a2860 RBP: ffff888109f5b9d8 R08: 0000000000000000 R09: 0000000000000000 R10: ffff888109f5b978 R11: ffff888109f5b948 R12: 00000000ffffff9f R13: ffff8881008a2a80 R14: ffff8881008a2860 R15: ffff8881008a2840 FS: 00007f98de70f100(0000) GS:ffff88822bf00000(0000) knlGS:0000000000000000 CS: 0010 DS: 0000 ES: 0000 CR0: 0000000080050033 CR2: ffffffffffffffd6 CR3: 0000000100efc000 CR4: 00000000000006e0 Call Trace: <TASK> nh_create_ipv6+0xed/0x10c rtm_new_nexthop+0x6d7/0x13f3 ? check_preemption_disabled+0x3d/0xf2 ? lock_is_held_type+0xbe/0xfd rtnetlink_rcv_msg+0x23f/0x26a ? check_preemption_disabled+0x3d/0xf2 ? rtnl_calcit.isra.0+0x147/0x147 netlink_rcv_skb+0x61/0xb2 netlink_unicast+0x100/0x187 netlink_sendmsg+0x37f/0x3a0 ? netlink_unicast+0x187/0x187 sock_sendmsg_nosec+0x67/0x9b ____sys_sendmsg+0x19d/0x1f9 ? copy_msghdr_from_user+0x4c/0x5e ? rcu_read_lock_any_held+0x2a/0x78 ___sys_sendmsg+0x6c/0x8c ? asm_sysvec_apic_timer_interrupt+0x12/0x20 ? lockdep_hardirqs_on+0xd9/0x102 ? sockfd_lookup_light+0x69/0x99 __sys_sendmsg+0x50/0x6e do_syscall_64+0xcb/0xf2 entry_SYSCALL_64_after_hwframe+0x44/0xae RIP: 0033:0x7f98dea28914 Code: 00 f7 d8 64 89 02 48 c7 c0 ff ff ff ff eb b5 0f 1f 80 00 00 00 00 48 8d 05 e9 5d 0c 00 8b 00 85 c0 75 13 b8 2e 00 00 00 0f 05 <48> 3d 00 f0 ff ff 77 54 c3 0f 1f 00 41 54 41 89 d4 55 48 89 f5 53 RSP: 002b:00007fff859f5e68 EFLAGS: 00000246 ORIG_RAX: 000000000000002e2e RAX: ffffffffffffffda RBX: 00000000619cb810 RCX: 00007f98dea28914 RDX: 0000000000000000 RSI: 00007fff859f5ed0 RDI: 0000000000000003 RBP: 0000000000000000 R08: 0000000000000001 R09: 0000000000000008 R10: fffffffffffffce6 R11: 0000000000000246 R12: 0000000000000001 R13: 000055c0097ae520 R14: 000055c0097957fd R15: 00007fff859f63a0 </TASK> Modules linked in: bridge stp llc bonding virtio_net</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2021-47572">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2f4298b754046d75b54f6c23beb4a44c</td>
+       <td>CVE-2021-47571</td>
+       <td>2024-05-24 15:15:22 <img src="imgs/new.gif" /></td>
+       <td>In the Linux kernel, the following vulnerability has been resolved: staging: rtl8192e: Fix use after free in _rtl92e_pci_disconnect() The free_rtllib() function frees the "dev" pointer so there is use after free on the next line. Re-arrange things to avoid that.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2021-47571">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ecf581cf281a64a57445d2af72657632</td>
+       <td>CVE-2021-47570</td>
+       <td>2024-05-24 15:15:22 <img src="imgs/new.gif" /></td>
+       <td>In the Linux kernel, the following vulnerability has been resolved: staging: r8188eu: fix a memory leak in rtw_wx_read32() Free "ptmp" before returning -EINVAL.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2021-47570">详情</a></td>
+      </tr>
+
+      <tr>
        <td>63980e84e9a6a05782ca50d4b3984f28</td>
        <td>CVE-2024-5315</td>
        <td>2024-05-24 10:15:11 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-05-23 17:15:30 <img src="imgs/new.gif" /></td>
        <td>LuckyFrameWeb v3.5.2 was discovered to contain an arbitrary file deletion vulnerability via the fileName parameter in the fileDownload method.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35081">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>246b67011ccbf949b51bffe9222cd19b</td>
-       <td>CVE-2024-5165</td>
-       <td>2024-05-23 10:15:10 <img src="imgs/new.gif" /></td>
-       <td>In Eclipse Ditto versions 3.0.0 to 3.5.5, the user input of several input fields of the Eclipse Ditto Explorer User Interface https://eclipse.dev/ditto/user-interface.html was not properly neutralized and thus vulnerable to both Reflected and Stored XSS (Cross Site Scripting). Several inputs were not persisted at the backend of Eclipse Ditto, but only in local browser storage to save settings of "environments" of the UI and e.g. the last performed "search queries", resulting in a "Reflected XSS" vulnerability. However, several other inputs were persisted at the backend of Eclipse Ditto, leading to a "Stored XSS" vulnerability. Those mean that authenticated and authorized users at Eclipse Ditto can persist Things in Ditto which can - when being displayed by other users also being authorized to see those Things in the Eclipse Ditto UI - cause scripts to be executed in the browser of other users.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5165">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6d57b4eac8f6755e76a28a46fd4f4552</td>
-       <td>CVE-2024-4779</td>
-       <td>2024-05-23 10:15:09 <img src="imgs/new.gif" /></td>
-       <td>The Unlimited Elements For Elementor (Free Widgets, Addons, Templates) plugin for WordPress is vulnerable to SQL Injection via the ‘data[post_ids][0]’ parameter in all versions up to, and including, 1.5.107 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-4779">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6bcfd2bbab7992d9bcb2ce1da8f71311</td>
-       <td>CVE-2024-2861</td>
-       <td>2024-05-23 10:15:09 <img src="imgs/new.gif" /></td>
-       <td>The ProfilePress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ProfilePress User Panel widget in all versions up to, and including, 4.15.8 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-2861">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>eb575c54d5faaa3488b12dd37087042d</td>
-       <td>CVE-2024-5264</td>
-       <td>2024-05-23 09:15:10 <img src="imgs/new.gif" /></td>
-       <td>Network Transfer with AES KHT in Thales Luna EFT 2.1 and above allows a user with administrative console access to access backups taken via offline analysis</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5264">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>34ce8efa2e732247a1c8c0bb010080b5</td>
-       <td>CVE-2024-35223</td>
-       <td>2024-05-23 09:15:09 <img src="imgs/new.gif" /></td>
-       <td>Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge. Dapr sends the app token of the invoker app instead of the app token of the invoked app. This causes of a leak of the application token of the invoker app to the invoked app when using Dapr as a gRPC proxy for remote service invocation. This vulnerability impacts Dapr users who use Dapr as a gRPC proxy for remote service invocation as well as the Dapr App API token functionality. An attacker could exploit this vulnerability to gain access to the app token of the invoker app, potentially compromising security and authentication mechanisms. This vulnerability was patched in version 1.13.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35223">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ff2b61015056d648e003d93e248bd310</td>
-       <td>CVE-2024-35186</td>
-       <td>2024-05-23 09:15:09 <img src="imgs/new.gif" /></td>
-       <td>gitoxide is a pure Rust implementation of Git. During checkout, `gix-worktree-state` does not verify that paths point to locations in the working tree. A specially crafted repository can, when cloned, place new files anywhere writable by the application. This vulnerability leads to a major loss of confidentiality, integrity, and availability, but creating files outside a working tree without attempting to execute code can directly impact integrity as well. This vulnerability has been patched in version(s) 0.36.0.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35186">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>089d072f5224ae5604dca8ff444565b0</td>
-       <td>CVE-2024-32969</td>
-       <td>2024-05-23 09:15:09 <img src="imgs/new.gif" /></td>
-       <td>vantage6 is an open-source infrastructure for privacy preserving analysis. Collaboration administrators can add extra organizations to their collaboration that can extend their influence. For example, organizations that they include can then create new users for which they know the passwords, and use that to read task results of other collaborations that that organization is involved in. This is only relatively trusted users - with access to manage a collaboration - are able to do this, which reduces the impact. This vulnerability was patched in version 4.5.0rc3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-32969">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>894d5d9161dea6df0d1bbf00cdbde0d6</td>
-       <td>CVE-2024-30280</td>
-       <td>2024-05-23 09:15:09 <img src="imgs/new.gif" /></td>
-       <td>Acrobat Reader versions 20.005.30574, 24.002.20736 and earlier are affected by an out-of-bounds read vulnerability when parsing a crafted file, which could result in a read past the end of an allocated memory structure. An attacker could leverage this vulnerability to execute code in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-30280">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2ce48c355a261b41ae64d9c8d853914d</td>
-       <td>CVE-2024-30279</td>
-       <td>2024-05-23 09:15:08 <img src="imgs/new.gif" /></td>
-       <td>Acrobat Reader versions 20.005.30574, 24.002.20736 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-30279">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0da7eddf13c3953739e9d3661472af76</td>
-       <td>CVE-2024-4706</td>
-       <td>2024-05-23 08:15:08 <img src="imgs/new.gif" /></td>
-       <td>The WordPress + Microsoft Office 365 / Azure AD | LOGIN plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'pintra' shortcode in all versions up to, and including, 27.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-4706">详情</a></td>
       </tr>
 
      </tbody>
