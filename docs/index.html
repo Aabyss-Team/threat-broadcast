@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-06-13 15:26:18 -->
+<!-- RELEASE TIME : 2024-06-13 19:20:15 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>4a3da1489b45f7928de61d5fb62f57b0</td>
+       <td>CVE-2024-37306</td>
+       <td>2024-06-13 15:15:53 <img src="imgs/new.gif" /></td>
+       <td>Computer Vision Annotation Tool (CVAT) is an interactive video and image annotation tool for computer vision. Starting in version 2.2.0 and prior to version 2.14.3, if an attacker can trick a logged-in CVAT user into visiting a malicious URL, they can initiate a dataset export or a backup from a project, task or job that the victim user has permission to export into a cloud storage that the victim user has access to. The name of the resulting file can be chosen by the attacker. This implies that the attacker can overwrite arbitrary files in any cloud storage that the victim can access and, if the attacker has read access to the cloud storage used in the attack, they can obtain media files, annotations, settings and other information from any projects, tasks or jobs that the victim has permission to export. Version 2.14.3 contains a fix for the issue. No known workarounds are available.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37306">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>1c5af1febc36fa95a41460672ed654b5</td>
+       <td>CVE-2024-37164</td>
+       <td>2024-06-13 15:15:52 <img src="imgs/new.gif" /></td>
+       <td>Computer Vision Annotation Tool (CVAT) is an interactive video and image annotation tool for computer vision. CVAT allows users to supply custom endpoint URLs for cloud storages based on Amazon S3 and Azure Blob Storage. Starting in version 2.1.0 and prior to version 2.14.3, an attacker with a CVAT account can exploit this feature by specifying URLs whose host part is an intranet IP address or an internal domain name. By doing this, the attacker may be able to probe the network that the CVAT backend runs in for HTTP(S) servers. In addition, if there is a web server on this network that is sufficiently API-compatible with an Amazon S3 or Azure Blob Storage endpoint, and either allows anonymous access, or allows authentication with credentials that are known by the attacker, then the attacker may be able to create a cloud storage linked to this server. They may then be able to list files on the server; extract files from the server, if these files are of a type that CVAT supports reading from cloud storage (media data (such as images/videos/archives), importable annotations or datasets, task/project backups); and/or overwrite files on this server with exported annotations/datasets/backups. The exact capabilities of the attacker will depend on how the internal server is configured. Users should upgrade to CVAT 2.14.3 to receive a patch. In this release, the existing SSRF mitigation measures are applied to requests to cloud providers, with access to intranet IP addresses prohibited by default. Some workarounds are also available. One may use network security solutions such as virtual networks or firewalls to prohibit network access from the CVAT backend to unrelated servers on your internal network and/or require authentication for access to internal servers.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37164">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7e456c472e9f1526766a35a5252e5e90</td>
+       <td>CVE-2024-37131</td>
+       <td>2024-06-13 15:15:52 <img src="imgs/new.gif" /></td>
+       <td>SCG Policy Manager, all versions, contains an overly permissive Cross-Origin Resource Policy (CORP) vulnerability. A remote unauthenticated attacker could potentially exploit this vulnerability, leading to the execution of malicious actions on the application in the context of the authenticated user.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37131">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a804dbd9a017a6ee2aa6806d3b834d8e</td>
+       <td>CVE-2024-29168</td>
+       <td>2024-06-13 15:15:52 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.22.00.00, contain a SQL Injection Vulnerability in the SCG UI for an internal assets REST API. A remote authenticated attacker could potentially exploit this vulnerability, leading to the execution of certain SQL commands on the application's backend database causing potential unauthorized access and modification of application data.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-29168">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e84bfe855ca8fd39d171b2237b3adaab</td>
+       <td>CVE-2024-28969</td>
+       <td>2024-06-13 15:15:52 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.24.00.00, contain an Improper Access Control vulnerability in the SCG exposed for an internal update REST API (if enabled by Admin user from UI). A remote low privileged attacker could potentially exploit this vulnerability, leading to the execution of certain APIs applicable only for Admin Users on the application's backend database that could potentially allow an unauthorized user access to restricted resources.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28969">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ceb186d21b31d6512b2971b4394dbe04</td>
+       <td>CVE-2024-28968</td>
+       <td>2024-06-13 15:15:51 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.24.00.00, contain an Improper Access Control vulnerability in the SCG exposed for internal email and collection settings REST APIs (if enabled by Admin user from UI). A remote low privileged attacker could potentially exploit this vulnerability, leading to the execution of certain APIs applicable only for Admin Users on the application's backend database that could potentially allow an unauthorized user access to restricted resources and change of state.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28968">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d06ffbd712cafa6723e5817c872d8d3b</td>
+       <td>CVE-2024-28967</td>
+       <td>2024-06-13 15:15:51 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.24.00.00, contain an Improper Access Control vulnerability in the SCG exposed for an internal maintenance REST API (if enabled by Admin user from UI). A remote low privileged attacker could potentially exploit this vulnerability, leading to the execution of certain APIs applicable only for Admin Users on the application's backend database that could potentially allow an unauthorized user access to restricted resources and change of state.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28967">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a9a0155a4910e0f363468858f2954392</td>
+       <td>CVE-2024-28966</td>
+       <td>2024-06-13 15:15:51 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.24.00.00, contain an Improper Access Control vulnerability in the SCG exposed for an internal update REST API (if enabled by Admin user from UI). A remote low privileged attacker could potentially exploit this vulnerability, leading to the execution of certain APIs applicable only for Admin Users on the application's backend database that could potentially allow an unauthorized user access to restricted resources and change of state.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28966">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>74814c8b298571513be033ab42615d0e</td>
+       <td>CVE-2024-28965</td>
+       <td>2024-06-13 15:15:51 <img src="imgs/new.gif" /></td>
+       <td>Dell SCG, versions prior to 5.24.00.00, contain an Improper Access Control vulnerability in the SCG exposed for an internal enable REST API (if enabled by Admin user from UI). A remote low privileged attacker could potentially exploit this vulnerability, leading to the execution of certain Internal APIs applicable only for Admin Users on the application's backend database that could potentially allow an unauthorized user access to restricted resources and change of state.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28965">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2619d0a706eea354c651abab20812c12</td>
+       <td>CVE-2021-4237</td>
+       <td>2024-06-13 15:15:50 <img src="imgs/new.gif" /></td>
+       <td>Rejected reason: reserved but not needed</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2021-4237">详情</a></td>
+      </tr>
+
+      <tr>
        <td>cd6930e6f700fc8b8012b8d3d6690d24</td>
        <td>CVE-2024-5927</td>
        <td>2024-06-13 11:15:48 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-06-12 19:15:51 <img src="imgs/new.gif" /></td>
        <td>Vault and Vault Enterprise did not properly validate the JSON Web Token (JWT) role-bound audience claim when using the Vault JWT auth method. This may have resulted in Vault validating a JWT the audience and role-bound claims do not match, allowing an invalid login to succeed when it should have been rejected. This vulnerability, CVE-2024-5798, was fixed in Vault and Vault Enterprise 1.17.0, 1.16.3, and 1.15.9</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5798">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>50962c6423c92d79bf3eb91d622eef4d</td>
-       <td>CVE-2024-5702</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>Memory corruption in the networking stack could have led to a potentially exploitable crash. This vulnerability affects Firefox < 125 and Firefox ESR < 115.12.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5702">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>15c7dd82cba467fcb1f0e9ab76220e7d</td>
-       <td>CVE-2024-5701</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>Memory safety bugs present in Firefox 126. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5701">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b474ad87d2a1c8b10f9a1328b81972cf</td>
-       <td>CVE-2024-5700</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>Memory safety bugs present in Firefox 126, Firefox ESR 115.11, and Thunderbird 115.11. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5700">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>08a289b0f9252f3445659e081a6bc76c</td>
-       <td>CVE-2024-5699</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>In violation of spec, cookie prefixes such as `__Secure` were being ignored if they were not correctly capitalized - by spec they should be checked with a case-insensitive comparison. This could have resulted in the browser not correctly honoring the behaviors specified by the prefix. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5699">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8096e402c0b5868a1de8a0c06a68cf49</td>
-       <td>CVE-2024-5698</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>By manipulating the fullscreen feature while opening a data-list, an attacker could have overlaid a text box over the address bar. This could have led to user confusion and possible spoofing attacks. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5698">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>57d6749782d9051bff0310e5357b9c6e</td>
-       <td>CVE-2024-5697</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>A website was able to detect when a user took a screenshot of a page using the built-in Screenshot functionality in Firefox. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5697">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2c7dbb56713db3fd0fbf4cb514840637</td>
-       <td>CVE-2024-5696</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>By manipulating the text in an `&lt;input&gt;` tag, an attacker could have caused corrupt memory leading to a potentially exploitable crash. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5696">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>88af31d92ceac08939afd9155664db84</td>
-       <td>CVE-2024-5695</td>
-       <td>2024-06-11 13:15:51</td>
-       <td>If an out-of-memory condition occurs at a specific point using allocations in the probabilistic heap checker, an assertion could have been triggered, and in rarer situations, memory corruption could have occurred. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5695">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>954e493bb68a7c450adeafb91fc39bf0</td>
-       <td>CVE-2024-5694</td>
-       <td>2024-06-11 13:15:50</td>
-       <td>An attacker could have caused a use-after-free in the JavaScript engine to read memory in the JavaScript string section of the heap. This vulnerability affects Firefox < 127.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5694">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2baae96bfaca3dfcc04d0652cd7e3891</td>
-       <td>CVE-2024-5693</td>
-       <td>2024-06-11 13:15:50</td>
-       <td>Offscreen Canvas did not properly track cross-origin tainting, which could be used to access image data from another site in violation of same-origin policy. This vulnerability affects Firefox < 127 and Firefox ESR < 115.12.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5693">详情</a></td>
       </tr>
 
      </tbody>
