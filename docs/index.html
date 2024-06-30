@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-06-30 17:25:12 -->
+<!-- RELEASE TIME : 2024-06-30 21:24:25 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,62 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>c471d502cd5db88f83ff496bcdb81aa0</td>
+       <td>CVE-2024-35119</td>
+       <td>2024-06-30 17:15:03 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 could allow a remote attacker to obtain sensitive information when a detailed technical error message is returned in a stack trace. This information could be used in further attacks against the system. IBM X-Force ID: 290342.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35119">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>aa6fd912d0b542a61e5b23af4cbd64b3</td>
+       <td>CVE-2024-31902</td>
+       <td>2024-06-30 17:15:02 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 is vulnerable to cross-site request forgery which could allow an attacker to execute malicious and unauthorized actions transmitted from a user that the website trusts. IBM X-Force ID: 289234.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-31902">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>dd1f83522d698106b8be438344986dd4</td>
+       <td>CVE-2024-28798</td>
+       <td>2024-06-30 17:15:02 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 is vulnerable to stored cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session. IBM X-Force ID: 287172.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28798">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>522a2dcf88ece5c4b7d33e18a7d25bb3</td>
+       <td>CVE-2023-50954</td>
+       <td>2024-06-30 17:15:02 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 returns sensitive information in URL information that could be used in further attacks against the system. IBM X-Force ID: 275776.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-50954">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a211a848e7c4095555a40dd5bab41c3f</td>
+       <td>CVE-2024-5062</td>
+       <td>2024-06-30 16:15:03 <img src="imgs/new.gif" /></td>
+       <td>A reflected Cross-Site Scripting (XSS) vulnerability was identified in zenml-io/zenml version 0.57.1. The vulnerability exists due to improper neutralization of input during web page generation, specifically within the survey redirect parameter. This flaw allows an attacker to redirect users to a specified URL after completing a survey, without proper validation of the 'redirect' parameter. Consequently, an attacker can execute arbitrary JavaScript code in the context of the user's browser session. This vulnerability could be exploited to steal cookies, potentially leading to account takeover.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5062">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>720c71976c910f1ec5725f83d56bfb71</td>
+       <td>CVE-2024-28795</td>
+       <td>2024-06-30 16:15:02 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 is vulnerable to cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session. IBM X-Force ID: 286832.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-28795">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f766b54ca0a64748f3d409a56387b138</td>
+       <td>CVE-2023-35022</td>
+       <td>2024-06-30 16:15:02 <img src="imgs/new.gif" /></td>
+       <td>IBM InfoSphere Information Server 11.7 could allow a local user to update projects that they do not have the authorization to access. IBM X-Force ID: 258254.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-35022">详情</a></td>
+      </tr>
+
+      <tr>
        <td>04948b47c2c5cf6ca5b263a13d52b8fb</td>
        <td>CVE-2024-6415</td>
        <td>2024-06-30 04:15:02 <img src="imgs/new.gif" /></td>
@@ -466,62 +522,6 @@
        <td>2024-06-28 22:15:03</td>
        <td>ZKsync Era is a layer 2 rollup that uses zero-knowledge proofs to scale Ethereum. There is possible invalid stack access due to the addresses used to access the stack not properly being converted to cells. This issue has been patched in version 1.5.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-38533">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>890b825dc35427ce84a7fddf5dfac118</td>
-       <td>CVE-2024-6071</td>
-       <td>2024-06-27 23:15:50</td>
-       <td>PTC Creo Elements/Direct License Server exposes a web interface which can be used by unauthenticated remote attackers to execute arbitrary OS commands on the server.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6071">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8b37e15063ac7d2b199d6d9b92839942</td>
-       <td>CVE-2016-20022</td>
-       <td>2024-06-27 23:15:50</td>
-       <td>In the Linux kernel before 4.8, usb_parse_endpoint in drivers/usb/core/config.c does not validate the wMaxPacketSize field of an endpoint descriptor. NOTE: This vulnerability only affects products that are no longer supported by the supplier.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2016-20022">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>55a8fee18fa0de29b9725891e8b0a72b</td>
-       <td>CVE-2024-4395</td>
-       <td>2024-06-27 22:15:10</td>
-       <td>The XPC service within the audit functionality of Jamf Compliance Editor before version 1.3.1 on macOS can lead to local privilege escalation.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-4395">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ec2763e814e5506406af94052703912b</td>
-       <td>CVE-2024-39705</td>
-       <td>2024-06-27 22:15:10</td>
-       <td>NLTK through 3.8.1 allows remote code execution if untrusted packages have pickled Python code, and the integrated data package download functionality is used. This affects, for example, averaged_perceptron_tagger and punkt.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39705">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ca3537a7b08fa041ed58e5c76443c06b</td>
-       <td>CVE-2024-36059</td>
-       <td>2024-06-27 22:15:10</td>
-       <td>Directory Traversal vulnerability in Kalkitech ASE ASE61850 IEDSmart upto and including version 2.3.5 allows attackers to read/write arbitrary files via the IEC61850 File Transfer protocol.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-36059">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fc08fa4778d462db16b7d8656603d54d</td>
-       <td>CVE-2023-52892</td>
-       <td>2024-06-27 22:15:10</td>
-       <td>In phpseclib before 1.0.22, 2.x before 2.0.46, and 3.x before 3.0.33, some characters in Subject Alternative Name fields in TLS certificates are incorrectly allowed to have a special meaning in regular expressions (such as a + wildcard), leading to name confusion in X.509 certificate host verification.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-52892">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2922f9667bac457d49f423c41be93e11</td>
-       <td>CVE-2024-5642</td>
-       <td>2024-06-27 21:15:16</td>
-       <td>CPython 3.9 and earlier doesn't disallow configuring an empty list ("[]") for SSLContext.set_npn_protocols() which is an invalid value for the underlying OpenSSL API. This results in a buffer over-read when NPN is used (see CVE-2024-5535 for OpenSSL). This vulnerability is of low severity due to NPN being not widely used and specifying an empty list likely being uncommon in-practice (typically a protocol name would be configured).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5642">详情</a></td>
       </tr>
 
      </tbody>
