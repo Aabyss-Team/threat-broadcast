@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-07-05 23:24:08 -->
+<!-- RELEASE TIME : 2024-07-06 15:26:27 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>e5eaa9a99ff3e71e953bed8c6500c770</td>
+       <td>CVE-2024-39486</td>
+       <td>2024-07-06 10:15:03 <img src="imgs/new.gif" /></td>
+       <td>In the Linux kernel, the following vulnerability has been resolved: drm/drm_file: Fix pid refcounting race filp->pid is supposed to be a refcounted pointer; however, before this patch, drm_file_update_pid() only increments the refcount of a struct pid after storing a pointer to it in filp->pid and dropping the dev->filelist_mutex, making the following race possible: process A process B ========= ========= begin drm_file_update_pid mutex_lock(&dev->filelist_mutex) rcu_replace_pointer(filp->pid, <pid B>, 1) mutex_unlock(&dev->filelist_mutex) begin drm_file_update_pid mutex_lock(&dev->filelist_mutex) rcu_replace_pointer(filp->pid, <pid A>, 1) mutex_unlock(&dev->filelist_mutex) get_pid(<pid A>) synchronize_rcu() put_pid(<pid B>) *** pid B reaches refcount 0 and is freed here *** get_pid(<pid B>) *** UAF *** synchronize_rcu() put_pid(<pid A>) As far as I know, this race can only occur with CONFIG_PREEMPT_RCU=y because it requires RCU to detect a quiescent state in code that is not explicitly calling into the scheduler. This race leads to use-after-free of a "struct pid". It is probably somewhat hard to hit because process A has to pass through a synchronize_rcu() operation while process B is between mutex_unlock() and get_pid(). Fix it by ensuring that by the time a pointer to the current task's pid is stored in the file, an extra reference to the pid has been taken. This fix also removes the condition for synchronize_rcu(); I think that optimization is unnecessary complexity, since in that case we would usually have bailed out on the lockless check above.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39486">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4b46ed80d99f7928d5b1a60dc6edc018</td>
+       <td>CVE-2024-37260</td>
+       <td>2024-07-06 10:15:03 <img src="imgs/new.gif" /></td>
+       <td>Server-Side Request Forgery (SSRF) vulnerability in Theme-Ruby Foxiz.This issue affects Foxiz: from n/a through 2.3.5.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37260">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c49314b3c4d81a4b10b98dd0845a2e00</td>
+       <td>CVE-2024-37234</td>
+       <td>2024-07-06 10:15:02 <img src="imgs/new.gif" /></td>
+       <td>URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Kodezen Limited Academy LMS.This issue affects Academy LMS: from n/a through 2.0.4.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37234">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>6c8ab36a79de8f5edda7f0d8dfb98855</td>
+       <td>CVE-2024-37208</td>
+       <td>2024-07-06 10:15:01 <img src="imgs/new.gif" /></td>
+       <td>Server-Side Request Forgery (SSRF) vulnerability in Robert Macchi WP Scraper.This issue affects WP Scraper: from n/a through 5.7.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-37208">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>98e88d0ed8a33e856b9294c2435624d4</td>
+       <td>CVE-2024-5616</td>
+       <td>2024-07-06 09:15:02 <img src="imgs/new.gif" /></td>
+       <td>A Cross-Site Request Forgery (CSRF) vulnerability exists in mudler/LocalAI versions up to and including 2.15.0, which allows attackers to trick victims into deleting installed models. By crafting a malicious HTML page, an attacker can cause the deletion of a model, such as 'gpt-4-vision-preview', without the victim's consent. The vulnerability is due to insufficient CSRF protection mechanisms on the model deletion functionality.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5616">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>61b24074a3e1b94655a5968d0b4d3beb</td>
+       <td>CVE-2024-40594</td>
+       <td>2024-07-06 05:15:09 <img src="imgs/new.gif" /></td>
+       <td>The OpenAI ChatGPT app before 2024-07-05 for macOS opts out of the sandbox, and stores conversations in cleartext in a location accessible to other apps.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-40594">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3e3ede06473f0f89655c8240db4d00b7</td>
+       <td>CVE-2024-39182</td>
+       <td>2024-07-05 23:15:10 <img src="imgs/new.gif" /></td>
+       <td>An information disclosure vulnerability in ISPmanager v6.98.0 allows attackers to access sensitive details of the root user's session via an arbitrary command (ISP6-1779).</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39182">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c08ac807ce4a1dc5c17d5912f0bbb03e</td>
+       <td>CVE-2024-33862</td>
+       <td>2024-07-05 23:15:10 <img src="imgs/new.gif" /></td>
+       <td>A buffer-management vulnerability in OPC Foundation OPCFoundation.NetStandard.Opc.Ua.Core before 1.05.374.54 could allow remote attackers to exhaust memory resources. It is triggered when the system receives an excessive number of messages from a remote source. This could potentially lead to a denial of service (DoS) condition, disrupting the normal operation of the system.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33862">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b33d3000851757735f955d6f3cc4d361</td>
+       <td>CVE-2024-5753</td>
+       <td>2024-07-05 20:15:02 <img src="imgs/new.gif" /></td>
+       <td>vanna-ai/vanna version v0.3.4 is vulnerable to SQL injection in some file-critical functions such as `pg_read_file()`. This vulnerability allows unauthenticated remote users to read arbitrary local files on the victim server, including sensitive files like `/etc/passwd`, by exploiting the exposed SQL queries via a Python Flask API.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5753">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f8ce98ea74e0338efd1dc21b192608a5</td>
+       <td>CVE-2024-39696</td>
+       <td>2024-07-05 19:15:10 <img src="imgs/new.gif" /></td>
+       <td>Evmos is a decentralized Ethereum Virtual Machine chain on the Cosmos Network. Prior to version 19.0.0, a user can create a vesting account with a 3rd party account (EOA or contract) as funder. Then, this user can create an authorization for the contract.CallerAddress, this is the authorization checked in the code. But the funds are taken from the funder address provided in the message. Consequently, the user can fund a vesting account with a 3rd party account without its permission. The funder address can be any address, so this vulnerability can be used to drain all the accounts in the chain. The issue has been patched in version 19.0.0.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39696">详情</a></td>
+      </tr>
+
+      <tr>
        <td>7b4eecbbd268cfd9d3f0e92162dd37dd</td>
        <td>CVE-2024-6523</td>
        <td>2024-07-05 11:15:10 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>c868b3e5e84d93cd46a2745b336f5d87</td>
        <td>CVE-2024-32754</td>
-       <td>2024-07-04 11:15:10 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 11:15:10</td>
        <td>Under certain circumstances, when the controller is in factory reset mode waiting for initial setup, it will broadcast its MAC address, serial number, and firmware version. Once configured, the controller will no longer broadcast this information.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-32754">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>cf645c1829d1fc3c11864460d54edd60</td>
        <td>CVE-2024-6434</td>
-       <td>2024-07-04 09:15:05 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:05</td>
        <td>The Premium Addons for Elementor plugin for WordPress is vulnerable to Regular Expression Denial of Service (ReDoS) in all versions up to, and including, 4.10.35. This is due to processing user-supplied input as a regular expression. This makes it possible for authenticated attackers, with Author-level access and above, to create and query a malicious post title, resulting in slowing server resources.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6434">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>07c1cc9c02de00146662a1343efca653</td>
        <td>CVE-2024-6319</td>
-       <td>2024-07-04 09:15:05 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:05</td>
        <td>The IMGspider plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'upload' function in all versions up to, and including, 2.3.10. This makes it possible for authenticated attackers, with contributor-level and above permissions, to upload arbitrary files on the affected site's server which may make remote code execution possible.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6319">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>69aba7fb2b964cbbc4378eed4af97975</td>
        <td>CVE-2024-6318</td>
-       <td>2024-07-04 09:15:04 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:04</td>
        <td>The IMGspider plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'upload_img_file' function in all versions up to, and including, 2.3.10. This makes it possible for authenticated attackers, with contributor-level and above permissions, to upload arbitrary files on the affected site's server which may make remote code execution possible.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6318">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>0f74a744c49c0f852083d193b06db28f</td>
        <td>CVE-2024-39884</td>
-       <td>2024-07-04 09:15:04 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:04</td>
        <td>A regression in the core of Apache HTTP Server 2.4.60 ignores some use of the legacy content-type based configuration of handlers. "AddType" and similar configuration, under some circumstances where files are requested indirectly, result in source code disclosure of local content. For example, PHP scripts may be served instead of interpreted. Users are recommended to upgrade to version 2.4.61, which fixes this issue.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39884">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>1ccf4b4ab9d0d5fe34ada8f0055e37f3</td>
        <td>CVE-2024-3904</td>
-       <td>2024-07-04 09:15:04 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:04</td>
        <td>Incorrect Default Permissions vulnerability in Smart Device Communication Gateway preinstalled on MELIPC Series MI5122-VW firmware versions "05" to "07" allows a local attacker to execute arbitrary code by saving a malicious file to a specific folder. As a result, the attacker may disclose, tamper with, destroy or delete information in the product, or cause a denial-of-service (DoS) condition on the product.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-3904">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>7710813ae322944216a6703fba85d33f</td>
        <td>CVE-2024-1574</td>
-       <td>2024-07-04 09:15:03 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:03</td>
        <td>Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability in the licensing feature of ICONICS GENESIS64 versions 10.97 to 10.97.2, Mitsubishi Electric GENESIS64 versions 10.97 to 10.97.2 and Mitsubishi Electric MC Works64 all versions allows a local attacker to execute a malicious code with administrative privileges by tampering with a specific file that is not protected by the system.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1574">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>7bce6b2d67a1bf98b9af818f7b160cad</td>
        <td>CVE-2024-1573</td>
-       <td>2024-07-04 09:15:03 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:03</td>
        <td>Improper Authentication vulnerability in the mobile monitoring feature of ICONICS GENESIS64 versions 10.97 to 10.97.2, Mitsubishi Electric GENESIS64 versions 10.97 to 10.97.2 and Mitsubishi Electric MC Works64 all versions allows a remote unauthenticated attacker to bypass proper authentication and log in to the system when all of the following conditions are met: * Active Directory is used in the security setting. * “Automatic log in” option is enabled in the security setting. * The IcoAnyGlass IIS Application Pool is running under an Active Directory Domain Account. * The IcoAnyGlass IIS Application Pool account is included in GENESIS64TM and MC Works64 Security and has permission to log in.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1573">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>a2a0900e380f304de9fdabf702b074f2</td>
        <td>CVE-2024-1182</td>
-       <td>2024-07-04 09:15:02 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:15:02</td>
        <td>Uncontrolled Search Path Element vulnerability in ICONICS GENESIS64 all versions, Mitsubishi Electric GENESIS64 all versions and Mitsubishi Electric MC Works64 all versions allows a local attacker to execute a malicious code by storing a specially crafted DLL in a specific folder when GENESIS64 and MC Works64 are installed with the Pager agent in the alarm multi-agent notification feature.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-1182">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>914190ea9ed66c1089707147479800af</td>
        <td>CVE-2024-5641</td>
-       <td>2024-07-04 08:15:01 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 08:15:01</td>
        <td>The One Click Order Re-Order plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'ced_ocor_save_general_setting' function in all versions up to, and including, 1.1.9. This makes it possible for authenticated attackers, with Subscriber-level access and above, to change the plugin settings, including adding stored cross-site scripting.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-5641">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5ab87198afdda372a76a80a58f7a4a68</td>
-       <td>CVE-2024-6469</td>
-       <td>2024-07-03 11:15:04</td>
-       <td>A vulnerability was found in playSMS 1.4.3. It has been declared as problematic. Affected by this vulnerability is an unknown functionality of the file /index.php?app=main&inc=feature_firewall&op=firewall_list of the component Template Handler. The manipulation of the argument IP address with the input {{`id`} leads to injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-270277 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6469">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ea7df40427a717ea3f86cd3a43dd805c</td>
-       <td>CVE-2024-6428</td>
-       <td>2024-07-03 09:15:08</td>
-       <td>Mattermost versions 9.8.0, 9.7.x <= 9.7.4, 9.6.x <= 9.6.2, 9.5.x <= 9.5.5 fail to prevent specifying a RemoteId when creating a new user which allows an attacker to specify both a remoteId and the user ID, resulting in creating a user with a user-defined user ID. This can cause some broken functionality in User Management such administrative actions against the user not working.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6428">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1f7f2cded2e8740df20b7096fb6e30a8</td>
-       <td>CVE-2024-39830</td>
-       <td>2024-07-03 09:15:07</td>
-       <td>Mattermost versions 9.8.x <= 9.8.0, 9.7.x <= 9.7.4, 9.6.x <= 9.6.2 and 9.5.x <= 9.5.5, when shared channels are enabled, fail to use constant time comparison for remote cluster tokens which allows an attacker to retrieve the remote cluster token via a timing attack during remote cluster token comparison.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39830">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0aa39f8e1bdb48fafbd03295a54c6b1c</td>
-       <td>CVE-2024-39807</td>
-       <td>2024-07-03 09:15:07</td>
-       <td>Mattermost versions 9.5.x <= 9.5.5 and 9.8.0 fail to properly sanitize the recipients of a webhook event which allows an attacker monitoring webhook events to retrieve the channel IDs of archived or restored channels.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39807">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fe0bfd4cec099045c032ec190adc7565</td>
-       <td>CVE-2024-39361</td>
-       <td>2024-07-03 09:15:06</td>
-       <td>Mattermost versions 9.8.0, 9.7.x <= 9.7.4, 9.6.x <= 9.6.2 and 9.5.x <= 9.5.5 fail to prevent users from specifying a RemoteId for their posts which allows an attacker to specify both a remoteId and the post ID, resulting in creating a post with a user-defined post ID. This can cause some broken functionality in the channel or thread with user-defined posts</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39361">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>bc345fa030f2e43eaa3ece6bfa1212f7</td>
-       <td>CVE-2024-39353</td>
-       <td>2024-07-03 09:15:06</td>
-       <td>Mattermost versions 9.5.x <= 9.5.5 and 9.8.0 fail to sanitize the RemoteClusterFrame payloads before audit logging them which allows a high privileged attacker with access to the audit logs to read message contents.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-39353">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9d66a9a9ca3eab0ad140e08df1b7316b</td>
-       <td>CVE-2024-36257</td>
-       <td>2024-07-03 09:15:06</td>
-       <td>Mattermost versions 9.5.x <= 9.5.5 and 9.8.0, when using shared channels with multiple remote servers connected, fail to check that the remote server A requesting the server B to update the profile picture of a user is the remote that actually has the user as a local one . This allows a malicious remote A to change the profile images of users that belong to another remote server C that is connected to the server A.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-36257">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fe57b1f41b6be71c4793bc162b74593a</td>
-       <td>CVE-2024-6340</td>
-       <td>2024-07-03 08:15:10</td>
-       <td>The Premium Addons for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's Countdown widget in all versions up to, and including, 4.10.35 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6340">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9bfaffacf475506020465479c7ccbf36</td>
-       <td>CVE-2024-6263</td>
-       <td>2024-07-03 08:15:10</td>
-       <td>The WP Lightbox 2 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘title’ parameter in all versions up to, and including, 3.0.6.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6263">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a04e45b662fd7612a1f0aa283f37f6fe</td>
-       <td>CVE-2024-4482</td>
-       <td>2024-07-03 08:15:09</td>
-       <td>The The Plus Addons for Elementor – Elementor Addons, Page Templates, Widgets, Mega Menu, WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'Countdown' widget in all versions up to, and including, 5.6.1 due to insufficient input sanitization and output escaping on user supplied 'text_days' attribute. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-4482">详情</a></td>
       </tr>
 
      </tbody>
@@ -2159,7 +2159,7 @@
       <tr>
        <td>2e57e86790f91b65edf47dd6ecc22f28</td>
        <td>CVE-2024-3244</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress EmbedPress Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/98003">详情</a></td>
       </tr>
@@ -2167,7 +2167,7 @@
       <tr>
        <td>3becf5cb1cd99b8ea6512431b47beb73</td>
        <td>CVE-2024-2311</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Avada Theme跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/98002">详情</a></td>
       </tr>
@@ -2175,7 +2175,7 @@
       <tr>
        <td>835d45b061424c7ff503105f3041d5eb</td>
        <td>CVE-2024-2325</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Link Library Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/98001">详情</a></td>
       </tr>
@@ -2183,7 +2183,7 @@
       <tr>
        <td>8b0f6df7a23fae232da82fd787fc954d</td>
        <td>CVE-2024-2306</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Revslider Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/98000">详情</a></td>
       </tr>
@@ -2191,7 +2191,7 @@
       <tr>
        <td>b83ddf816de57582399e72a6c8ab144c</td>
        <td>CVE-2024-2327</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Global Elementor Buttons Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/97999">详情</a></td>
       </tr>
@@ -2199,7 +2199,7 @@
       <tr>
        <td>7a530b47318d0c794bde62ae9ac191f6</td>
        <td>CVE-2024-2305</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Cards for Beaver Builder Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/97998">详情</a></td>
       </tr>
@@ -2207,7 +2207,7 @@
       <tr>
        <td>81f6678fb5519e6244ad5f47e61cb410</td>
        <td>CVE-2024-3167</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Ocean Extra Plugin跨站脚本漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/97997">详情</a></td>
       </tr>
@@ -2215,7 +2215,7 @@
       <tr>
        <td>d9fa5501f57eaa2ff8f0b6b879c1bbb5</td>
        <td>CVE-2024-2302</td>
-       <td>2024-07-04 09:28:25 <img src="imgs/new.gif" /></td>
+       <td>2024-07-04 09:28:25</td>
        <td>WordPress Easy Digital Downloads Plugin信息泄露漏洞</td>
        <td><a target="_blank" href="http://www.nsfocus.net/vulndb/97996">详情</a></td>
       </tr>
