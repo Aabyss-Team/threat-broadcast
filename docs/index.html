@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-10-09 09:29:34 -->
+<!-- RELEASE TIME : 2024-10-09 19:22:55 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>4b0e3d6ba62b645859b02ee236ddfed6</td>
+       <td>CVE-2024-9675</td>
+       <td>2024-10-09 15:15:17 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was found in Buildah. Cache mounts do not properly validate that user-specified paths for the cache are within our cache directory, allowing a `RUN` instruction in a Container file to mount an arbitrary directory from the host (read/write) into the container as long as those files can be accessed by the user running Buildah.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9675">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7cc2ce445eee380aeefafd320d6e36ea</td>
+       <td>CVE-2024-9671</td>
+       <td>2024-10-09 15:15:17 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was found in 3Scale. There is no auth mechanism to see a PDF invoice of a Developer user if the URL is known. Anyone can see the invoice if the URL is known or guessed.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9671">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>66a0e0f0247a580c96ef0720c2b26e75</td>
+       <td>CVE-2024-8048</td>
+       <td>2024-10-09 15:15:17 <img src="imgs/new.gif" /></td>
+       <td>In Progress Telerik Reporting versions prior to 2024 Q3 (18.2.24.924), a code execution attack is possible using object injection via insecure expression evaluation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8048">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b49ccbb7dc60d5a40c114eb8d749f97a</td>
+       <td>CVE-2024-8015</td>
+       <td>2024-10-09 15:15:17 <img src="imgs/new.gif" /></td>
+       <td>In Progress Telerik Report Server versions prior to 2024 Q3 (10.2.24.924), a remote code execution attack is possible through object injection via an insecure type resolution vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8015">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8cb5affd02ee85bee6e92671e1d7ba96</td>
+       <td>CVE-2024-8014</td>
+       <td>2024-10-09 15:15:16 <img src="imgs/new.gif" /></td>
+       <td>In Progress Telerik Reporting versions prior to 2024 Q3 (18.2.24.924), a code execution attack is possible through object injection via an insecure type resolution vulnerability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8014">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7d2929795cca282b8d51ff29d04e323e</td>
+       <td>CVE-2024-7840</td>
+       <td>2024-10-09 15:15:16 <img src="imgs/new.gif" /></td>
+       <td>In Progress Telerik Reporting versions prior to 2024 Q3 (2024.3.924), a command injection attack is possible through improper neutralization of hyperlink elements.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-7840">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f53bb28287e6047e747a03d247e65973</td>
+       <td>CVE-2024-7294</td>
+       <td>2024-10-09 15:15:16 <img src="imgs/new.gif" /></td>
+       <td>In Progress® Telerik® Report Server versions prior to 2024 Q3 (10.2.24.806), an HTTP DoS attack is possible on anonymous endpoints without rate limiting.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-7294">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e118c55d332902b96be360221d288ebe</td>
+       <td>CVE-2024-7293</td>
+       <td>2024-10-09 15:15:16 <img src="imgs/new.gif" /></td>
+       <td>In Progress® Telerik® Report Server versions prior to 2024 Q3 (10.2.24.806), a password brute forcing attack is possible through weak password requirements.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-7293">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a527326d291d1c4543a041fe01037b2a</td>
+       <td>CVE-2024-7292</td>
+       <td>2024-10-09 15:15:15 <img src="imgs/new.gif" /></td>
+       <td>In Progress® Telerik® Report Server versions prior to 2024 Q3 (10.2.24.806), a credential stuffing attack is possible through improper restriction of excessive login attempts.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-7292">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a3cd5d3170d5bb34afedb2701802eded</td>
+       <td>CVE-2024-47673</td>
+       <td>2024-10-09 15:15:15 <img src="imgs/new.gif" /></td>
+       <td>In the Linux kernel, the following vulnerability has been resolved: wifi: iwlwifi: mvm: pause TCM when the firmware is stopped Not doing so will make us send a host command to the transport while the firmware is not alive, which will trigger a WARNING. bad state = 0 WARNING: CPU: 2 PID: 17434 at drivers/net/wireless/intel/iwlwifi/iwl-trans.c:115 iwl_trans_send_cmd+0x1cb/0x1e0 [iwlwifi] RIP: 0010:iwl_trans_send_cmd+0x1cb/0x1e0 [iwlwifi] Call Trace: <TASK> iwl_mvm_send_cmd+0x40/0xc0 [iwlmvm] iwl_mvm_config_scan+0x198/0x260 [iwlmvm] iwl_mvm_recalc_tcm+0x730/0x11d0 [iwlmvm] iwl_mvm_tcm_work+0x1d/0x30 [iwlmvm] process_one_work+0x29e/0x640 worker_thread+0x2df/0x690 ? rescuer_thread+0x540/0x540 kthread+0x192/0x1e0 ? set_kthread_struct+0x90/0x90 ret_from_fork+0x22/0x30</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47673">详情</a></td>
+      </tr>
+
+      <tr>
        <td>6bc47c319ccf00835524daa978539f65</td>
        <td>CVE-2024-7963</td>
        <td>2024-10-09 02:15:33 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-10-08 10:15:05 <img src="imgs/new.gif" /></td>
        <td>The WooCommerce Multilingual & Multicurrency with WPML plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in all versions up to, and including, 5.3.7. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8629">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>00397b8d0b784bec2f7739c9abc957d3</td>
-       <td>CVE-2024-9292</td>
-       <td>2024-10-08 05:36:26 <img src="imgs/new.gif" /></td>
-       <td>The Bridge Core plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'formforall' shortcode in versions up to, and including, 3.2.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9292">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e5516ecd8eb79b0735f1cc00a04a371c</td>
-       <td>CVE-2024-21533</td>
-       <td>2024-10-08 05:15:14 <img src="imgs/new.gif" /></td>
-       <td>All versions of the package ggit are vulnerable to Arbitrary Argument Injection via the clone() API, which allows specifying the remote URL to clone and the file on disk to clone to. The library does not sanitize for user input or validate a given URL scheme, nor does it properly pass command-line flags to the git binary using the double-dash POSIX characters (--) to communicate the end of options.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21533">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3d59d92ee4520119046e314fe5accedc</td>
-       <td>CVE-2024-21532</td>
-       <td>2024-10-08 05:15:13 <img src="imgs/new.gif" /></td>
-       <td>All versions of the package ggit are vulnerable to Command Injection via the fetchTags(branch) API, which allows user input to specify the branch to be fetched and then concatenates this string along with a git command which is then passed to the unsafe exec() Node.js child process API.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21532">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>16bbd5e5f272ab160e2d52e3faa9b2f1</td>
-       <td>CVE-2024-9026</td>
-       <td>2024-10-08 04:15:11 <img src="imgs/new.gif" /></td>
-       <td>In PHP versions 8.1.* before 8.1.30, 8.2.* before 8.2.24, 8.3.* before 8.3.12, when using PHP-FPM SAPI and it is configured to catch workers output through catch_workers_output = yes, it may be possible to pollute the final log or remove up to 4 characters from the log messages by manipulating log message content. Additionally, if PHP-FPM is configured to use syslog output, it may be possible to further remove log data using the same vulnerability.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9026">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>356e6c84caaa4947b19331fbecca8a42</td>
-       <td>CVE-2024-8927</td>
-       <td>2024-10-08 04:15:10 <img src="imgs/new.gif" /></td>
-       <td>In PHP versions 8.1.* before 8.1.30, 8.2.* before 8.2.24, 8.3.* before 8.3.12, HTTP_REDIRECT_STATUS variable is used to check whether or not CGI binary is being run by the HTTP server. However, in certain scenarios, the content of this variable can be controlled by the request submitter via HTTP headers, which can lead to cgi.force_redirect option not being correctly applied. In certain configurations this may lead to arbitrary file inclusion in PHP.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8927">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6d3c04d2f425744017138518788e0f23</td>
-       <td>CVE-2024-8926</td>
-       <td>2024-10-08 04:15:10 <img src="imgs/new.gif" /></td>
-       <td>In PHP versions 8.1.* before 8.1.30, 8.2.* before 8.2.24, 8.3.* before 8.3.12, when using a certain non-standard configurations of Windows codepages, the fixes for CVE-2024-4577 https://github.com/advisories/GHSA-vxpp-6299-mxw3 may still be bypassed and the same command injection related to Windows "Best Fit" codepage behavior can be achieved. This may allow a malicious user to pass options to PHP binary being run, and thus reveal the source code of scripts, run arbitrary PHP code on the server, etc.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8926">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>601619e02f703d4b4c8b3e7cbbbf705f</td>
-       <td>CVE-2024-8925</td>
-       <td>2024-10-08 04:15:09 <img src="imgs/new.gif" /></td>
-       <td>In PHP versions 8.1.* before 8.1.30, 8.2.* before 8.2.24, 8.3.* before 8.3.12, erroneous parsing of multipart form data contained in an HTTP POST request could lead to legitimate data not being processed. This could lead to malicious attacker able to control part of the submitted data being able to exclude portion of other data, potentially leading to erroneous application behavior.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8925">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ecc7a17d4e840dad5ddbf4ab2e6d3606</td>
-       <td>CVE-2024-47594</td>
-       <td>2024-10-08 04:15:09 <img src="imgs/new.gif" /></td>
-       <td>SAP NetWeaver Enterprise Portal (KMC) does not sufficiently encode user-controlled inputs, resulting in Cross-Site Scripting vulnerability in KMC servlet. An attacker could craft a script and trick the user into clicking it. When a victim who is registered on the portal clicks on such link, confidentiality and integrity of their web browser session could be compromised.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47594">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>df44c380b56a5ac18326ead6ecedb463</td>
-       <td>CVE-2024-45382</td>
-       <td>2024-10-08 04:15:08 <img src="imgs/new.gif" /></td>
-       <td>in OpenHarmony v4.1.0 and prior versions allow a local attacker cause DOS through out-of-bounds write.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-45382">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f7b47b35fa6960b6468cacdf31bd5ec3</td>
-       <td>CVE-2024-45282</td>
-       <td>2024-10-08 04:15:08 <img src="imgs/new.gif" /></td>
-       <td>Fields which are in 'read only' state in Bank Statement Draft in Manage Bank Statements application, could be modified by MERGE method. The property of an OData entity representing assumably immutable method is not protected against external modifications leading to integrity violations. Confidentiality and Availability are not impacted.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-45282">详情</a></td>
       </tr>
 
      </tbody>
