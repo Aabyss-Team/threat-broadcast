@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-10-11 09:28:52 -->
+<!-- RELEASE TIME : 2024-10-11 19:22:42 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>9f4c5e4f9bdeaeb76801955a8f2387a3</td>
+       <td>CVE-2024-6985</td>
+       <td>2024-10-11 15:38:08 <img src="imgs/new.gif" /></td>
+       <td>A path traversal vulnerability exists in the api open_personality_folder endpoint of parisneo/lollms-webui. This vulnerability allows an attacker to read any folder in the personality_folder on the victim's computer, even though sanitize_path is set. The issue arises due to improper sanitization of the personality_folder parameter, which can be exploited to traverse directories and access arbitrary files.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-6985">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>39c3c2adc11ba651f3f5935815f16b78</td>
+       <td>CVE-2024-47509</td>
+       <td>2024-10-11 15:36:33 <img src="imgs/new.gif" /></td>
+       <td>An Allocation of Resources Without Limits or Throttling vulnerability in the PFE management daemon (evo-pfemand) of Juniper Networks Junos OS Evolved allows an authenticated, network-based attacker to cause an FPC crash leading to a Denial of Service (DoS).When specific SNMP GET operations or specific low-priviledged CLI commands are executed, a GUID resource leak will occur, eventually leading to exhaustion and resulting in FPCs to hang. Affected FPCs need to be manually restarted to recover. GUID exhaustion will trigger a syslog message like one of the following: evo-pfemand[<pid>]: get_next_guid: Ran out of Guid Space ... evo-aftmand-zx[<pid>]: get_next_guid: Ran out of Guid Space ... The leak can be monitored by running the following command and taking note of the values in the rightmost column labeled Guids: user@host> show platform application-info allocations app evo-pfemand/evo-pfemand In case one or more of these values are constantly increasing the leak is happening. This issue affects Junos OS Evolved: * All versions before 21.4R2-EVO, * 22.1 versions before 22.1R2-EVO. Please note that this issue is similar to, but different from CVE-2024-47505 and CVE-2024-47508.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47509">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2d8e4b44074fb25820426746456c522f</td>
+       <td>CVE-2024-47508</td>
+       <td>2024-10-11 15:35:58 <img src="imgs/new.gif" /></td>
+       <td>An Allocation of Resources Without Limits or Throttling vulnerability in the PFE management daemon (evo-pfemand) of Juniper Networks Junos OS Evolved allows an authenticated, network-based attacker to cause an FPC crash leading to a Denial of Service (DoS).When specific SNMP GET operations or specific low-priviledged CLI commands are executed, a GUID resource leak will occur, eventually leading to exhaustion and resulting in FPCs to hang. Affected FPCs need to be manually restarted to recover. GUID exhaustion will trigger a syslog message like one of the following: evo-pfemand[<pid>]: get_next_guid: Ran out of Guid Space ... evo-aftmand-zx[<pid>]: get_next_guid: Ran out of Guid Space ... The leak can be monitored by running the following command and taking note of the values in the rightmost column labeled Guids: user@host> show platform application-info allocations app evo-pfemand/evo-pfemand In case one or more of these values are constantly increasing the leak is happening. This issue affects Junos OS Evolved: * All versions before 21.2R3-S8-EVO, * 21.3 versions before 21.3R3-EVO; * 21.4 versions before 22.1R2-EVO, * 22.1 versions before 22.1R1-S1-EVO, 22.1R2-EVO. Please note that this issue is similar to, but different from CVE-2024-47505 and CVE-2024-47509.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47508">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>724644b00bc790b0c906c574f0c371e3</td>
+       <td>CVE-2024-47505</td>
+       <td>2024-10-11 15:35:24 <img src="imgs/new.gif" /></td>
+       <td>An Allocation of Resources Without Limits or Throttling vulnerability in the PFE management daemon (evo-pfemand) of Juniper Networks Junos OS Evolved allows an authenticated, network-based attacker to cause an FPC crash leading to a Denial of Service (DoS).When specific SNMP GET operations or specific low-priviledged CLI commands are executed, a GUID resource leak will occur, eventually leading to exhaustion and resulting in FPCs to hang. Affected FPCs need to be manually restarted to recover. GUID exhaustion will trigger a syslog message like one of the following: evo-pfemand[<pid>]: get_next_guid: Ran out of Guid Space ... evo-aftmand-zx[<pid>]: get_next_guid: Ran out of Guid Space ... The leak can be monitored by running the following command and taking note of the values in the rightmost column labeled Guids: user@host> show platform application-info allocations app evo-pfemand/evo-pfemand In case one or more of these values are constantly increasing the leak is happening. This issue affects Junos OS Evolved: * All versions before 21.4R3-S7-EVO, * 22.1 versions before 22.1R3-S6-EVO, * 22.2 versions before 22.2R3-EVO, * 22.3 versions before 22.3R3-EVO, * 22.4 versions before 22.4R2-EVO. Please note that this issue is similar to, but different from CVE-2024-47508 and CVE-2024-47509.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47505">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7e175e177706c32f5ac10d87fb66c079</td>
+       <td>CVE-2024-8376</td>
+       <td>2024-10-11 15:18:54 <img src="imgs/new.gif" /></td>
+       <td>In Eclipse Mosquitto up to version 2.0.18a, an attacker can achieve memory leaking, segmentation fault or heap-use-after-free by sending specific sequences of "CONNECT", "DISCONNECT", "SUBSCRIBE", "UNSUBSCRIBE" and "PUBLISH" packets.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8376">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e8f3b722eba6a37d211de4fb6f3460fd</td>
+       <td>CVE-2024-33582</td>
+       <td>2024-10-11 15:17:45 <img src="imgs/new.gif" /></td>
+       <td>A DLL hijack vulnerability was reported in Lenovo Service Framework that could allow a local attacker to execute code with elevated privileges.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33582">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bee45b386c594c24dba45dee5300c086</td>
+       <td>CVE-2024-33581</td>
+       <td>2024-10-11 15:17:35 <img src="imgs/new.gif" /></td>
+       <td>A DLL hijack vulnerability was reported in Lenovo PC Manager AI intelligent scenario that could allow a local attacker to execute code with elevated privileges.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33581">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f7a6a3f3c452b7fcec243f360b4410f3</td>
+       <td>CVE-2024-33580</td>
+       <td>2024-10-11 15:17:03 <img src="imgs/new.gif" /></td>
+       <td>A DLL hijack vulnerability was reported in Lenovo Personal Cloud that could allow a local attacker to execute code with elevated privileges.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33580">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8ce945cb9073650bae227404afc1ac0c</td>
+       <td>CVE-2024-33579</td>
+       <td>2024-10-11 15:16:54 <img src="imgs/new.gif" /></td>
+       <td>A DLL hijack vulnerability was reported in Lenovo Baiying that could allow a local attacker to execute code with elevated privileges.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33579">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>cb18a1a829b5e896d059f89ed0ea6506</td>
+       <td>CVE-2024-33578</td>
+       <td>2024-10-11 15:16:44 <img src="imgs/new.gif" /></td>
+       <td>A DLL hijack vulnerability was reported in Lenovo Leyun that could allow a local attacker to execute code with elevated privileges.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-33578">详情</a></td>
+      </tr>
+
+      <tr>
        <td>dfa4a6190fd7db71398cbe165104799f</td>
        <td>CVE-2024-9792</td>
        <td>2024-10-10 15:15:15 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-10-09 15:15:15</td>
        <td>In the Linux kernel, the following vulnerability has been resolved: wifi: iwlwifi: mvm: pause TCM when the firmware is stopped Not doing so will make us send a host command to the transport while the firmware is not alive, which will trigger a WARNING. bad state = 0 WARNING: CPU: 2 PID: 17434 at drivers/net/wireless/intel/iwlwifi/iwl-trans.c:115 iwl_trans_send_cmd+0x1cb/0x1e0 [iwlwifi] RIP: 0010:iwl_trans_send_cmd+0x1cb/0x1e0 [iwlwifi] Call Trace: <TASK> iwl_mvm_send_cmd+0x40/0xc0 [iwlmvm] iwl_mvm_config_scan+0x198/0x260 [iwlmvm] iwl_mvm_recalc_tcm+0x730/0x11d0 [iwlmvm] iwl_mvm_tcm_work+0x1d/0x30 [iwlmvm] process_one_work+0x29e/0x640 worker_thread+0x2df/0x690 ? rescuer_thread+0x540/0x540 kthread+0x192/0x1e0 ? set_kthread_struct+0x90/0x90 ret_from_fork+0x22/0x30</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-47673">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6bc47c319ccf00835524daa978539f65</td>
-       <td>CVE-2024-7963</td>
-       <td>2024-10-09 02:15:33</td>
-       <td>The CMSMasters Content Composer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's multiple shortcodes in all versions up to, and including, 1.8.8 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-7963">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c9c168861c8c8a4b689e9a05a1ba24fa</td>
-       <td>CVE-2024-45179</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>An issue was discovered in za-internet C-MOR Video Surveillance 5.2401 and 6.00PL01. Due to insufficient input validation, the C-MOR web interface is vulnerable to OS command injection attacks. It was found out that different functionality is vulnerable to OS command injection attacks, for example for generating new X.509 certificates, or setting the time zone. These OS command injection vulnerabilities in the script generatesslreq.pml can be exploited as a low-privileged authenticated user to execute commands in the context of the Linux user www-data via shell metacharacters in HTTP POST data (e.g., the city parameter). The OS command injection vulnerability in the script settimezone.pml or setdatetime.pml (e.g., via the year parameter) requires an administrative user for the C-MOR web interface. By also exploiting a privilege-escalation vulnerability, it is possible to execute commands on the C-MOR system with root privileges.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-45179">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f2292e303aab540e996872b9b81c2d04</td>
-       <td>CVE-2024-35288</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>Nitro PDF Pro before 13.70.8.82 and 14.x before 14.26.1.0 allows Local Privilege Escalation in the MSI Installer because custom actions occur unsafely in repair mode. CertUtil is run in a conhost.exe window, and there is a mechanism allowing CTRL+o to launch cmd.exe as NT AUTHORITY\SYSTEM.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-35288">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>dffc5cf2f2d09e3d42f59afedf9b1203</td>
-       <td>CVE-2024-25286</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>3DSecure 2.0 allows CSRF in the Authorization Method via modified Origin and Referer HTTP headers.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25286">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9a4694e5aca13acd42c35ce15ebf7a57</td>
-       <td>CVE-2024-25285</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>3DSecure 2.0 allows form action hijacking via threeDsMethod.jsp?threeDSMethodData= or the threeDSMethodNotificationURL parameter. The destination web site for a form submission can be modified.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25285">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>bc0c57ce10a1c7aa4ba68807b7d9d591</td>
-       <td>CVE-2024-25284</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>3DSecure 2.0 allows reflected XSS in the 3DS Authorization Method via the threeDsMethod.jsp threeDSMethodData parameter.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25284">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fcb13c888d0aea00be85f8b1e51c75cf</td>
-       <td>CVE-2024-25283</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>3DSecure 2.0 allows reflected XSS in the 3DS Authorization Challenge via a modified params parameter in a /rest/online request with a /redirect?action=challenge&txn= substring.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25283">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2cf85602fce07097c765a03ff5ae6b27</td>
-       <td>CVE-2024-25282</td>
-       <td>2024-10-09 00:00:00</td>
-       <td>3DSecure 2.0 allows XSS in its 3DSMethod Authentication via a modified params parameter in a /rest/online request with a /redirect?action=challenge&txn= substring.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-25282">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>dc0cc78297e15da6e70be72e77ea7d4b</td>
-       <td>CVE-2024-9603</td>
-       <td>2024-10-08 23:15:13</td>
-       <td>Type Confusion in V8 in Google Chrome prior to 129.0.6668.100 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9603">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2ca09167dacb79072004eb3b7cb0617c</td>
-       <td>CVE-2024-9602</td>
-       <td>2024-10-08 23:15:12</td>
-       <td>Type Confusion in V8 in Google Chrome prior to 129.0.6668.100 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: High)</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9602">详情</a></td>
       </tr>
 
      </tbody>
