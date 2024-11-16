@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-11-16 07:26:19 -->
+<!-- RELEASE TIME : 2024-11-16 09:26:53 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>b44f471e0082731fc905e8f310d7d799</td>
+       <td>CVE-2024-10614</td>
+       <td>2024-11-16 06:15:07 <img src="imgs/new.gif" /></td>
+       <td>The Customer Reviews for WooCommerce plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the cancel_import() function in all versions up to, and including, 5.61.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to cancel and import or check on the status.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-10614">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8d055b6d14fed56a3a9a044ffb37faa5</td>
+       <td>CVE-2024-8856</td>
+       <td>2024-11-16 05:15:13 <img src="imgs/new.gif" /></td>
+       <td>The Backup and Staging by WP Time Capsule plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the the UploadHandler.php file and no direct file access prevention in all versions up to, and including, 1.22.21. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8856">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>10873207d2cc76e7e059d6313ffb8124</td>
+       <td>CVE-2024-10728</td>
+       <td>2024-11-16 05:15:12 <img src="imgs/new.gif" /></td>
+       <td>The Post Grid Gutenberg Blocks and WordPress Blog Plugin – PostX plugin for WordPress is vulnerable to unauthorized plugin installation/activation due to a missing capability check on the 'install_required_plugin_callback' function in all versions up to, and including, 4.1.16. This makes it possible for authenticated attackers, with Subscriber-level access and above, to install and activate arbitrary plugins which can be leveraged to achieve remote code execution if another vulnerable plugin is installed and activated.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-10728">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bb3f5a856495407f13b418201c1098dc</td>
+       <td>CVE-2024-9938</td>
+       <td>2024-11-16 04:15:08 <img src="imgs/new.gif" /></td>
+       <td>The Bounce Handler MailPoet 3 plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'page' parameter in all versions up to, and including, 1.3.21 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9938">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2e151991dccad3b6a649dc489bd6d70c</td>
+       <td>CVE-2024-9935</td>
+       <td>2024-11-16 04:15:08 <img src="imgs/new.gif" /></td>
+       <td>The PDF Generator Addon for Elementor Page Builder plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 1.7.5 via the rtw_pgaepb_dwnld_pdf() function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9935">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8cfa7d06362c62da007e072fe5ac3f81</td>
+       <td>CVE-2024-9850</td>
+       <td>2024-11-16 04:15:07 <img src="imgs/new.gif" /></td>
+       <td>The SVG Case Study plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9850">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>23c58e7fc2b350e57edd618bf1d77666</td>
+       <td>CVE-2024-9849</td>
+       <td>2024-11-16 04:15:07 <img src="imgs/new.gif" /></td>
+       <td>The 3D FlipBook, PDF Viewer, PDF Embedder – Real 3D FlipBook WordPress Plugin plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'r3dfb_save_thumbnail_callback' function in all versions up to, and including, 4.6. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9849">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5595d8366dc51ca6ed370ea9ef60a873</td>
+       <td>CVE-2024-9839</td>
+       <td>2024-11-16 04:15:07 <img src="imgs/new.gif" /></td>
+       <td>The The Uix Slideshow plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 1.6.5. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9839">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0b44cf579dbd476a5f40e6015684338d</td>
+       <td>CVE-2024-9615</td>
+       <td>2024-11-16 04:15:07 <img src="imgs/new.gif" /></td>
+       <td>The BulkPress plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in all versions up to, and including, 0.3.5. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9615">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e3458f6f07e9ea0ff81d3f0d5ec3c72b</td>
+       <td>CVE-2024-9386</td>
+       <td>2024-11-16 04:15:07 <img src="imgs/new.gif" /></td>
+       <td>The Exclusive Divi – Divi Preloader, Modules for Divi & Extra Theme plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 1.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9386">详情</a></td>
+      </tr>
+
+      <tr>
        <td>a37344ee81e56249751fadf49f5924a5</td>
        <td>CVE-2024-9356</td>
        <td>2024-11-15 06:15:05 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-11-13 23:15:03</td>
        <td>Cybele Software Thinfinity Workspace before v7.0.2.113 was discovered to contain an access control issue in the API endpoint where Web Sockets connections are established.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-40404">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6392ffe8d4cb0844284b3c6d4ad3a5a8</td>
-       <td>CVE-2024-52268</td>
-       <td>2024-11-13 06:15:14</td>
-       <td>Cross-site scripting vulnerability exists in VK All in One Expansion Unit versions prior to 9.100.1.0. If this vulnerability is exploited, an arbitrary script may be executed on the web browser of the user who is accessing the web site using the product.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-52268">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>220638cf0dd85359b4d4113b96be19db</td>
-       <td>CVE-2024-9409</td>
-       <td>2024-11-13 05:15:27</td>
-       <td>CWE-400: An Uncontrolled Resource Consumption vulnerability exists that could cause the device to become unresponsive resulting in communication loss when a large amount of IGMP packets is present in the network.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9409">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e97567594731b3f248e1f633619fd490</td>
-       <td>CVE-2024-8938</td>
-       <td>2024-11-13 05:15:25</td>
-       <td>CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer vulnerability exists that could cause a potential arbitrary code execution after a successful Man-In-The-Middle attack followed by sending a crafted Modbus function call to tamper with memory area involved in memory size computation.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8938">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c13f9a8f4f0d519394c65a90be02aa73</td>
-       <td>CVE-2024-8937</td>
-       <td>2024-11-13 05:15:22</td>
-       <td>CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer vulnerability exists that could cause a potential arbitrary code execution after a successful Man-In-The Middle attack followed by sending a crafted Modbus function call to tamper with memory area involved in the authentication process.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8937">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d27cda3b2cc4aa9cb465c90169d75b9b</td>
-       <td>CVE-2024-8936</td>
-       <td>2024-11-13 05:15:20</td>
-       <td>CWE-20: Improper Input Validation vulnerability exists that could lead to loss of confidentiality of controller memory after a successful Man-In-The-Middle attack followed by sending a crafted Modbus function call used to tamper with memory.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8936">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6c23be02d7783d151d02da0c5fcd57c4</td>
-       <td>CVE-2024-8935</td>
-       <td>2024-11-13 05:15:19</td>
-       <td>CWE-290: Authentication Bypass by Spoofing vulnerability exists that could cause a denial of service and loss of confidentiality and integrity of controllers when conducting a Man-In-The-Middle attack between the controller and the engineering workstation while a valid user is establishing a communication session. This vulnerability is inherent to Diffie Hellman algorithm which does not protect against Man-In-The-Middle attacks.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8935">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7ebc6d4ff83382befbfe792904dea579</td>
-       <td>CVE-2024-21541</td>
-       <td>2024-11-13 05:15:14</td>
-       <td>All versions of the package dom-iterator are vulnerable to Arbitrary Code Execution due to use of the Function constructor without complete input sanitization. Function generates a new function body and thus care must be given to ensure that the inputs to Function are not attacker-controlled. The risks involved are similar to that of allowing attacker-controlled input to reach eval.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21541">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1a59bb5d54340914292367d86bfa8f8f</td>
-       <td>CVE-2024-21540</td>
-       <td>2024-11-13 05:15:12</td>
-       <td>All versions of the package source-map-support are vulnerable to Directory Traversal in the retrieveSourceMap function.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-21540">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>969545b5838305d878e334a9443c76c1</td>
-       <td>CVE-2024-11150</td>
-       <td>2024-11-13 05:15:12</td>
-       <td>The WordPress User Extra Fields plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete_tmp_uploaded_file() function in all versions up to, and including, 16.6. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11150">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>cfbe7dbd6a12a2c010436a90bda99b4c</td>
-       <td>CVE-2024-10800</td>
-       <td>2024-11-13 05:15:11</td>
-       <td>The WordPress User Extra Fields plugin for WordPress is vulnerable to privilege escalation due to a missing capability check on the ajax_save_fields() function in all versions up to, and including, 16.6. This makes it possible for authenticated attackers, with subscriber-level access and above, to add custom fields that can be updated and then use the check_and_overwrite_wp_or_woocommerce_fields function to update the wp_capabilities field to have administrator privileges.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-10800">详情</a></td>
       </tr>
 
      </tbody>
