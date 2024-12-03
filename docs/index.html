@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2024-12-03 03:10:59 -->
+<!-- RELEASE TIME : 2024-12-03 07:29:16 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>5897e9548f0cb78cc6ba43086fdbba68</td>
+       <td>CVE-2024-9694</td>
+       <td>2024-12-03 03:15:05 <img src="imgs/new.gif" /></td>
+       <td>The CMSMasters Elementor Addon plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple widgets in all versions up to, and including, 1.14.7 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9694">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>96c08f5996cd58df951c740865d7deb6</td>
+       <td>CVE-2024-45068</td>
+       <td>2024-12-03 03:15:04 <img src="imgs/new.gif" /></td>
+       <td>Authentication credentials leakage vulnerability in Hitachi Ops Center Common Services within Hitachi Ops Center OVA. This issue affects Hitachi Ops Center Common Services: from 10.9.3-00 before 11.0.3-00; Hitachi Ops Center OVA: from 10.9.3-00 before 11.0.2-01.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-45068">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bd66dfbae9884a8c1b75e4bbd19de9c5</td>
+       <td>CVE-2024-9200</td>
+       <td>2024-12-03 02:15:17 <img src="imgs/new.gif" /></td>
+       <td>A post-authentication command injection vulnerability in the "host" parameter of the diagnostic function in Zyxel VMG4005-B50A firmware versions through V5.15(ABQA.2.2)C0 could allow an authenticated attacker with administrator privileges to execute operating system (OS) commands on a vulnerable device.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9200">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0d653f2fe95b9d2522661b2cd0bfc7d3</td>
+       <td>CVE-2024-9197</td>
+       <td>2024-12-03 02:15:17 <img src="imgs/new.gif" /></td>
+       <td>A post-authentication buffer overflow vulnerability in the parameter "action" of the CGI program in Zyxel VMG3625-T50B firmware versions through V5.50(ABPM.9.2)C0 could allow an authenticated attacker with administrator privileges to cause a temporary denial of service (DoS) condition against the web management interface by sending a crafted HTTP GET request to a vulnerable device if the function ZyEE is enabled.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-9197">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7543f6cff1035daa8c498826e929e6ac</td>
+       <td>CVE-2024-8748</td>
+       <td>2024-12-03 02:15:17 <img src="imgs/new.gif" /></td>
+       <td>A buffer overflow vulnerability in the packet parser of the third-party library "libclinkc" in Zyxel VMG8825-T50K firmware versions through V5.50(ABOM.8.4)C0 could allow an attacker to cause a temporary denial of service (DoS) condition against the web management interface by sending a crafted HTTP POST request to a vulnerable device.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-8748">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c761ca26022e365fb1a06802a2262026</td>
+       <td>CVE-2018-9449</td>
+       <td>2024-12-03 01:15:04 <img src="imgs/new.gif" /></td>
+       <td>In process_service_search_attr_rsp of sdp_discovery.cc, there is a possible out of bound read due to a missing bounds check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2018-9449">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2f7ed7e43fed0cd0f15c5ca968c7b8ef</td>
+       <td>CVE-2018-9441</td>
+       <td>2024-12-03 01:15:04 <img src="imgs/new.gif" /></td>
+       <td>In sdp_copy_raw_data of sdp_discovery.cc, there is a possible out of bounds read due to an incorrect bounds check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is needed for exploitation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2018-9441">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e996298945c08c8e3fe1f6d5ce2d47c0</td>
+       <td>CVE-2024-53937</td>
+       <td>2024-12-02 23:15:05 <img src="imgs/new.gif" /></td>
+       <td>An issue was discovered on Victure RX1800 WiFi 6 Router (software EN_V1.0.0_r12_110933, hardware 1.0) devices. The TELNET service is enabled by default with admin/admin as default credentials and is exposed over the LAN. The allows attackers to execute arbitrary commands with root-level permissions. Device setup does not require this password to be changed during setup in order to utilize the device. (However, the TELNET password is dictated by the current GUI password.)</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53937">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>aa243b7d7e302565897840a7813c9d63</td>
+       <td>CVE-2024-53988</td>
+       <td>2024-12-02 22:15:11 <img src="imgs/new.gif" /></td>
+       <td>rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. There is a possible XSS vulnerability with certain configurations of Rails::HTML::Sanitizer 1.6.0 when used with Rails >= 7.1.0. A possible XSS vulnerability with certain configurations of Rails::HTML::Sanitizer may allow an attacker to inject content if HTML5 sanitization is enabled and the application developer has overridden the sanitizer's allowed tags where the "math", "mtext", "table", and "style" elements are allowed and either either "mglyph" or "malignmark" are allowed. This vulnerability is fixed in 1.6.1.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53988">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>de488a0c309859d8e2e312c22a15f767</td>
+       <td>CVE-2024-53987</td>
+       <td>2024-12-02 22:15:11 <img src="imgs/new.gif" /></td>
+       <td>rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. There is a possible XSS vulnerability with certain configurations of Rails::HTML::Sanitizer 1.6.0 when used with Rails >= 7.1.0. A possible XSS vulnerability with certain configurations of Rails::HTML::Sanitizer may allow an attacker to inject content if HTML5 sanitization is enabled and the application developer has overridden the sanitizer's allowed tags where the "style" element is explicitly allowed and the "svg" or "math" element is not allowed. This vulnerability is fixed in 1.6.1.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53987">详情</a></td>
+      </tr>
+
+      <tr>
        <td>9eef9e4c58ecb068948eedfd18f8b78e</td>
        <td>CVE-2024-43053</td>
        <td>2024-12-02 11:15:09 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2024-11-30 22:15:18</td>
        <td>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Rejuan Ahamed Best Addons for Elementor allows Stored XSS.This issue affects Best Addons for Elementor: from n/a through 1.0.5.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53763">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>26f52e08314e09b9d2c93d1e013424fb</td>
-       <td>CVE-2024-11998</td>
-       <td>2024-11-30 09:31:04</td>
-       <td>A vulnerability was found in code-projects Farmacia 1.0. It has been declared as critical. This vulnerability affects unknown code of the file /visualizer-forneccedor.chp. The manipulation of the argument id leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11998">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3f725f35496ef3834518e7def96780b8</td>
-       <td>CVE-2024-11997</td>
-       <td>2024-11-30 08:15:05</td>
-       <td>A vulnerability was found in code-projects Farmacia 1.0. It has been classified as problematic. This affects an unknown part of the file /vendas.php. The manipulation of the argument notaFiscal leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11997">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>afa05246475a6eb58e281fe67ab5dfed</td>
-       <td>CVE-2024-11996</td>
-       <td>2024-11-30 08:15:03</td>
-       <td>A vulnerability was found in code-projects Farmacia 1.0 and classified as problematic. Affected by this issue is some unknown functionality of the file /editar-fornecedor.php. The manipulation of the argument cidade leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Other parameters might be affected as well.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11996">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8081ffc69c843827a239f1be21e916c4</td>
-       <td>CVE-2024-11252</td>
-       <td>2024-11-30 06:15:17</td>
-       <td>The Social Sharing Plugin – Sassy Social Share plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the heateor_mastodon_share parameter in all versions up to, and including, 3.3.69 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11252">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6466a855b952a9a8ecad4e010eb5f429</td>
-       <td>CVE-2024-43703</td>
-       <td>2024-11-30 03:15:14</td>
-       <td>Software installed and run as a non-privileged user may conduct improper GPU system calls to achieve unauthorised reads and writes of physical memory from the GPU HW.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-43703">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>81510a57672b6b7c26da6eb5cbfceda6</td>
-       <td>CVE-2024-43702</td>
-       <td>2024-11-30 03:15:13</td>
-       <td>Software installed and run as a non-privileged user may conduct improper GPU system calls to allow unprivileged access to arbitrary physical memory page.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-43702">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>781eccd878212e67c51af0cf98725192</td>
-       <td>CVE-2024-53623</td>
-       <td>2024-11-29 23:15:04</td>
-       <td>Incorrect access control in the component l_0_0.xml of TP-Link ARCHER-C7 v5 allows attackers to access sensitive information.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53623">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5ce0a9fa05c70f2f44c2741ac0dda9d3</td>
-       <td>CVE-2024-54159</td>
-       <td>2024-11-29 22:15:07</td>
-       <td>stalld through 1.19.7 allows local users to cause a denial of service (file overwrite) via a /tmp/rtthrottle symlink attack.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-54159">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6a1a416bb27840943f632e63184a6bf2</td>
-       <td>CVE-2024-11995</td>
-       <td>2024-11-29 21:15:04</td>
-       <td>A vulnerability has been found in code-projects Farmacia 1.0 and classified as problematic. Affected by this vulnerability is an unknown functionality of the file /pagamento.php. The manipulation of the argument total leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-11995">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8d4f7bffbad5e10ee5c0516d2813a380</td>
-       <td>CVE-2024-53507</td>
-       <td>2024-11-29 20:15:21</td>
-       <td>A SQL injection vulnerability was discovered in Siyuan 3.1.11 in /getHistoryItems.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-53507">详情</a></td>
       </tr>
 
      </tbody>
