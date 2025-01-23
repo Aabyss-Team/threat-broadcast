@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2025-01-23 09:28:51 -->
+<!-- RELEASE TIME : 2025-01-23 23:25:18 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>3115093150c7cf9fccdfd8ab31281439</td>
+       <td>CVE-2025-23012</td>
+       <td>2025-01-23 21:15:15 <img src="imgs/new.gif" /></td>
+       <td>Fedora Repository 3.8.x includes a service account (fedoraIntCallUser) with default credentials and privileges to read read local files by manipulating datastreams. Fedora Repository 3.8.1 was released on 2015-06-11 and is no longer maintained. Migrate to a currently supported version (6.5.1 as of 2025-01-23).</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-23012">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>09aaf7a610c68b8d54597a7ae448adaa</td>
+       <td>CVE-2025-23011</td>
+       <td>2025-01-23 21:15:15 <img src="imgs/new.gif" /></td>
+       <td>Fedora Repository 3.8.1 allows path traversal when extracting uploaded archives ("Zip Slip"). A remote, authenticated attacker can upload a specially crafted archive that will extract an arbitrary JSP file to a location that can be executed by an unauthenticated GET request. Fedora Repository 3.8.1 was released on 2015-06-11 and is no longer maintained. Migrate to a currently supported version (6.5.1 as of 2025-01-23).</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-23011">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3eb0770d61645d6a80879823bc69a12e</td>
+       <td>CVE-2025-24353</td>
+       <td>2025-01-23 18:15:33 <img src="imgs/new.gif" /></td>
+       <td>Directus is a real-time API and App dashboard for managing SQL database content. Prior to version 11.2.0, when sharing an item, a typical user can specify an arbitrary role. It allows the user to use a higher-privileged role to see fields that otherwise the user should not be able to see. Instances that are impacted are those that use the share feature and have specific roles hierarchy and fields that are not visible for certain roles. Version 11.2.0 contains a patch the issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-24353">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8ef1c5eec894c57f02d515f794b76ce3</td>
+       <td>CVE-2025-24034</td>
+       <td>2025-01-23 18:15:33 <img src="imgs/new.gif" /></td>
+       <td>Himmelblau is an interoperability suite for Microsoft Azure Entra ID and Intune. Starting in version 0.7.0 and prior to versions 0.7.15 and 0.8.3, Himmelblau is vulnerable to leaking credentials in debug logs. When debug logging is enabled, user access tokens are inadvertently logged, potentially exposing sensitive authentication data. Similarly, Kerberos Ticket-Granting Tickets (TGTs) are logged when debug logging is enabled. Both issues pose a risk of exposing sensitive credentials, particularly in environments where debug logging is enabled. Himmelblau versions 0.7.15 and 0.8.3 contain a patch that fixes both issues. Some workarounds are available for users who are unable to upgrade. For the **logon compliance script issue**, disable the `logon_script` option in `/etc/himmelblau/himmelblau.conf`, and avoid using the `-d` flag when starting the `himmelblaud` daemon. For the Kerberos CCache issue, one may disable debug logging globally by setting the `debug` option in `/etc/himmelblau/himmelblau.conf` to `false` and avoiding the `-d` parameter when starting `himmelblaud`.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-24034">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>281649424e98602c7f9f5f8e2ff63dbe</td>
+       <td>CVE-2025-24033</td>
+       <td>2025-01-23 18:15:33 <img src="imgs/new.gif" /></td>
+       <td>@fastify/multipart is a Fastify plugin for parsing the multipart content-type. Prior to versions 8.3.1 and 9.0.3, the `saveRequestFiles` function does not delete the uploaded temporary files when user cancels the request. The issue is fixed in versions 8.3.1 and 9.0.3. As a workaround, do not use `saveRequestFiles`.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-24033">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bf54b4478e521e53cdd4a9e4195e1f4b</td>
+       <td>CVE-2025-23227</td>
+       <td>2025-01-23 18:15:33 <img src="imgs/new.gif" /></td>
+       <td>IBM Tivoli Application Dependency Discovery Manager 7.3.0.0 through 7.3.0.11 is vulnerable to stored cross-site scripting. This vulnerability allows authenticated users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-23227">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>9c3d99dea4d52d3728799537511f4265</td>
+       <td>CVE-2025-22153</td>
+       <td>2025-01-23 18:15:33 <img src="imgs/new.gif" /></td>
+       <td>RestrictedPython is a tool that helps to define a subset of the Python language which allows to provide a program input into a trusted environment. Via a type confusion bug in versions of the CPython interpreter starting in 3.11 and prior to 3.13.2 when using `try/except*`, RestrictedPython starting in version 6.0 and prior to version 8.0 could be bypassed. The issue is patched in version 8.0 of RestrictedPython by removing support for `try/except*` clauses. No known workarounds are available.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-22153">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3d3249ee3b314d32bd5519afe942fa33</td>
+       <td>CVE-2024-55930</td>
+       <td>2025-01-23 18:15:32 <img src="imgs/new.gif" /></td>
+       <td>Weak default folder permissions</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-55930">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bd465340152cc4ed4cde0b1e63da7ed1</td>
+       <td>CVE-2024-55929</td>
+       <td>2025-01-23 18:15:32 <img src="imgs/new.gif" /></td>
+       <td>Mail spoofing</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-55929">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c855e995d11c2e23a4d4cc41a3f0428e</td>
+       <td>CVE-2024-55928</td>
+       <td>2025-01-23 18:15:32 <img src="imgs/new.gif" /></td>
+       <td>Clear text secrets returned & Remote system secrets in clear text</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-55928">详情</a></td>
+      </tr>
+
+      <tr>
        <td>f75be8a4fe1c1c94dc5ca210328d3b41</td>
        <td>CVE-2024-12477</td>
        <td>2025-01-22 22:15:08 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2025-01-21 18:15:17</td>
        <td>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Estatebud Estatebud – Properties & Listings allows Stored XSS. This issue affects Estatebud – Properties & Listings: from n/a through 5.5.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-23994">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>041117659363a3a7f8cc73c363c3dc0c</td>
-       <td>CVE-2025-24337</td>
-       <td>2025-01-20 14:15:27</td>
-       <td>WriteFreely through 0.15.1, when MySQL is used, allows local users to discover credentials by reading config.ini.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-24337">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9f813f3f046f9dcd3a893f2aa24fea2c</td>
-       <td>CVE-2025-21655</td>
-       <td>2025-01-20 14:15:27</td>
-       <td>In the Linux kernel, the following vulnerability has been resolved: io_uring/eventfd: ensure io_eventfd_signal() defers another RCU period io_eventfd_do_signal() is invoked from an RCU callback, but when dropping the reference to the io_ev_fd, it calls io_eventfd_free() directly if the refcount drops to zero. This isn't correct, as any potential freeing of the io_ev_fd should be deferred another RCU grace period. Just call io_eventfd_put() rather than open-code the dec-and-test and free, which will correctly defer it another RCU grace period.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-21655">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>884c68164dc181cae44b67d30e9ed9db</td>
-       <td>CVE-2024-13176</td>
-       <td>2025-01-20 14:15:26</td>
-       <td>Issue summary: A timing side-channel which could potentially allow recovering the private key exists in the ECDSA signature computation. Impact summary: A timing side-channel in ECDSA signature computations could allow recovering the private key by an attacker. However, measuring the timing would require either local access to the signing application or a very fast network connection with low latency. There is a timing signal of around 300 nanoseconds when the top word of the inverted ECDSA nonce value is zero. This can happen with significant probability only for some of the supported elliptic curves. In particular the NIST P-521 curve is affected. To be able to measure this leak, the attacker process must either be located in the same physical computer or must have a very fast network connection with low latency. For that reason the severity of this vulnerability is Low.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2024-13176">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1a8fc5b6ad4053fc025224dc2e070c95</td>
-       <td>CVE-2023-52923</td>
-       <td>2025-01-20 10:48:13</td>
-       <td>In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: adapt set backend to use GC transaction API Use the GC transaction API to replace the old and buggy gc API and the busy mark approach. No set elements are removed from async garbage collection anymore, instead the _DEAD bit is set on so the set element is not visible from lookup path anymore. Async GC enqueues transaction work that might be aborted and retried later. rbtree and pipapo set backends does not set on the _DEAD bit from the sync GC path since this runs in control plane path where mutex is held. In this case, set elements are deactivated, removed and then released via RCU callback, sync GC never fails.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2023-52923">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1f4000f198b297d781340dc3dfdbc6a6</td>
-       <td>CVE-2025-0590</td>
-       <td>2025-01-20 07:17:10</td>
-       <td>Improper permission settings for mobile applications (com.transsion.carlcare) may lead to information leakage risk.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0590">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c4df16c25f8484681234c90fb51aa38d</td>
-       <td>CVE-2025-0586</td>
-       <td>2025-01-20 03:15:09</td>
-       <td>The a+HRD from aEnrich Technology has an Insecure Deserialization vulnerability, allowing remote attackers with database modification privileges and regular system privileges to perform arbitrary code execution.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0586">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>57c64641138b9e0a14974ba0ceaae4b3</td>
-       <td>CVE-2025-0585</td>
-       <td>2025-01-20 03:15:09</td>
-       <td>The a+HRD from aEnrich Technology has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read, modify, and delete database contents.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0585">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d54818cca93ccf4c67cf428ff157990f</td>
-       <td>CVE-2025-0584</td>
-       <td>2025-01-20 03:15:09</td>
-       <td>The a+HRD from aEnrich Technology has a Server-side Request Forgery, allowing unauthenticated remote attackers to exploit this vulnerability to probe internal network.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0584">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5cd84b3f052ac13a6fe560b0047fc444</td>
-       <td>CVE-2025-0582</td>
-       <td>2025-01-20 03:15:08</td>
-       <td>A vulnerability classified as critical was found in itsourcecode Farm Management System up to 1.0. This vulnerability affects unknown code of the file /add-pig.php. The manipulation of the argument pigphoto leads to unrestricted upload. The attack can be initiated remotely.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0582">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6cf94fbff9b3a77ea94e58b699285f0e</td>
-       <td>CVE-2025-0581</td>
-       <td>2025-01-20 03:15:08</td>
-       <td>A vulnerability classified as problematic has been found in CampCodes School Management Software 1.0. This affects an unknown part of the file /chat/group/send of the component Chat History. The manipulation of the argument message leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-0581">详情</a></td>
       </tr>
 
      </tbody>
