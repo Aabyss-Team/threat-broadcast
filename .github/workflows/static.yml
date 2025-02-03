@@ -5,20 +5,16 @@ on:
   schedule:
     - cron: '*/120 * * * *' # 每小时运行
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -27,13 +23,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: List files in docs directory (for debugging)
+        run: ls -la ./docs/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          # Upload entire repository
-          path: './docs/'
+          path: './docs/**'  # 确保路径正确，上传整个 docs 目录下的文件
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
