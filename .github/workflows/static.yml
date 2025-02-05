@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: [main]  # 推荐在代码推送时触发
+    branches: [master]  # 推荐在代码推送时触发
   # 可选定时触发（按需启用）
   # schedule:
   #   - cron: '0 * * * *'  # 每小时运行一次
