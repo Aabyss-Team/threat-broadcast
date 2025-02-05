@@ -1,9 +1,11 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  schedule:
-    - cron: '*/120 * * * *' # 每小时运行
+  push:
+    branches: [main]  # 推荐在代码推送时触发
+  # 可选定时触发（按需启用）
+  # schedule:
+  #   - cron: '0 * * * *'  # 每小时运行一次
 
 permissions:
   contents: read
@@ -16,21 +18,22 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: List files in docs directory (for debugging)
+
+      - name: List files in docs directory
         run: ls -la ./docs/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: './docs/**'  # 确保路径正确，上传整个 docs 目录下的文件
+          path: './docs/**'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
