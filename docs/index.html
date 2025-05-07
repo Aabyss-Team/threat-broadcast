@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2025-05-06 09:15:50 -->
+<!-- RELEASE TIME : 2025-05-07 09:15:38 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>79bb13c16e762cafdc81bd6aa2bedcb6</td>
+       <td>CVE-2025-4335</td>
+       <td>2025-05-07 03:15:19 <img src="imgs/new.gif" /></td>
+       <td>The Woocommerce Multiple Addresses plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.0.7.1. This is due to insufficient restrictions on user meta that can be updated through the save_multiple_shipping_addresses() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4335">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8877928b64360bbe2130f6ca3541bbdc</td>
+       <td>CVE-2025-4220</td>
+       <td>2025-05-07 03:15:19 <img src="imgs/new.gif" /></td>
+       <td>The Xavin&#039;s List Subpages plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'xls' shortcode in all versions up to, and including, 1.3 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4220">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>9ca573f0a6c29148043ec077eb59e581</td>
+       <td>CVE-2025-4055</td>
+       <td>2025-05-07 03:15:19 <img src="imgs/new.gif" /></td>
+       <td>The Multiple Post Type Order plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'mpto' shortcode in all versions up to, and including, 1.10.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4055">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8dd26e6e1b2e08d7a9ee4f96fa2df0bb</td>
+       <td>CVE-2025-4054</td>
+       <td>2025-05-07 03:15:18 <img src="imgs/new.gif" /></td>
+       <td>The Relevanssi – A Better Search plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the highlights functionality in all versions up to, and including, 4.24.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page via the search results.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4054">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>baaf821fd0bd14c8eef2635f3f52732c</td>
+       <td>CVE-2025-3924</td>
+       <td>2025-05-07 03:15:18 <img src="imgs/new.gif" /></td>
+       <td>The PeproDev Ultimate Profile Solutions plugin for WordPress is vulnerable to unauthorized access of data via its publicly exposed reset-password endpoint. The plugin looks up the 'valid_email' value based solely on a supplied username parameter, without verifying that the requester is associated with that user account. This allows unauthenticated attackers to enumerate email addresses for any user, including administrators.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3924">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>25c5e97993fbc3bd903e3f4c0281aca7</td>
+       <td>CVE-2025-3921</td>
+       <td>2025-05-07 03:15:18 <img src="imgs/new.gif" /></td>
+       <td>The PeproDev Ultimate Profile Solutions plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the handel_ajax_req() function in versions 1.9.1 to 7.5.2. This makes it possible for unauthenticated attackers to update arbitrary user's metadata which can be leveraged to block an administrator from accessing their site when wp_capabilities is set to 0.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3921">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a4151b00532d42b9554ea83834c8124f</td>
+       <td>CVE-2025-3860</td>
+       <td>2025-05-07 03:15:18 <img src="imgs/new.gif" /></td>
+       <td>The CarDealerPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘saleclass' parameter in all versions up to, and including, 6.7.2504.00 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3860">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c304fa433f5a4672d1e4b10f128fd160</td>
+       <td>CVE-2025-3853</td>
+       <td>2025-05-07 03:15:18 <img src="imgs/new.gif" /></td>
+       <td>The WPshop 2 – E-Commerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions 2.0.0 to 2.6.0 via the callback_generate_api_key() due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above, to create valid API keys on behalf of other users.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3853">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>68277a1b38ca73c50c41e003772bdc44</td>
+       <td>CVE-2025-3852</td>
+       <td>2025-05-07 03:15:17 <img src="imgs/new.gif" /></td>
+       <td>The WPshop 2 – E-Commerce plugin for WordPress is vulnerable to privilege escalation via account takeover in versions 2.0.0 to 2.6.0. This is due to the plugin not properly validating a user's identity prior to updating their details like email & password through the update() function. This makes it possible for authenticated attackers, with subscriber-level access and above, to change arbitrary user's passwords, including administrators, and leverage that to gain access to their account.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3852">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4fa1fc0be9c64d8d692d4963792fc0c2</td>
+       <td>CVE-2025-3851</td>
+       <td>2025-05-07 03:15:17 <img src="imgs/new.gif" /></td>
+       <td>The Download Manager and Payment Form WordPress Plugin – WP SmartPay plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions 1.1.0 to 2.7.13 via the show() function due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with Subscriber-level access and above, to view other user's data like email address, name, and notes.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3851">详情</a></td>
+      </tr>
+
+      <tr>
        <td>5954be69b34b5f6174211eff55c79543</td>
        <td>CVE-2025-4310</td>
        <td>2025-05-06 03:31:04 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>403068bb1d0e34bcf7184aba6151ebb6</td>
        <td>CVE-2025-4260</td>
-       <td>2025-05-05 03:15:23 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:23</td>
        <td>A vulnerability was found in zhangyanbo2007 youkefu up to 4.2.0 and classified as problematic. Affected by this issue is the function impsave of the file m\web\handler\admin\system\TemplateController.java. The manipulation of the argument dataFile leads to deserialization. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4260">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>f8d22e002e053e843cf9dd5c72626faf</td>
        <td>CVE-2025-4259</td>
-       <td>2025-05-05 03:15:23 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:23</td>
        <td>A vulnerability has been found in newbee-mall 1.0 and classified as critical. Affected by this vulnerability is the function Upload of the file ltd/newbee/mall/controller/common/UploadController.java. The manipulation of the argument File leads to unrestricted upload. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4259">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>8b800f106bea82a1c2e3ecd05ed387ee</td>
        <td>CVE-2025-20671</td>
-       <td>2025-05-05 03:15:22 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:22</td>
        <td>In thermal, there is a possible out of bounds write due to a race condition. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS09698599; Issue ID: MSV-3228.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20671">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>80295adc99796dad802c05da211316cf</td>
        <td>CVE-2025-20670</td>
-       <td>2025-05-05 03:15:22 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:22</td>
        <td>In Modem, there is a possible permission bypass due to improper certificate validation. This could lead to remote information disclosure, if a UE has connected to a rogue base station controlled by the attacker, with User execution privileges needed. User interaction is needed for exploitation. Patch ID: MOLY01334347; Issue ID: MSV-2772.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20670">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>a89e3ad462e65e11d0a5b196331d664f</td>
        <td>CVE-2025-20668</td>
-       <td>2025-05-05 03:15:22 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:22</td>
        <td>In scp, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS09625562; Issue ID: MSV-3027.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20668">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>2fb3a1c98db063d6899112f3cf7f94ba</td>
        <td>CVE-2025-20667</td>
-       <td>2025-05-05 03:15:22 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:22</td>
        <td>In Modem, there is a possible information disclosure due to incorrect error handling. This could lead to remote information disclosure, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY01513293; Issue ID: MSV-2741.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20667">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>12fed8c57d146a29a6403aa4b1ed88b0</td>
        <td>CVE-2025-20666</td>
-       <td>2025-05-05 03:15:21 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:21</td>
        <td>In Modem, there is a possible system crash due to an uncaught exception. This could lead to remote denial of service, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY00650610; Issue ID: MSV-2933.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20666">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>ea2f46b682be5a107821d6b32edd0d23</td>
        <td>CVE-2025-20665</td>
-       <td>2025-05-05 03:15:21 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 03:15:21</td>
        <td>In devinfo, there is a possible information disclosure due to a missing SELinux policy. This could lead to local information disclosure of device identifier with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: ALPS09555228; Issue ID: MSV-2760.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-20665">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>8f51778c16a54170601442a08633fb32</td>
        <td>CVE-2025-4273</td>
-       <td>2025-05-05 02:15:18 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 02:15:18</td>
        <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4273">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>16e2856583a391dbd20a22ce19784610</td>
        <td>CVE-2025-4258</td>
-       <td>2025-05-05 02:15:18 <img src="imgs/new.gif" /></td>
+       <td>2025-05-05 02:15:18</td>
        <td>A vulnerability, which was classified as critical, was found in zhangyanbo2007 youkefu up to 4.2.0. Affected is the function Upload of the file \youkefu-master\src\main\java\com\ukefu\webim\web\handler\resource\MediaController.java. The manipulation of the argument imgFile leads to unrestricted upload. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4258">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9f04288bf30c40b91583678a46a24ebf</td>
-       <td>CVE-2025-27585</td>
-       <td>2025-03-03 01:15:12</td>
-       <td>A stored cross-site scripting (XSS) vulnerability in Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the Print Name parameter at /rest/staffResource/update.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-27585">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a65272fa7edaeefdf24840e5d9f5621e</td>
-       <td>CVE-2025-27584</td>
-       <td>2025-03-03 01:15:12</td>
-       <td>A stored cross-site scripting (XSS) vulnerability in Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the First Name parameter at /rest/staffResource/update.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-27584">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5c610c3e93da029c2b8eeafec5fc7647</td>
-       <td>CVE-2025-27583</td>
-       <td>2025-03-03 01:15:12</td>
-       <td>Incorrect access control in the component /rest/staffResource/findAllUsersAcrossOrg of Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows create and modify user accounts, including an Administrator account.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-27583">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fc63d9afab3fd518ca996a32456a4260</td>
-       <td>CVE-2025-25953</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 was discovered to contain an Azure JWT access token exposure. This vulnerability allows authenticated attackers to escalate privileges and access sensitive information.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25953">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>716a1e2abb537a1c8fc50ea46efc179c</td>
-       <td>CVE-2025-25952</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>An Insecure Direct Object References (IDOR) in the component /getStudemtAllDetailsById?studentId=XX of Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows attackers to access sensitive user information via a crafted API request.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25952">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6e1578a02d8d84ec077c331086ded8db</td>
-       <td>CVE-2025-25951</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>An information disclosure vulnerability in the component /rest/cb/executeBasicSearch of Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows attackers to access sensitive user information.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25951">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e7f618f9c50716da9292c26bdfcacae6</td>
-       <td>CVE-2025-25950</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>Incorrect access control in the component /rest/staffResource/update of Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows create and modify user accounts, including an Administrator account.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25950">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ff452da27434b1dc0c0ad1655bcbf72a</td>
-       <td>CVE-2025-25949</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>A stored cross-site scripting (XSS) vulnerability in Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into the User ID parameter at /rest/staffResource/update.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25949">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7c784497583ed8bdfe46df0b6c0e515c</td>
-       <td>CVE-2025-25948</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>Incorrect access control in the component /rest/staffResource/create of Serosoft Solutions Pvt Ltd Academia Student Information System (SIS) EagleR v1.0.118 allows create and modify user accounts, including an Administrator account.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-25948">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5d62fd331d4a7c2d2660b787768bd240</td>
-       <td>CVE-2025-1843</td>
-       <td>2025-03-03 01:15:11</td>
-       <td>A vulnerability, which was classified as critical, has been found in Mini-Tmall up to 20250211. This issue affects the function select of the file com/xq/tmall/dao/ProductMapper.java. The manipulation of the argument orderBy leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-1843">详情</a></td>
       </tr>
 
      </tbody>
