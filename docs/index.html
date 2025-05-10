@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2025-05-10 12:23:33 -->
+<!-- RELEASE TIME : 2025-05-10 15:13:50 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>d3d887ede10ba78d7c8059f91dc0d85f</td>
+       <td>CVE-2025-4495</td>
+       <td>2025-05-10 01:15:51 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability has been found in JAdmin-JAVA JAdmin 1.0 and classified as problematic. Affected by this vulnerability is an unknown functionality of the file /memoAjax/save. The manipulation of the argument ID leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4495">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>717eebe5e8ece477a2dee23303eced91</td>
+       <td>CVE-2025-47424</td>
+       <td>2025-05-09 23:15:51 <img src="imgs/new.gif" /></td>
+       <td>Retool (self-hosted) before 3.196.0 allows Host header injection. When the BASE_DOMAIN environment variable is not set, the HTTP host header can be manipulated.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-47424">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3b2448d1e58c5b4229b6c794515ab218</td>
+       <td>CVE-2025-3794</td>
+       <td>2025-05-09 23:15:50 <img src="imgs/new.gif" /></td>
+       <td>The WPForms – Easy Form Builder for WordPress – Contact Forms, Payment Forms, Surveys, & More plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the start_timestamp parameter in all versions up to, and including, 1.9.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-3794">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>e941a1852ca73ee745c821dea0e0301f</td>
+       <td>CVE-2025-4494</td>
+       <td>2025-05-09 22:15:18 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability, which was classified as critical, was found in JAdmin-JAVA JAdmin 1.0. Affected is the function toLogin of the file NoNeedLoginController.java of the component Admin Backend. The manipulation leads to improper authentication. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4494">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>809c531927e3327c0da8cc39efc4acac</td>
+       <td>CVE-2025-4492</td>
+       <td>2025-05-09 22:15:17 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability, which was classified as critical, has been found in Campcodes Online Food Ordering System 1.0. This issue affects some unknown processing of the file /routers/ticket-message.php. The manipulation of the argument ticket_id leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4492">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>560c167366c67d2e9b40b88f0a077c9f</td>
+       <td>CVE-2025-47269</td>
+       <td>2025-05-09 21:15:51 <img src="imgs/new.gif" /></td>
+       <td>code-server runs VS Code on any machine anywhere through browser access. Prior to version 4.99.4, a maliciously crafted URL using the proxy subpath can result in the attacker gaining access to the session token. Failure to properly validate the port for a proxy request can result in proxying to an arbitrary domain. The malicious URL `https://<code-server>/proxy/test@evil.com/path` would be proxied to `test@evil.com/path` where the attacker could exfiltrate a user's session token. Any user who runs code-server with the built-in proxy enabled and clicks on maliciously crafted links that go to their code-server instances with reference to /proxy. Normally this is used to proxy local ports, however the URL can reference the attacker's domain instead, and the connection is then proxied to that domain, which will include sending cookies. With access to the session cookie, the attacker can then log into code-server and have full access to the machine hosting code-server as the user running code-server. This issue has been patched in version 4.99.4.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-47269">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>434036d74c160a701b983cfa8cb7075d</td>
+       <td>CVE-2025-4491</td>
+       <td>2025-05-09 21:15:51 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability classified as critical was found in Campcodes Online Food Ordering System 1.0. This vulnerability affects unknown code of the file /routers/ticket-status.php. The manipulation of the argument ticket_id leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4491">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>17bd99c0c503a929f2b0eac5226a349f</td>
+       <td>CVE-2025-4490</td>
+       <td>2025-05-09 21:15:51 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability classified as critical has been found in Campcodes Online Food Ordering System 1.0. This affects an unknown part of the file /view-ticket-admin.php. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4490">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bbf0a2c3bffa4f0f1f91a4bce11dbc90</td>
+       <td>CVE-2025-4489</td>
+       <td>2025-05-09 21:15:51 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was found in Campcodes Online Food Ordering System 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file /routers/user-router.php. The manipulation of the argument t1_verified leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4489">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ea78d33a6532e54b3ac92e418cb231e1</td>
+       <td>CVE-2025-4447</td>
+       <td>2025-05-09 21:15:51 <img src="imgs/new.gif" /></td>
+       <td>In Eclipse OpenJ9 versions up to 0.51, when used with OpenJDK version 8 a stack based buffer overflow can be caused by modifying a file on disk that is read when the JVM starts.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4447">详情</a></td>
+      </tr>
+
+      <tr>
        <td>dc3430ca68c31e1e7910380879dbc3ae</td>
        <td>CVE-2025-4483</td>
        <td>2025-05-09 18:16:04 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2025-05-09 07:16:09 <img src="imgs/new.gif" /></td>
        <td>In the Linux kernel, the following vulnerability has been resolved: pds_core: make wait_context part of q_info Make the wait_context a full part of the q_info struct rather than a stack variable that goes away after pdsc_adminq_post() is done so that the context is still available after the wait loop has given up. There was a case where a slow development firmware caused the adminq request to time out, but then later the FW finally finished the request and sent the interrupt. The handler tried to complete_all() the completion context that had been created on the stack in pdsc_adminq_post() but no longer existed. This caused bad pointer usage, kernel crashes, and much wailing and gnashing of teeth.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-37886">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ab5844001bba0602bab507a98b568f09</td>
-       <td>CVE-2025-4463</td>
-       <td>2025-05-09 05:15:52 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability, which was classified as critical, was found in itsourcecode Gym Management System 1.0. Affected is an unknown function of the file /ajax.php?action=save_package. The manipulation of the argument ID leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4463">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4de4c21fc40da5efb7ecdb08ce9b7a8f</td>
-       <td>CVE-2025-4462</td>
-       <td>2025-05-09 05:15:52 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability, which was classified as critical, has been found in TOTOLINK N150RT 3.4.0-B20190525. This issue affects some unknown processing of the file /boafrm/formWsc. The manipulation of the argument localPin leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4462">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3bfcaae71c0acf7512bb121a771366a2</td>
-       <td>CVE-2025-4461</td>
-       <td>2025-05-09 05:15:52 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability classified as problematic was found in TOTOLINK N150RT 3.4.0-B20190525. This vulnerability affects unknown code of the component Virtual Server Page. The manipulation leads to cross site scripting. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4461">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>251729ef4c7232c4e2c0a8587c21cfb9</td>
-       <td>CVE-2025-47737</td>
-       <td>2025-05-09 05:15:51 <img src="imgs/new.gif" /></td>
-       <td>lib.rs in the trailer crate through 0.1.2 for Rust mishandles allocating with a size of zero.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-47737">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9cb46f04f5dab75f684ffcee614d4173</td>
-       <td>CVE-2025-47736</td>
-       <td>2025-05-09 05:15:51 <img src="imgs/new.gif" /></td>
-       <td>dialect/mod.rs in the libsql-sqlite3-parser crate through 0.13.0 before 14f422a for Rust can crash if the input is not valid UTF-8.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-47736">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7bdfea6c4ab4b55f3efa1081ecc0bfc7</td>
-       <td>CVE-2025-47735</td>
-       <td>2025-05-09 05:15:51 <img src="imgs/new.gif" /></td>
-       <td>inner::drop in inner.rs in the wgp crate through 0.2.0 for Rust lacks drop_slow thread synchronization.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-47735">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5a5328717ed545f219bb4e1b81d2fe81</td>
-       <td>CVE-2025-4460</td>
-       <td>2025-05-09 04:16:17 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability classified as problematic has been found in TOTOLINK N150RT 3.4.0-B20190525. This affects an unknown part of the component URL Filtering Page. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4460">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>409bd6ee85b8b72bdfc97939094133f2</td>
-       <td>CVE-2025-4459</td>
-       <td>2025-05-09 04:16:17 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability was found in code-projects Patient Record Management System 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file fecalysis_form.php. The manipulation of the argument itr_no leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4459">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4069576b9cf55f64217bb7c99dc65445</td>
-       <td>CVE-2025-4458</td>
-       <td>2025-05-09 04:16:17 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability was found in code-projects Patient Record Management System 1.0. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file /edit_upatient.php. The manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4458">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>42e5ee22216ffd20028c6ab4c567e84d</td>
-       <td>CVE-2025-4457</td>
-       <td>2025-05-09 04:16:16 <img src="imgs/new.gif" /></td>
-       <td>A vulnerability classified as critical was found in Project Worlds Car Rental Project 1.0. Affected by this vulnerability is an unknown functionality of the file /admin/approve.php. The manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2025-4457">详情</a></td>
       </tr>
 
      </tbody>
