@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-06-15 20:48:26 -->
+<!-- RELEASE TIME : 2026-06-16 20:41:38 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>0c7ad3c0647b49432b1d6c393f93a119</td>
+       <td>CVE-2026-53776</td>
+       <td>2026-06-16 17:16:42 <img src="imgs/new.gif" /></td>
+       <td>Perry before 0.5.1166 contains a JWT validation vulnerability that allows remote attackers to bypass token expiration by exploiting the unconditional setting of validate_exp = false in the verify_decode helper within the stdlib JWT verification path. Attackers in possession of a previously issued bearer token can present expired tokens to any jwt.verify() call and retain authenticated access indefinitely, bypassing force-expired sessions such as user logout or administrative revocation.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-53776">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ed714d898628c2906dbc7c8cb3ca369a</td>
+       <td>CVE-2026-44932</td>
+       <td>2026-06-16 17:16:40 <img src="imgs/new.gif" /></td>
+       <td>Passing of unsanitized strings from DHCP replies into the wicked dhcp client before wicked 0.6.79 could be used by attackers operating a malicious DHCP server to execute code on the local machine.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-44932">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b51192a17361de2556e6cab36141934e</td>
+       <td>CVE-2026-42089</td>
+       <td>2026-06-16 17:16:40 <img src="imgs/new.gif" /></td>
+       <td>Yeoman Environment provides an API to discover, create, and run generators, and to configure where and how a generator is resolved. Versions 2.9.0 through 6.0.0 install missing local generator packages from caller-supplied package names without user confirmation. In downstream consumers that pass attacker-controlled project configuration into this path, this can result in arbitrary package installation and code execution during CLI bootstrap. The vulnerable method is installLocalGenerators(), which calls repository.install() directly without prompting the user. This issue has been fixed in version 6.0.0.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-42089">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>523b34b51ad4fcaf69bc1b4aa8c75d59</td>
+       <td>CVE-2026-39927</td>
+       <td>2026-06-16 17:16:40 <img src="imgs/new.gif" /></td>
+       <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-39927">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>02a2542a968beb9bf1f7ab65a2f15ecc</td>
+       <td>CVE-2026-39926</td>
+       <td>2026-06-16 17:16:40 <img src="imgs/new.gif" /></td>
+       <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-39926">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f61c0b5dbefa9b1f466210e90468f4c1</td>
+       <td>CVE-2026-24228</td>
+       <td>2026-06-16 17:16:39 <img src="imgs/new.gif" /></td>
+       <td>NVIDIA NeMo Framework for Linux contains a vulnerability where an attacker may cause deserialization of untrusted data. A successful exploit of this vulnerability may lead to code execution, escalation of privileges, data tampering, and information disclosure.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-24228">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2d09e5bd16c41b182301ce7462b53feb</td>
+       <td>CVE-2026-24155</td>
+       <td>2026-06-16 17:16:39 <img src="imgs/new.gif" /></td>
+       <td>NVIDIA NeMo Framework for all platforms contains a code injection vulnerability. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, information disclosure, and data tampering.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-24155">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>80ce2775981ea0b44c30d28d3bf55261</td>
+       <td>CVE-2026-12412</td>
+       <td>2026-06-16 17:16:39 <img src="imgs/new.gif" /></td>
+       <td>Rejected reason: loading template...</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-12412">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>59bdcb540a8e82d76ca59d5646c6e484</td>
+       <td>CVE-2026-12003</td>
+       <td>2026-06-16 17:16:31 <img src="imgs/new.gif" /></td>
+       <td>To allow builds of Python to be run from an in-tree layout (rather than an installed file layout), the VPATH variable is defined at build time and used to locate certain landmarks - specifically, Modules/setup.local. When this landmark is found relative to VPATH relative to the executable, Python assumes it is running in a source tree and generates a different default sys.path. This code remains in release builds, so that release-ready builds can be built in-tree. On Windows, since builds are written to 'PCbuild/', the value of VPATH is set to '..\..', which results in a landmark of '..\..\Modules\setup.local'. This path is outside the install directory of Python, and may have different permissions, potentially allowing a low-privilege user to create the landmark and an alternative `Lib` folder that will be discovered by an otherwise restricted install. Such a setup occurs with the legacy default install location for all users (in the now superseded EXE installer), due to how Windows allows all users to create folders in the root directory of their OS drive. Our recommended mitigation on Windows is to migrate away from the legacy installer and use the new [Python install manager](https://www.python.org/downloads/latest/pymanager/) to install for the current user. Installs where the directory two levels above the Python installation directory have equivalent permissions are unaffected (in general, a per-user install cannot be modified at all by other users, removing any escalation of privilege risk, and could be directly modified by a privileged user, making the potential tampering irrelevant). Alternative mitigations might include preemptively creating and restricting access to a `Modules` directory. Be aware that only 3.13 and 3.14 will receive updated legacy installers - earlier fixes are only provided as sources. Platforms other than Windows allow VPATH to be overridden, but as they don't usually use a separated directory in the build for binaries, are unlikely to have a landmark reference outside of the install directory. The landmark detection involving VPATH is a fallback for when a more specific landmark - .\pybuilddir.txt - is absent, and was included for compatibility. Future releases of Python will no longer include the fallback, and so builds will need to generate or preserve the pybuilddir.txt file in order to work in-tree. This landmark file has been generated on Windows since 3.11, and on other platforms for longer.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-12003">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>13ff62b1f22d57a5ab94ee4416210736</td>
+       <td>CVE-2026-10649</td>
+       <td>2026-06-16 17:16:30 <img src="imgs/new.gif" /></td>
+       <td>A flaw was found in Pacemaker. An unauthenticated remote attacker can exploit an integer overflow vulnerability in the remote message decompression process. By sending a specially crafted compressed remote message before authentication, an attacker can cause memory corruption, leading to a denial of service (DoS) in the CIB remote listener. This can result in the affected service crashing.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-10649">详情</a></td>
+      </tr>
+
+      <tr>
        <td>5641783c22b06880b1ca37be8f913d33</td>
        <td>CVE-2026-9863</td>
        <td>2026-06-15 16:16:35 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2026-06-10 15:16:41</td>
        <td>A flaw was found in migration-planner-ui-app. An attacker can register a malicious discovery agent with a specially crafted credentialUrl containing JavaScript code. When an organizational user clicks this link in the user interface, the embedded malicious code executes within the user's browser session. This cross-site scripting (XSS) vulnerability allows the attacker to compromise the victim's Red Hat Single Sign-On (SSO) session, potentially leading to unauthorized cross-tenant data access and API actions.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-53473">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7a901e3957c2ecf8c4d12e97c4b83902</td>
-       <td>CVE-2026-49742</td>
-       <td>2026-06-09 11:16:53</td>
-       <td>Backend users with file download permissions were able to download files from the fallback storage of the file abstraction layer (FAL) via the Media Module. Since the fallback storage resolves paths relative to the server's document root, this could expose sensitive files such as log files. This issue affects TYPO3 CMS versions 11.0.0-11.5.50, 12.0.0-12.4.45, 13.0.0-13.4.30 and 14.0.0-14.3.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-49742">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>16f2efc96ba04a7c77133ea8895801f4</td>
-       <td>CVE-2026-49741</td>
-       <td>2026-06-09 11:16:53</td>
-       <td>Backend users with write access to the form_definition database table were able to directly create, update, or delete form definition records via DataHandler, bypassing the Form Framework's persistence validation and permission checks. This allowed injecting arbitrary form configurations, re-enabling attack vectors originally addressed in TYPO3-CORE-SA-2018-003, including SQL injection and privilege escalation. This issue affects TYPO3 CMS versions 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-49741">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>188b74c61c4349c8d377103162522e85</td>
-       <td>CVE-2026-49740</td>
-       <td>2026-06-09 11:16:53</td>
-       <td>TYPO3's cache frontend (VariableFrontend) and persistent key-value store (Registry) deserialized PHP payloads without integrity validation or class restrictions. An attacker with write access to the underlying storage backend (cache store or sys_registry database table) could inject a crafted serialized payload to trigger PHP Object Injection, potentially exploiting a gadget chain to achieve Remote Code Execution or other high-impact effects. Exploiting this vulnerability requires direct local write access to the storage, such as the SQL database or file system. This issue affects TYPO3 CMS versions before 10.4.57, 11.0.0-11.5.51, 12.0.0-12.4.46, 13.0.0-13.4.31 and 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-49740">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0db8922f1c285b846e25e2d7e0386461</td>
-       <td>CVE-2026-49738</td>
-       <td>2026-06-09 11:16:53</td>
-       <td>The path allowance check in GeneralUtility::isAllowedAbsPath() performed a plain string prefix comparison without requiring a directory separator boundary, causing a path like /var/www/html-other/secret.yaml to be incorrectly accepted as valid when the project root was /var/www/html. Administrator users with access to the File Abstraction Layer were able to create new file storage definitions pointing to directories outside the project root, bypassing this path check. This issue affects TYPO3 CMS versions before 10.4.57, 11.0.0-11.5.51, 12.0.0-12.4.46, 13.0.0-13.4.31 and 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-49738">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5292e8521be3781aa1c82838edb5fe3e</td>
-       <td>CVE-2026-47352</td>
-       <td>2026-06-09 11:16:53</td>
-       <td>Authenticated backend users were able to retrieve file metadata via several Backend API routes without proper permission checks, allowing access to files outside their permitted file mounts or storages. This issue affects TYPO3 CMS versions before 10.4.57, 11.0.0-11.5.51, 12.0.0-12.4.46, 13.0.0-13.4.31 and 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47352">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4982502f1be9a06ba504b69ae2bd6139</td>
-       <td>CVE-2026-47351</td>
-       <td>2026-06-09 11:16:52</td>
-       <td>Backend users were able to insert arbitrary records and files into the TYPO3 clipboard without proper read permission checks, which allowed users to gather information about records and files they were not authorized to view. This issue affects TYPO3 CMS versions 10.4.0-13.4.30 and 14.0.0-14.3.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47351">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>68d7d6777100ad0e30a5ca435e0aab04</td>
-       <td>CVE-2026-47350</td>
-       <td>2026-06-09 11:16:52</td>
-       <td>Backend users were able to move records to a different page without having edit permissions on the source page. This issue affects TYPO3 CMS versions 13.0.0-13.4.31 and 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47350">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>50f8113e5819cf3b0f9afcb721199109</td>
-       <td>CVE-2026-47349</td>
-       <td>2026-06-09 11:16:52</td>
-       <td>Backend users with access to the Recycler module were able to restore soft-deleted records on pages or for tables they were not authorized to modify. This issue affects TYPO3 CMS versions before 10.4.57, 11.0.0-11.5.51, 12.0.0-12.4.46, 13.0.0-13.4.31 and 14.0.0-14.3.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47349">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>32373156117e648a607a50a59bd835c5</td>
-       <td>CVE-2026-47348</td>
-       <td>2026-06-09 11:16:52</td>
-       <td>Editors with access to create or modify page content were able to include HTML markup in page titles that were stored in the search index without sanitization. When displayed in frontend search results via the Indexed Search plugin, these titles were rendered without proper output encoding, resulting in a Cross-Site Scripting vulnerability. This issue affects TYPO3 CMS versions 13.0.0-13.4.30 and 14.0.0-14.3.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47348">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>44ef8c2547fd3d7a9340c04578476d4f</td>
-       <td>CVE-2026-47347</td>
-       <td>2026-06-09 11:16:52</td>
-       <td>Applications that use GeneralUtility::sanitizeLocalUrl to allow only local URLs are vulnerable to open redirect attacks if the URL is used after it has passed the aforementioned sanitization checks. This enables attackers to redirect users to external content and carry out phishing attacks. This issue affects TYPO3 CMS versions before 10.4.57, 11.0.0-11.5.50, 12.0.0-12.4.45, 13.0.0-13.4.30 and 14.0.0-14.3.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-47347">详情</a></td>
       </tr>
 
      </tbody>
