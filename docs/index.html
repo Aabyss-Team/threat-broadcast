@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-08-05 16:27:20 -->
+<!-- RELEASE TIME : 2026-08-06 23:52:18 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>1cdade67888302ecd10cba73887cf792</td>
+       <td>CVE-2026-8166</td>
+       <td>2026-08-06 12:16:28 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Logo Software Industry and Trade Inc. E-Logo Purchasing Portal allows Stored XSS. This issue affects e-Logo Purchasing Portal: before 1.52.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-8166">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0683527c58c87a3fff75f0054b95013c</td>
+       <td>CVE-2026-68481</td>
+       <td>2026-08-06 12:16:28 <img src="imgs/new.gif" /></td>
+       <td>In Apache CXF's DefaultEncryptingOAuthDataProvider, revoked access tokens still decrypt successfully, and TokenIntrospectionService reports active:true. The same applies to refresh tokens. This violates the RFC stipulations that 'The authorization server MUST invalidate the token.' and 'introspection of a revoked token MUST return {"active":false}'. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-68481">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>22bf96f03570d6c200427dbfc0d6dc87</td>
+       <td>CVE-2026-68079</td>
+       <td>2026-08-06 12:16:28 <img src="imgs/new.gif" /></td>
+       <td>In Apache CXF's DefaultEncryptingCodeDataProvider, a captured authorization code can be redeemed an unlimited number of times due to a flaw in the implementation of the removeCodeGrant functionality. This violates the RFC requirement that "The authorization code MUST NOT be used more than once." Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-68079">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b01e497f0fcd1f41a18e97cbfe71e62d</td>
+       <td>CVE-2026-65583</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>Apache CXF’s OIDC relying-party token validation could accept self-issued ID tokens without enforcing required claim checks (issuer/subject/audience/time and sub_jwk binding), enabling authentication bypass with crafted tokens. However, note that self-issued ID tokens are not accepted by default in the validator. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fixes this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-65583">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f3247d1f94159e3aad546e9c401e11a8</td>
+       <td>CVE-2026-63687</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>Apache CXF's JwtRequestCodeFilter copies all claims from a signed request JWT into the authorization parameter map without excluding security-sensitive parameters. A client that can produce a validly-signed request JWT (e.g., one whose client_secret is known or compromised) can thereby substitute the code_challenge, code_challenge_method, nonce, and state values that were set in the outer HTTP request, undermining PKCE integrity and OpenID Connect replay protection. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-63687">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>684dc83e90ce42620aee6f542aec6837</td>
+       <td>CVE-2026-61466</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>In Apache CXF's OAuth2 Dynamic Client Registration endpoint, the authorization server accepts and stores the `scope` value supplied in the client registration request verbatim, without validating it against an AS-defined allowlist. This could lead to a client self-assigning privileged scopes at registration time. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-61466">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f111973c241fad6acfe72662f8e5f147</td>
+       <td>CVE-2026-57818</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>A race condition in JCacheCodeDataProvider allows an attacker to redeem a single authorization code multiple times via concurrent requests, resulting in the issuance of multiple distinct, valid access tokens. Users are recommended to upgrade to versions 4.2.3, 4.1.8 or 3.6.12, which fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-57818">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0d8e098e391e800b3ae756f55801d97e</td>
+       <td>CVE-2026-5391</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>The LatePoint plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'btn_wrapper_classes' attribute of the 'latepoint_resources' shortcode in all versions up to, and including, 5.3.2. This is due to insufficient input sanitization and output escaping in the 'locations' branch of the 'shortcode_latepoint_resources' function. This makes it possible for authenticated attackers, with contributor level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-5391">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d1e05f22118800422f84e2cc964e4367</td>
+       <td>CVE-2026-5158</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>The Post Grid Gutenberg Blocks for News, Magazines, Blog Websites – PostX plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'inputPlaceHolder' parameter in all versions up to, and including, 5.0.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-5158">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>d3a60adedd0f8fd32007da10b2c6b7e7</td>
+       <td>CVE-2026-19035</td>
+       <td>2026-08-06 12:16:27 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was identified in Shibby Tomato 1.28.0000. Affected by this issue is the function new_qoslimit_start of the file /etc/qoslimit. The manipulation of the argument new_qoslimit_enable leads to os command injection. The attack may be initiated remotely. The exploit is publicly available and might be used. This project is superseded by FreshTomato.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-19035">详情</a></td>
+      </tr>
+
+      <tr>
        <td>104c7601e3e21d6438445bf181877c33</td>
        <td>CVE-2026-71256</td>
        <td>2026-08-05 12:18:57 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>a4c72d4ddc683319fb87c5cae82b5ffc</td>
        <td>CVE-2026-66884</td>
-       <td>2026-08-04 12:16:36 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 12:16:36</td>
        <td>Cross-Site Request Forgery vulnerability in Erlang Ecosystem Foundation oidcc_plug (Oidcc.Plug.AuthorizationCallback module) allows an attacker to make a victim's browser complete an authorization flow the victim never initiated. This vulnerability is associated with program file lib/oidcc/plug/authorization_callback.ex and program routine Oidcc.Plug.AuthorizationCallback.call/2. A callback request that carries no Oidcc.Plug.Authorize session is processed with every security check disabled rather than being rejected. call/2 substitutes permissive defaults for the absent session, and each downstream check treats its value as nothing to compare and returns :ok, so the nonce, state, PKCE, peer IP and user agent checks are all skipped. A separate clause of check_state/2 also accepts a state-less request when a verifier is present. An attacker obtains an authorization code for their own provider account, then induces the victim to visit the callback endpoint with that code and no state parameter. The application signs the victim in as the attacker, so the victim's subsequent actions occur in the attacker's account where the attacker can read them. Applications reusing one callback for both signing in and linking a provider account are further exposed to account takeover, the attacker's account becoming linked to the victim's. The permissive fallback serves no conforming flow. Third-party-initiated login reaches a relying party at a separate login initiation endpoint and causes it to send a fresh authentication request, and this library implements no such endpoint. Oidcc.Plug.Authorize always sends a state parameter, which an authorization server must echo, so no legitimate callback lacks one. This issue affects oidcc_plug: from 0.2.0-beta.1 before 0.5.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-66884">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>a64ccd01bb05b5e017fdf282a56bffda</td>
        <td>CVE-2026-66883</td>
-       <td>2026-08-04 12:16:36 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 12:16:36</td>
        <td>Improper Handling of Case Sensitivity vulnerability in Erlang Ecosystem Foundation oidcc_plug (Oidcc.Plug.Authorize module) renders the user agent session binding inert, removing a defense in depth control against replay of a stolen session. This vulnerability is associated with program files lib/oidcc/plug/authorize.ex and lib/oidcc/plug/authorization_callback.ex, and program routines Oidcc.Plug.Authorize.call/2 and Oidcc.Plug.AuthorizationCallback.call/2. Oidcc.Plug.Authorize.call/2 reads the initiating client's user agent with get_req_header(conn, "User-Agent"). Plug lowercases incoming header names, but get_req_header/2 matches the supplied key exactly and performs no normalization of its own, so the mixed-case lookup always returns an empty list and nil is written into the session. On the callback side, Oidcc.Plug.AuthorizationCallback treats a stored nil user agent as nothing to compare and returns :ok without inspecting the request. The two behaviours combine so that the check passes unconditionally on every request, including for deployments that explicitly opted in with check_useragent: true, and an authorization callback can be completed from a different user agent than the one that initiated the flow without detection. The check fails open silently, with no error and no log entry, so a deployment cannot tell the binding is absent. The impact is limited to defense in depth. The inert check does not by itself allow an attacker to complete an authorization flow; it removes one layer that would otherwise hinder use of a stolen or leaked session, such as an exfiltrated session cookie replayed from a different client. The CSRF/state, nonce, and PKCE checks are unaffected and continue to function. Deployments that never enabled check_useragent are not affected in practice, since they never expected the binding. The corresponding lookup in Oidcc.Plug.AuthorizationCallback correctly uses the lowercase key and is not affected. This issue affects oidcc_plug: from 0.1.0-alpha.3 before 0.5.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-66883">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>b9be65c707a6c21a7e1c9e7f916fe379</td>
        <td>CVE-2026-10050</td>
-       <td>2026-08-04 11:22:43 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 11:22:43</td>
        <td>In Eclipse Jetty, the Digest authentication server-side component uses ISO-8859-1 to encode the password as bytes. This was done because the initial specification for HTTP did not specify explicitly a charset, and it was assumed to be ISO-8859-1 for historical reasons. If the password contains characters that cannot be represented in ISO-8859-1, they are silently replaced by `?`. This happens with passwords that contain Chinese, Cyrillic or Greek characters, for example: `αβ123` converts to `??123`. An attacker can send a request with a digest `Authorization` header crafted with a password made of only `?` characters; the server would match any password of the same length that contains non-ISO-8859-1 characters. Recent HTTP Digest [RFC-7616](https://datatracker.ietf.org/doc/html/rfc7616) supports a `charset` parameters that defaults to UTF-8 that allows for correct encoding/decoding of passwords.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-10050">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>e810f892f70eafa0bf3ae46899264e3b</td>
        <td>CVE-2026-18772</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Improper input validation vulnerability in Samsung Open Source rlottie allows Oversized Serialized Data Payloads.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-18772">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>e7a753f5acf36b83a8c1c1efebe331c6</td>
        <td>CVE-2026-15721</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Cleartext storage of sensitive information vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows SQL Injection. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-15721">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>c60ad35a774c74882671235fa3e73b42</td>
        <td>CVE-2026-14838</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Use of GET request method with sensitive query strings vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Session Hijacking. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-14838">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>b7ef51e0978aa832a51e746830fdb518</td>
        <td>CVE-2026-14804</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Use of hard-coded cryptographic key vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Read Sensitive Constants Within an Executable. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-14804">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>af742771e0cd9dc5c8f2b9f2c6f4a664</td>
        <td>CVE-2026-14465</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Insufficient session expiration vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Reusing Session IDs (aka Session Replay). This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-14465">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>1618e9671b619ce5972392d80630eca0</td>
        <td>CVE-2026-14219</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>URL redirection to untrusted site ('open redirect') vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Phishing. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-14219">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>02e1b5c96464f65bf31dbea25c7f53a8</td>
        <td>CVE-2026-14202</td>
-       <td>2026-08-04 10:19:32 <img src="imgs/new.gif" /></td>
+       <td>2026-08-04 10:19:32</td>
        <td>Observable response discrepancy vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Account Footprinting. This issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-14202">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f3a48765cf30438d650ef7aabd18f25a</td>
-       <td>CVE-2026-69082</td>
-       <td>2026-08-03 10:16:33</td>
-       <td>CTI-Transmute contained a cross-site request forgery vulnerability in the administrative user deletion functionality. The /account/delete/<id> endpoint accepted HTTP GET requests for an operation that modified application state. An unauthenticated remote attacker could construct a malicious link or embed a request targeting this endpoint and induce an authenticated CTI-Transmute administrator to visit the attacker-controlled content. If the administrator had an active session, the browser would automatically include the administrator’s session credentials, causing the selected user account to be deleted without the administrator intentionally confirming the operation. Successful exploitation requires interaction from a currently authenticated administrator who has permission to delete users. The attacker does not need a CTI-Transmute account or administrative privileges because the forged request executes using the victim administrator’s session. The vulnerability could allow an attacker to delete arbitrary user accounts, resulting in unauthorized modification of application state and denial of access for affected users. Depending on whether administrators can delete other administrators or the final administrative account, exploitation could also disrupt administration of the CTI-Transmute instance. The patch resolves the issue by restricting the deletion endpoint to HTTP POST requests and submitting the deletion through a form containing a CSRF token.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-69082">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3a98f655b9aae68424843f8eb650ce38</td>
-       <td>CVE-2026-69079</td>
-       <td>2026-08-03 10:16:33</td>
-       <td>CTI-Transmute contains an uncontrolled resource-consumption vulnerability in the unauthenticated /activity_timeline endpoint. The endpoint accepts a user-controlled days query parameter that was not restricted to a reasonable range. A remote, unauthenticated attacker could submit an excessively large value for this parameter, causing the application to retrieve and process activity data over an arbitrarily large period. This could consume excessive database, CPU, or memory resources, delay the processing of concurrent requests, or trigger an internal server error. Repeated requests could further degrade the availability of the CTI-Transmute website. The vulnerability is corrected by clamping the requested timeline range to a minimum of one day and a maximum of 1,095 days.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-69079">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f63a973bd78e8907d946a0aa5a5f2e19</td>
-       <td>CVE-2026-69078</td>
-       <td>2026-08-03 10:16:33</td>
-       <td>CTI-Transmute is affected by a server-side request forgery vulnerability in the evaluation report PDF-generation functionality. User-controlled CTI content, including conversion names, descriptions, and comments, is converted from Markdown to HTML and rendered as a PDF using WeasyPrint. Before the patch, the renderer used WeasyPrint’s default URL-fetching behavior without restricting the protocols or destinations that could be referenced by the generated HTML. An attacker able to supply content included in an evaluation report could inject crafted resource references using schemes such as http://, https://, or file://. When the report was rendered, CTI-Transmute could fetch these resources using the application server’s network connectivity and filesystem privileges. Successful exploitation could allow an attacker to: * access services available only from the CTI-Transmute server or its internal network; * probe internal hosts and service endpoints; * retrieve local files readable by the application process; and * expose fetched content through the generated PDF, depending on the referenced resource type and rendering context. The vulnerability is corrected by providing WeasyPrint with a restrictive URL fetcher that permits only self-contained data: URIs. The externally hosted Google Fonts stylesheet was also removed so that PDF generation performs no intentional network or filesystem fetches.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-69078">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9a5dc57940df8f4e7a1ff339614fab8c</td>
-       <td>CVE-2026-68742</td>
-       <td>2026-08-03 10:16:33</td>
-       <td>A flaw was found in SSSD. The sss_nss_protocol_parse_addr() function in the NSS responder does not validate the addrlen field against the remaining packet body size. A local attacker can exploit this via a crafted GETHOSTBYADDR request to the NSS responder socket, causing an out-of-bounds read and process crash, resulting in a denial of service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-68742">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>3d54ac90cea327f3399f37112fcbc3ef</td>
-       <td>CVE-2026-33591</td>
-       <td>2026-08-03 10:16:28</td>
-       <td>A vulnerability in Wapt Server before version 2.6.1.17813 allows a remote unauthenticated attacker to bypass security restriction using a specially crafted packet and retrieve a valid session token for the targeted account.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-33591">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e4c151050be2d852dfcd7e7e3874d6e4</td>
-       <td>CVE-2026-0392</td>
-       <td>2026-08-03 10:16:27</td>
-       <td>eParakstītājs 3.0 for Windows before version 1.10.0 retrieves and executes its automatic updates over a channel that is not authenticated or integrity-protected. On each launch the application fetches an update descriptor (XML) over TLS but accepts any TLS certificate (a permissive TrustManager and a HostnameVerifier that always returns true), does not verify any digital signature on the update descriptor, and does not verify the Authenticode signature or a checksum of the downloaded installer before running it. A man-in-the-middle attacker able to redirect www.eparaksts.lv can serve a crafted update descriptor pointing to an attacker-controlled executable, which the client downloads and executes, resulting in arbitrary code execution on the victim host.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-0392">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6e60d4c46540b7dd861f906568629103</td>
-       <td>CVE-2026-69075</td>
-       <td>2026-08-03 09:17:06</td>
-       <td>FlowIntel is affected by a stored cross-site scripting vulnerability through multiple user-controlled or administrator-controlled fields. Persisted values—including case titles, ticket identifiers, recurring-case information, user profile attributes, organisation names, and role names—were rendered inside DOM elements subsequently compiled by Vue. Although normal HTML escaping could neutralize direct HTML markup, it did not prevent an attacker from injecting Vue interpolation expressions using the configured [[ ... ]] delimiters. An authenticated attacker able to modify one of the affected fields could store a malicious Vue expression. When another user viewed an affected case, report, profile, recurring-case page, or navigation component, Vue could evaluate the injected expression in the context of the FlowIntel application. Successful exploitation could allow arbitrary JavaScript execution in the victim’s browser under the FlowIntel origin. This could expose information available to the victim, perform actions using the victim’s authenticated session, or modify application data within the victim’s privileges. The patch introduces a dedicated vue_escape filter that escapes HTML-sensitive characters and breaks Vue interpolation delimiters before the values are rendered. The filter is applied to the affected case, account, organisation, role, configuration, and navigation fields.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-69075">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>1e032e8af22f3c24daef51596fb74124</td>
-       <td>CVE-2026-63563</td>
-       <td>2026-08-03 09:17:06</td>
-       <td>Sharp and Toshiba Tec MFPs (multifunction printers) for a certain market have been shipped with the user authentication feature disabled in the initial configuration. When used with the initial configuration, the address book editing and a range of features related to Document Filing can be accessed without user authentication. Products intended for the Japanese market are not affected.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-63563">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>70840ea9cb41f193760d60bcc022161a</td>
-       <td>CVE-2026-63545</td>
-       <td>2026-08-03 09:17:06</td>
-       <td>Sharp and Toshiba Tec MFPs (multifunction printers) caches data internally when printing, and leave them uncleared. They may be accessed later by other users.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-63545">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8287ef52591bcf9195c00ce75fa73d75</td>
-       <td>CVE-2026-62416</td>
-       <td>2026-08-03 09:17:05</td>
-       <td>Network Scanner Tool and Network Scanner Tool Lite provided by Sharp Corporation, with the initial configuration, require no authentication and accept files unlimitedly. When the affected products are used with the initial configuration, anyone can connect to them without authentication and upload files unlimitedly. This may cause a denial-of-service (DoS) condition on the PC. Furthermore, if a malicious file is uploaded, a PC user may be tricked to execute the file to attack other entities from that PC.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-62416">详情</a></td>
       </tr>
 
      </tbody>
