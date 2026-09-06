@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-09-05 19:46:36 -->
+<!-- RELEASE TIME : 2026-09-06 17:26:46 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>50af17313836b2b06ef5997f164dd8b1</td>
+       <td>CVE-2026-83534</td>
+       <td>2026-09-06 16:16:50 <img src="imgs/new.gif" /></td>
+       <td>PostgreSQL Anonymizer contains a vulnerability in the anon.anonymize_database_parallel() function that allows the owner of a table to run arbitrary code with superuser privilege. The issue is fixed in PostgreSQL Anonymizer 3.2.0 and later versions</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83534">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>ac0e574543e30ca231dac2b56c00b4e0</td>
+       <td>CVE-2026-19634</td>
+       <td>2026-09-06 16:16:50 <img src="imgs/new.gif" /></td>
+       <td>PostgreSQL Anonymizer contains a SQL injection vulnerability in two import functions. A user can create a malicious JSON document containing specially crafted object names. If a superuser subsequently calls anon.import_database_rules() or anon.import_roles_rules(), the malicious code is executed with superuser privileges. The issue is fixed in PostgreSQL Anonymizer 3.1.4 and later</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-19634">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>1c0e5ceb595c801d9dd2ba7dc212568c</td>
+       <td>CVE-2026-19633</td>
+       <td>2026-09-06 16:16:49 <img src="imgs/new.gif" /></td>
+       <td>PostgreSQL Anonymizer contains a vulnerability that allows unprivileged masked users to execute arbitrary code by abusing operators, domain casts, or view subqueries that carry untrusted expressions. When these objects are evaluated in the context of the extension’s masking mechanisms, the malicious code can run with elevated privileges. The issue is fixed in PostgreSQL Anonymizer 3.1.4 and later versions</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-19633">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>93fc7bb5868778a7af0be36d94b723ee</td>
+       <td>CVE-2026-86283</td>
+       <td>2026-09-06 15:17:24 <img src="imgs/new.gif" /></td>
+       <td>MISP's UiBeta theme collection view (app/View/Themed/UiBeta/Collections/view.ctp) performed a secondary query of member events by UUID without applying the caller's access control list (ACL). The CollectionsController::view() action correctly resolved collection element UUIDs through Event::fetchSimpleEvents($user, ...), which enforces per-user event ACL. However, the view template independently re-queried the same UUIDs using only an Event.uuid IN (...) condition, omitting the createEventConditions() authorization filter. Because collection element UUIDs are stored without server-side authorization against the referenced event (CollectionElementsController::add() accepts whatever UUID the collection owner posts), an authenticated user with view access to a collection could retrieve full details of events they are not permitted to read. The exposed data included event identifiers, info, dates, timestamps, creator organization, all event tags, and galaxy clusters (the latter attached via a cluster-scoped rather than event-scoped ACL check). This constitutes an authorization bypass at the presentation layer, allowing horizontal privilege escalation across event boundaries within the MISP instance.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86283">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2359d3381668af5c9be9e0e234835b16</td>
+       <td>CVE-2026-86217</td>
+       <td>2026-09-06 15:17:24 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was detected in code-projects Hotel and Tourism Reservation in PHP 1.0. Affected is an unknown function of the file /ht/hotel_db%20(1).sql of the component Database Backup Handler. The manipulation results in information disclosure. The attack may be launched remotely. The exploit is now public and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86217">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>70e68215b4ce3f7bddc2562488be9089</td>
+       <td>CVE-2026-86216</td>
+       <td>2026-09-06 14:17:25 <img src="imgs/new.gif" /></td>
+       <td>A security vulnerability has been detected in code-projects Hotel and Tourism Reservation in PHP 1.0. This impacts an unknown function of the file /ht/details.php. The manipulation of the argument room leads to cross site scripting. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86216">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f6058e522c022c8a43081ab8d9e69658</td>
+       <td>CVE-2026-86215</td>
+       <td>2026-09-06 14:17:24 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was identified in Mstfakts College-Management-System. The affected element is an unknown function of the file Front-end/server.php of the component Logout Handler. Such manipulation of the argument log_out leads to session expiration. It is possible to launch the attack remotely. The exploit is publicly available and might be used. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The project was informed of the problem early through an issue report but has not responded yet.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86215">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4998b473b1674461e07e391e0869ba73</td>
+       <td>CVE-2026-86259</td>
+       <td>2026-09-06 13:17:10 <img src="imgs/new.gif" /></td>
+       <td>OpenMAIC before 1.0.1 skips server-side request forgery validation in non-production builds, allowing unauthenticated attackers to reach cloud instance metadata services. Attackers can supply arbitrary provider URLs via the x-base-url header or baseUrl parameter to access sensitive cloud credentials and metadata.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86259">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>366168657f5db6c73152703eb2c3f55c</td>
+       <td>CVE-2026-86258</td>
+       <td>2026-09-06 13:17:10 <img src="imgs/new.gif" /></td>
+       <td>nbviewer through 1.0.1 contains a path traversal vulnerability in LocalFileHandler.can_show() that uses string-prefix comparison instead of proper path validation. Attackers can read files from sibling directories outside the configured root by requesting paths that share the root as a textual prefix, disclosing unintended notebooks and credentials.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86258">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>2e30d89dd20af3dbbd098c37bb58437b</td>
+       <td>CVE-2026-86214</td>
+       <td>2026-09-06 13:17:10 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was determined in Mstfakts College-Management-System. Impacted is an unknown function of the file Front-end/login.php. This manipulation of the argument email causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86214">详情</a></td>
+      </tr>
+
+      <tr>
        <td>c3c8e29a7619c1331a931e29bdaa8292</td>
        <td>CVE-2026-86197</td>
        <td>2026-09-05 13:18:15 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>baea922a847da5c80039492578dbf7e9</td>
        <td>CVE-2026-85649</td>
-       <td>2026-09-04 13:20:11 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 13:20:11</td>
        <td>(Holloway) Chew, Kean Ho's Actualizer v1.2.0 and earlier contains a fail-open password validation vulnerability in the Alpha user and root user password loops of Shell/debian-minbase-install.sh. The installer invokes mkpasswd to generate yescrypt password hashes but does not check the command's return value and unconditionally accepts the result. If mkpasswd fails to generate a yescrypt hash, for example because an incompatible mkpasswd implementation or an environment without yescrypt support is used, the resulting password hash variable can be empty and the build proceeds. The resulting image can therefore contain empty password fields for the root and alpha accounts, potentially permitting passwordless authentication depending on the authentication configuration.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85649">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>56240d05b142c44c4d6197a3e9312a94</td>
        <td>CVE-2026-85617</td>
-       <td>2026-09-04 12:17:25 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:25</td>
        <td>snipe-it versions before 8.6.3 contain an authorization bypass vulnerability in the bulk delete functionality that allows restricted users to soft-delete users outside their authorized scope. Attackers can include unauthorized user IDs in bulk delete requests to bypass instance-level restrictions and modify or disable accounts they should not access.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85617">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>2728304fc1ff47aa72dd2df8fb01a69b</td>
        <td>CVE-2026-85616</td>
-       <td>2026-09-04 12:17:25 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:25</td>
        <td>Snipe-IT versions before 8.6.2 contain an authorization bypass vulnerability in checkout-acceptance report actions when Full Multiple Company Support is enabled. Authenticated users with reports.view permission can enumerate sequential acceptance IDs and soft-delete or trigger reminder emails for acceptances belonging to other companies by exploiting a null check on the legacy users.company_id column.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85616">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>84de59a36ff04e8e3e2ebad1b20a244d</td>
        <td>CVE-2026-85615</td>
-       <td>2026-09-04 12:17:25 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:25</td>
        <td>Openpanel before 2.3.0 contains an insecure direct object reference vulnerability in the report.getLayouts and report.resetLayout tRPC procedures that fail to bind dashboardId to the authorized projectId. Authenticated attackers can supply an arbitrary victim dashboardId with their own projectId to read report layouts and configurations or delete dashboard grid arrangements across tenants.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85615">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>eea22f2864a9f487dc850ff4f1e60809</td>
        <td>CVE-2026-85614</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>OpenPanel before 2.3.0 contains an unauthenticated server-side request forgery vulnerability in the GET /tools/site-checker endpoint that accepts a fully client-controlled URL parameter with no private IP filtering or DNS-rebinding protection. Attackers can make the OpenPanel server issue requests to internal services, localhost, and cloud metadata endpoints, reading internal HTTP response titles, headers, status codes, and SSL certificate information.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85614">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>42449862d36ef713a5012b8bab2c4453</td>
        <td>CVE-2026-85613</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>OpenPanel before 2.3.0 contains a cross-site scripting vulnerability in the unauthenticated favicon proxy endpoint GET /misc/favicon that allows remote attackers to execute scripts by supplying an SVG file URL. Attackers can host malicious SVG files with embedded scripts that execute in the victim's browser on the API origin, enabling same-origin credentialed requests to authenticated endpoints.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85613">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>eeb3ee3daf348219a2dab47c8ff3749b</td>
        <td>CVE-2026-85612</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>OpenPanel before 2.3.0 contains an unauthenticated server-side request forgery vulnerability in the /misc/favicon and /misc/og endpoints that accept an attacker-supplied url parameter with insufficient validation. Attackers can force the API to fetch arbitrary internal hosts and cloud metadata endpoints, with small responses returned verbatim enabling credential theft and internal service enumeration.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85612">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>d495ee3ed3dba9e830ad0cd3342179a7</td>
        <td>CVE-2026-85611</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>OpenPanel before 2.3.0 contains a cross-tenant broken object level authorization vulnerability in the report.getLayouts and report.resetLayout tRPC procedures that fail to scope dashboard queries to the caller's project. Authenticated attackers can supply their own projectId with a victim organization's guessable dashboardId to read confidential report definitions or permanently delete dashboard layouts across tenant boundaries.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85611">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>cd7a35ec721d5db3b9978ebe12bf3fc3</td>
        <td>CVE-2026-85610</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>OpenPanel before 2.3.0 fails to properly validate chart formula expressions, allowing authenticated project members with read access to execute arbitrary code by recovering the native JavaScript Function constructor through mathjs matrix objects. Attackers can use the recovered constructor to load Node.js built-ins and execute operating system commands with the privileges of the API process, bypassing organization authorization boundaries.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85610">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>042cfe44c394b855c796745c192ea794</td>
        <td>CVE-2026-85609</td>
-       <td>2026-09-04 12:17:24 <img src="imgs/new.gif" /></td>
+       <td>2026-09-04 12:17:24</td>
        <td>Openpanel before 2.3.0 contains an unauthenticated full-read server-side request forgery (SSRF) vulnerability in the GET /tools/site-checker endpoint (apps/api/src/controllers/tools.controller.ts). The endpoint passes a user-supplied url query parameter to fetchWithRedirects() and performs server-side HTTP requests to arbitrary URLs without any SSRF/IP validation. An unauthenticated remote attacker can access cloud instance metadata endpoints, probe internal services, scan internal network ports, and read returned content (status code, page size, timing, and parsed HTML metadata), and leak internal IP addresses (via getIPInfo() to a third party).</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85609">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a825ade98bccde23e545b5d15c771286</td>
-       <td>CVE-2026-9852</td>
-       <td>2026-09-03 13:06:25</td>
-       <td>A CSV injection vulnerability exists in SYS600. Injected malicious formulas can add or modify data to the spreadsheet, insert links, exfiltrate data, and in some cases, depending on how the user has their environment configured, execute malicious code on the user’s machine. To exploit this issue attackers would need a way to create arbitrary log messages. This could be achieved through normal functionality via SCIL scripts, a log injection vulnerability, or via the SYS600 broker. This vulnerability affects all Windows users regardless of their privilege level who can run the Notify service and export the log.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-9852">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>10ae0df09f476d4d2d3a94fcae3e4ee7</td>
-       <td>CVE-2026-85175</td>
-       <td>2026-09-03 13:06:25</td>
-       <td>SiYuan versions <= 3.8.1 (fixed in v3.8.2) contain an incomplete blocklist in the IsForbiddenAbsPath() function (kernel/util/path_guard.go), which only blocks conf/conf.json by exact match and does not restrict the TLS private key (conf/key.pem) or CA private key (conf/ca.key) stored in the same conf/ directory. Because the getFile handler skips the blocklist for RoleAdministrator and all authenticated users receive RoleAdministrator in v3.8.1, any user (or any client on a default no-auth-code instance) can retrieve these private keys via POST /api/file/getFile. On deployments with TLS enabled, this allows decryption of captured HTTPS traffic (key.pem) and forging of certificates trusted by clients that imported SiYuan's CA (ca.key).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85175">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>abb9a911133ceb21de13dfbd1da3f966</td>
-       <td>CVE-2026-85172</td>
-       <td>2026-09-03 13:06:24</td>
-       <td>n8n versions before 2.34.1 contain a server-side request forgery vulnerability in the legacy request helper function exposed to Code and Function nodes. The validation logic checks the uri property for SSRF safety while the underlying HTTP client uses the url property when both are present, allowing attackers to bypass validation by supplying a safe uri alongside a malicious url to access internal addresses.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85172">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0ae7bc4fcbda94bf38eb7d35c7e86a94</td>
-       <td>CVE-2026-85171</td>
-       <td>2026-09-03 13:06:24</td>
-       <td>n8n before 1.123.73, 2.35.4, and 2.36.2 contains a credential exposure vulnerability in the Strapi, SeaTable, and Mailcheck nodes. These nodes send their decrypted credentials to the authentication endpoint via the raw legacy HTTP helper outside any error handling, causing the plaintext secret to be persisted in execution error data. Any authenticated user can read the plaintext secret from their own execution through the REST API, bypassing the blank-value redaction enforced by the credentials API.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85171">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5c368fecc2e9d5198049fa285ec1259e</td>
-       <td>CVE-2026-85169</td>
-       <td>2026-09-03 13:06:24</td>
-       <td>n8n versions before 1.123.73, 2.35.4, and 2.36.2 contain an expression sandbox escape in the $fromAI handler. $fromAI resolved a caller-supplied placeholder name without requiring it to be an own property and admitted reserved keys; against a primitive input value it returned a live host-prototype reference. An attacker with workflow-build privilege can walk the prototype chain to the Function constructor and compile/execute arbitrary code in the main n8n process, leading to remote code execution.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85169">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>bb21ea3d5623d05f10c936a84df90c26</td>
-       <td>CVE-2026-85167</td>
-       <td>2026-09-03 13:06:24</td>
-       <td>n8n before 2.35.4 and 2.36.x before 2.36.2 contain a query injection vulnerability in the Elasticsearch Document Get All and Google Cloud Firestore Document Query operations, which build their JSON query by interpolating expression values directly into the query string before parsing. A value containing quote and brace characters can close the intended field and introduce new query operators, turning an intended single-document lookup into a full-collection read.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85167">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>db7dc007e0883ccef260fffa72dbd26d</td>
-       <td>CVE-2026-85166</td>
-       <td>2026-09-03 13:06:23</td>
-       <td>n8n before 2.35.4 and 2.36.x before 2.36.2 does not validate credential references in the inline workflow JSON of nodes that execute an inline sub-workflow (e.g., the Workflow Tool node). A shared-workflow editor, or any user creating/updating a workflow via the REST API, Public API, or MCP, can persist a node referencing a credential they do not own. When the workflow is later executed under an identity that holds the credential, the inline sub-workflow resolves the secret and can send it to an attacker-controlled endpoint, resulting in credential exfiltration.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85166">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ea4782f7b4419468e3a376b36b57374b</td>
-       <td>CVE-2026-85164</td>
-       <td>2026-09-03 13:06:23</td>
-       <td>WWBN AVideo through commit c91b5975d contains a server-side request forgery vulnerability in the set_api_userImages API endpoint that fails to validate profileImg and backgroundImg URLs before fetching them. Authenticated API clients can supply internal URLs to fetch cloud metadata or internal services, with responses written to publicly accessible web paths for retrieval.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85164">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6f8314c0f027cd94852b3dee14218a42</td>
-       <td>CVE-2026-85162</td>
-       <td>2026-09-03 13:06:23</td>
-       <td>AVideo through commit c91b5975d contains a cross-site request forgery vulnerability in plugin/Live/saveLive.php that lacks forbidIfNotPost and forbidIfInvalidToken protections. Attackers can craft malicious image tags to overwrite authenticated streamers' RTMP keys, passwords, and titles, hijacking live broadcasts.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85162">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>cbf34b032d9c2ac4c28a1c3c82206cf8</td>
-       <td>CVE-2026-85161</td>
-       <td>2026-09-03 13:06:23</td>
-       <td>AVideo through commit c91b5975d contains a cross-site request forgery vulnerability in removePoster.php that lacks forbidIfNotPost or forbidIfInvalidToken checks. Attackers can craft malicious image tags to delete authenticated victims' live poster and thumbnail files via GET requests.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85161">详情</a></td>
       </tr>
 
      </tbody>
