@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-09-06 17:26:46 -->
+<!-- RELEASE TIME : 2026-09-07 18:56:42 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>ba8198df5395e4e28cc55b7a89d4fd0d</td>
+       <td>CVE-2026-86451</td>
+       <td>2026-09-07 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>Affected versions of MISP allow authenticated users to retrieve object-reference records by UUID through EventGraphTool::get_reference_data() without first checking whether the requester is authorized to view the object the reference belongs to. The vulnerable code queried ObjectReference.uuid directly and returned the matching row whenever it existed. Because no parent-object ACL was applied, a user who knew or obtained a reference UUID could retrieve information associated with an object outside their normal access scope. The commit explicitly states that any object reference could be returned by UUID without authorizing its parent object. The fix retrieves the referenced object's object_id and calls fetchObjectSimple() with the current user. If the user cannot access that parent object, MISP now returns NotFoundException instead of exposing the reference. Version affected: ≤2.5.45</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86451">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>80657d989b7ac1922179f7e1fbb6264d</td>
+       <td>CVE-2026-86441</td>
+       <td>2026-09-07 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>Affected versions of MISP contain inconsistent authorization checks across dashboard widgets that display organisation information. Several organisation-related widgets did not honor Security.hide_organisation_index_from_users. As a result, authenticated users without the perm_sharing_group permission could enumerate organisations even though the normal organisation index was intentionally hidden from them. The affected widgets included paths that: * returned organisation names and identifiers; * could expose additional organisation database fields through JSON export because unrestricted find('all') queries fetched full rows; * accepted limit=0 or negative values in a way that could effectively remove the result limit and return the entire organisation table. A related organisation-contributor leaderboard also ignored the same visibility setting. Its handler counted Event.orgc_id across the entire event table and mapped those IDs to organisation names, revealing every organisation with events regardless of whether the caller could see any of those events. The fix withdraws this widget entirely for users who lack organisation-index visibility. Version affected: ≤2.5.45</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86441">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f29d0c5dd9d44b94f67562671c935e1e</td>
+       <td>CVE-2026-86440</td>
+       <td>2026-09-07 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>Affected versions of MISP insufficiently validate URLs used by dashboard widgets, particularly the Button widget. The widget's URL is stored configuration controlled by a user. The previous renderer considered a URL safe if it appeared relative or if its parsed hostname matched the configured MISP hostname. That logic failed to reject dangerous schemes and URL forms that browsers normalize differently from PHP's URL parsing. As a result, values such as javascript: URLs or backslash-based authority forms could reach the generated anchor's href and execute script or navigate to an attacker-controlled origin when another user interacted with the widget. The upstream commit describes the issue as: “javascript: and backslash URLs reached the href (stored XSS)”. The fix routes widget URLs through a shared DashboardURLValidator, rejects dangerous schemes, raw backslashes, control characters, and unauthorized absolute origins, and validates the URL both in the widget handler and renderer. Version affected: ≤2.5.45</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86440">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>288bbf57721cdee2c056dde197c07fc4</td>
+       <td>CVE-2026-86435</td>
+       <td>2026-09-07 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>commonmark versions from 1.5.0 before 2.8.4 contain a denial of service vulnerability in the Footnote extension that fails to deduplicate footnote definitions. Attackers can craft documents with duplicate footnote definitions and references to create quadratic output expansion, consuming excessive memory and CPU to exhaust server resources.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86435">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>023da92a144667379e69e9e93b51c840</td>
+       <td>CVE-2026-8279</td>
+       <td>2026-09-07 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>The Masteriyo LMS plugin for WordPress is vulnerable to unauthorized data deletion due to a missing capability check on the 'delete_item_permissions_check' function in the CourseProgressItemsController in all versions up to, and including, 2.2.0. This makes it possible for unauthenticated attackers to delete arbitrary course progress records belonging to any student.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-8279">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f45f5d5d7984e98305f4cdf65f2cdf7f</td>
+       <td>CVE-2026-86434</td>
+       <td>2026-09-07 13:20:42 <img src="imgs/new.gif" /></td>
+       <td>league/commonmark versions >= 2.0.0 and < 2.8.4 (patched in 2.9.0) contain a denial of service vulnerability in UniqueSlugNormalizer::normalize(), which restarts its numeric-suffix search from 1 on every slug collision, resulting in O(K^2) time complexity for K headings that collapse to the same base slug. The vulnerable path is reached when HeadingPermalinkExtension, FootnoteExtension, or TableOfContentsExtension is registered. An unauthenticated attacker can force many headings onto a single base slug (e.g., via empty ATX headings, identical heading text, or punctuation-only headings) in a small Markdown document, consuming excessive CPU and denying service.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86434">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>fad0f10cce094991a7ffe172d03acb8a</td>
+       <td>CVE-2026-86433</td>
+       <td>2026-09-07 13:20:42 <img src="imgs/new.gif" /></td>
+       <td>commonmark versions from 1.5.0 before 2.8.4 contain a denial of service vulnerability in the Attributes extension where AttributesListener::findTargetAndDirection() performs quadratic-time sibling list scanning. Unauthenticated attackers can submit approximately 32 KB of repeated attribute blocks to cause parsing to take over 5 seconds, exhausting server resources.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86433">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a9daecbcf06eddd870338ef18ffad74c</td>
+       <td>CVE-2026-86432</td>
+       <td>2026-09-07 13:20:42 <img src="imgs/new.gif" /></td>
+       <td>commonmark versions from 2.0.0 before 2.8.4 contain a denial of service vulnerability in XmlRenderer that emits depth-proportional indentation for every XML tag. Attackers can provide deeply nested Markdown or AST structures to cause quadratic memory consumption and output amplification, exhausting server resources.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86432">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>01b8917fa9e1036941e9f29aa0f5556b</td>
+       <td>CVE-2026-86431</td>
+       <td>2026-09-07 13:20:42 <img src="imgs/new.gif" /></td>
+       <td>league/commonmark (thephpleague/commonmark) versions >= 2.7.0 and < 2.9.1 contain a cross-site scripting vulnerability in the AttributesExtension. Prefixing an attribute name with a single U+000C form feed byte (e.g. {\x0Conclick="alert(1)"}) bypasses the AttributesHelper::filterAttributes() 'on*' event-handler filter because PHP's trim() does not strip U+000C, causing the attribute to be written verbatim into the output where browsers parse it as a genuine event handler. The same prefix also defeats the allow_unsafe_links check, allowing javascript: URIs through href/src attributes even when allow_unsafe_links is false. Exploitation requires processing untrusted Markdown with the AttributesExtension enabled; the injected script executes when the rendered HTML is viewed. Fixed in 2.9.1.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86431">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>55594bb5f2187429cf7e9b41d3c5946c</td>
+       <td>CVE-2026-86430</td>
+       <td>2026-09-07 13:20:42 <img src="imgs/new.gif" /></td>
+       <td>league/commonmark versions before 2.9.1 contain multiple denial of service vulnerabilities in fenced code block detection, reference link label lookup, and emphasis delimiter processing that perform super-linear work on crafted input. Attackers can submit specially crafted Markdown with long backtick runs, nested brackets, or delimiter sequences to consume disproportionate CPU time and prevent legitimate requests from completing.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86430">详情</a></td>
+      </tr>
+
+      <tr>
        <td>50af17313836b2b06ef5997f164dd8b1</td>
        <td>CVE-2026-83534</td>
        <td>2026-09-06 16:16:50 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>c3c8e29a7619c1331a931e29bdaa8292</td>
        <td>CVE-2026-86197</td>
-       <td>2026-09-05 13:18:15 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:15</td>
        <td>Grav before 2.0.20 contains a cross-site scripting vulnerability in the Twig sandbox policy that allowlists addJs and addCss methods on Grav\Common\Assets without proper output escaping. Page editors can inject arbitrary script by registering malicious assets or injecting attributes, which are rendered unescaped into document head tags and executed for all visitors including administrators.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86197">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>98e3050a3e404a2bbf893a0302a4333e</td>
        <td>CVE-2026-86196</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>Grav API plugin versions before 1.0.20 build password reset links from the untrusted Host header in the forgot-password endpoint, allowing unauthenticated attackers to redirect reset tokens to attacker-controlled domains. Attackers can send password reset requests for any account with a malicious Host header, intercept the reset token from victim emails, and complete account takeover including super-admin accounts.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86196">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>ce605fd63a24d2f30d9d066ed29e9a29</td>
        <td>CVE-2026-86195</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>grav-plugin-api versions before 1.0.20 contain a privilege escalation vulnerability in the InvitationsController where the stripSuperFlags() method only removes nested super flags but fails to strip dot-keyed equivalents like api.super. A non-super user manager with api.access and api.users.write permissions can create an invitation with a dot-keyed super flag in the access payload that bypasses the guard and persists to the new account. Attackers can accept the invitation through the public endpoint without real invitee interaction to create a super-admin account and immediately receive a valid JWT for full site control.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86195">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>bcb33085ad3a6e253d6aa735107df769</td>
        <td>CVE-2026-86194</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>Grav Form Plugin before 9.1.22 fails to verify page authorization when resolving forms by name across pages, allowing anonymous visitors to execute form actions defined on login-restricted or unpublished pages. Attackers can POST to any public page with a restricted form's name to trigger save, upload, email, or call actions without authentication.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86194">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>304c1cdd0a2bcc1c15c7e7b6c20b7497</td>
        <td>CVE-2026-86193</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>grav-plugin-api before 1.0.20 fails to validate group-inherited super permissions in user-management guards, allowing non-super user managers to modify super-admin accounts. Attackers with api.access and api.users.write can patch password fields on group-super accounts to gain full administrative control.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86193">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>638ede994f028bef16834b911bff0ea4</td>
        <td>CVE-2026-86192</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>SiYuan versions before v3.8.2 fail to properly filter private attribute-view cell values in the getAttributeViewKeys endpoint. Publish readers can retrieve hidden KeyValues payloads from rows bound to inaccessible documents, exposing private database contents without authorization.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86192">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>cc8639adb86bd485434ad8dd7570ad55</td>
        <td>CVE-2026-86191</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>SiYuan versions before v3.8.2 contain an information disclosure vulnerability in the getAttributeViewKeysByID endpoint that allows publish readers to enumerate private attribute view key definitions without verifying parent database visibility. Attackers can access the endpoint to retrieve complete key schemas including sensitive field names and relation definitions from hidden databases.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86191">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>c4aa3fdd7f80a5850e9a63b230ff3ab6</td>
        <td>CVE-2026-86190</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86190">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>fb63201c2f9b2b39abdc221d106972e4</td>
        <td>CVE-2026-86189</td>
-       <td>2026-09-05 13:18:14 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:14</td>
        <td>WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86189">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>2779dc2cabf5bd0566046588144f1802</td>
        <td>CVE-2026-86188</td>
-       <td>2026-09-05 13:18:13 <img src="imgs/new.gif" /></td>
+       <td>2026-09-05 13:18:13</td>
        <td>AVideo with YPTSocket plugin enabled contains a cross-site scripting vulnerability allowing unauthenticated attackers to execute arbitrary JavaScript in other users' browsers via the websocket callback mechanism. Attackers can send crafted socket messages with callback names resolving to global functions like avideoConfirmHTML that accept untrusted data and assign it to innerHTML, achieving script execution in the victim's origin without authentication or user interaction.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86188">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>baea922a847da5c80039492578dbf7e9</td>
-       <td>CVE-2026-85649</td>
-       <td>2026-09-04 13:20:11</td>
-       <td>(Holloway) Chew, Kean Ho's Actualizer v1.2.0 and earlier contains a fail-open password validation vulnerability in the Alpha user and root user password loops of Shell/debian-minbase-install.sh. The installer invokes mkpasswd to generate yescrypt password hashes but does not check the command's return value and unconditionally accepts the result. If mkpasswd fails to generate a yescrypt hash, for example because an incompatible mkpasswd implementation or an environment without yescrypt support is used, the resulting password hash variable can be empty and the build proceeds. The resulting image can therefore contain empty password fields for the root and alpha accounts, potentially permitting passwordless authentication depending on the authentication configuration.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85649">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>56240d05b142c44c4d6197a3e9312a94</td>
-       <td>CVE-2026-85617</td>
-       <td>2026-09-04 12:17:25</td>
-       <td>snipe-it versions before 8.6.3 contain an authorization bypass vulnerability in the bulk delete functionality that allows restricted users to soft-delete users outside their authorized scope. Attackers can include unauthorized user IDs in bulk delete requests to bypass instance-level restrictions and modify or disable accounts they should not access.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85617">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>2728304fc1ff47aa72dd2df8fb01a69b</td>
-       <td>CVE-2026-85616</td>
-       <td>2026-09-04 12:17:25</td>
-       <td>Snipe-IT versions before 8.6.2 contain an authorization bypass vulnerability in checkout-acceptance report actions when Full Multiple Company Support is enabled. Authenticated users with reports.view permission can enumerate sequential acceptance IDs and soft-delete or trigger reminder emails for acceptances belonging to other companies by exploiting a null check on the legacy users.company_id column.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85616">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>84de59a36ff04e8e3e2ebad1b20a244d</td>
-       <td>CVE-2026-85615</td>
-       <td>2026-09-04 12:17:25</td>
-       <td>Openpanel before 2.3.0 contains an insecure direct object reference vulnerability in the report.getLayouts and report.resetLayout tRPC procedures that fail to bind dashboardId to the authorized projectId. Authenticated attackers can supply an arbitrary victim dashboardId with their own projectId to read report layouts and configurations or delete dashboard grid arrangements across tenants.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85615">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>eea22f2864a9f487dc850ff4f1e60809</td>
-       <td>CVE-2026-85614</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>OpenPanel before 2.3.0 contains an unauthenticated server-side request forgery vulnerability in the GET /tools/site-checker endpoint that accepts a fully client-controlled URL parameter with no private IP filtering or DNS-rebinding protection. Attackers can make the OpenPanel server issue requests to internal services, localhost, and cloud metadata endpoints, reading internal HTTP response titles, headers, status codes, and SSL certificate information.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85614">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>42449862d36ef713a5012b8bab2c4453</td>
-       <td>CVE-2026-85613</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>OpenPanel before 2.3.0 contains a cross-site scripting vulnerability in the unauthenticated favicon proxy endpoint GET /misc/favicon that allows remote attackers to execute scripts by supplying an SVG file URL. Attackers can host malicious SVG files with embedded scripts that execute in the victim's browser on the API origin, enabling same-origin credentialed requests to authenticated endpoints.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85613">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>eeb3ee3daf348219a2dab47c8ff3749b</td>
-       <td>CVE-2026-85612</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>OpenPanel before 2.3.0 contains an unauthenticated server-side request forgery vulnerability in the /misc/favicon and /misc/og endpoints that accept an attacker-supplied url parameter with insufficient validation. Attackers can force the API to fetch arbitrary internal hosts and cloud metadata endpoints, with small responses returned verbatim enabling credential theft and internal service enumeration.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85612">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d495ee3ed3dba9e830ad0cd3342179a7</td>
-       <td>CVE-2026-85611</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>OpenPanel before 2.3.0 contains a cross-tenant broken object level authorization vulnerability in the report.getLayouts and report.resetLayout tRPC procedures that fail to scope dashboard queries to the caller's project. Authenticated attackers can supply their own projectId with a victim organization's guessable dashboardId to read confidential report definitions or permanently delete dashboard layouts across tenant boundaries.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85611">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>cd7a35ec721d5db3b9978ebe12bf3fc3</td>
-       <td>CVE-2026-85610</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>OpenPanel before 2.3.0 fails to properly validate chart formula expressions, allowing authenticated project members with read access to execute arbitrary code by recovering the native JavaScript Function constructor through mathjs matrix objects. Attackers can use the recovered constructor to load Node.js built-ins and execute operating system commands with the privileges of the API process, bypassing organization authorization boundaries.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85610">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>042cfe44c394b855c796745c192ea794</td>
-       <td>CVE-2026-85609</td>
-       <td>2026-09-04 12:17:24</td>
-       <td>Openpanel before 2.3.0 contains an unauthenticated full-read server-side request forgery (SSRF) vulnerability in the GET /tools/site-checker endpoint (apps/api/src/controllers/tools.controller.ts). The endpoint passes a user-supplied url query parameter to fetchWithRedirects() and performs server-side HTTP requests to arbitrary URLs without any SSRF/IP validation. An unauthenticated remote attacker can access cloud instance metadata endpoints, probe internal services, scan internal network ports, and read returned content (status code, page size, timing, and parsed HTML metadata), and leak internal IP addresses (via getIPInfo() to a third party).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85609">详情</a></td>
       </tr>
 
      </tbody>
