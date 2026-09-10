@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-09-09 22:51:35 -->
+<!-- RELEASE TIME : 2026-09-10 22:52:54 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>a2b51100acb62437fc061d7ccd005ad1</td>
+       <td>CVE-2026-89044</td>
+       <td>2026-09-10 18:18:16 <img src="imgs/new.gif" /></td>
+       <td>Netty versions 4.1.133.Final through 4.1.137.Final and 4.2.13.Final through 4.2.17.Final fail to properly validate the final transfer coding in the Transfer-Encoding header, allowing attackers to smuggle requests by using malformed encoding declarations. Attackers can split Transfer-Encoding headers across multiple lines or use values like 'chunked, xchunked' to bypass validation and decode messages as chunked when the final coding is not chunked, enabling request smuggling attacks.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89044">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5e7b5c524cfbb48968a1a0bf1876214d</td>
+       <td>CVE-2026-89043</td>
+       <td>2026-09-10 18:18:16 <img src="imgs/new.gif" /></td>
+       <td>passport-saml-encrypted through 0.1.13 contains an XML signature wrapping vulnerability where signature verification and assertion extraction use independent XPath lookups with no cross-validation. Attackers holding any validly signed SAML message can prepend a forged unsigned assertion that gets accepted as the verified identity while the genuine signature validates against the original assertion.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89043">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>608b64f19e06eb7b3f112d05daf585e4</td>
+       <td>CVE-2026-89042</td>
+       <td>2026-09-10 18:18:15 <img src="imgs/new.gif" /></td>
+       <td>passport-saml-encrypted through 0.1.13 makes SAML signature verification conditional on an optional cert option, allowing attackers to bypass authentication by submitting unsigned SAML responses. Attackers can post forged SAML responses with arbitrary NameID and attributes to the assertion consumer service endpoint to receive authenticated profiles without valid signatures.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89042">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4f8856c5a2a36f3d454bbf55b59faac4</td>
+       <td>CVE-2026-88055</td>
+       <td>2026-09-10 18:18:14 <img src="imgs/new.gif" /></td>
+       <td>AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. In 1.16.1 and earlier, the manager role can store meta_page_title or meta_page_favicon through /api/admin/system-preferences, and MetaGenerator inserts those values into production homepage HTML without escaping attribute values or text content. The values pass unchanged through server/models/systemSettings.js and reach MetaGenerator.generate() in server/index.js. #assembleMeta() in server/utils/boot/MetaGenerator.js concatenates the stored values into HTML. When an administrator visits the homepage /, injected JavaScript can read the administrator JWT and use it to create API keys, access or modify workspace and chat data, delete users, and perform other administrator actions. server/endpoints/admin.js accepts the manager-controlled settings before server/models/systemSettings.js returns them unchanged. No fixed version is available as of this review.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88055">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>863bd9b4d49dfd89f1f5fc7c36862c42</td>
+       <td>CVE-2026-88053</td>
+       <td>2026-09-10 18:18:14 <img src="imgs/new.gif" /></td>
+       <td>Tesseract is an open source OCR engine. In version 5.5.3 and earlier, Classify::ReadIntTemplates in src/classify/intproto.cpp reads NumClassPruners, NumClasses, and NumProtoSets from the TESSDATA_INTTEMP component of a crafted .traineddata file and uses those values as loop bounds without validating them against MAX_NUM_CLASS_PRUNERS, MAX_NUM_CLASSES, and MAX_NUM_PROTO_SETS. The loops store heap pointers into fixed-capacity ClassPruners and ProtoSets arrays in INT_TEMPLATES_STRUCT and INT_CLASS_STRUCT, so an oversized count causes heap out-of-bounds pointer writes during legacy-classifier initialization before OCR begins, resulting in heap corruption, a crash, or potentially controlled corruption. No fixed release is available as of this review.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88053">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>3f675d4dfff5762ab7a3f038346e470e</td>
+       <td>CVE-2026-88052</td>
+       <td>2026-09-10 18:18:14 <img src="imgs/new.gif" /></td>
+       <td>Tesseract is an open source OCR engine. In version 5.5.3 and earlier, UNICHARSET::load_via_fgets in src/ccutil/unicharset.cpp trusts the declared unichar count as a loop bound and uses id as an unchecked index into the unichars vector. unichar_insert_backwards_compatible can leave the vector unchanged for an empty, duplicate, or already-encodable representation, causing id to become larger than unichars.size(). Subsequent set_* calls and the write to unichars[id].properties.enabled then write UNICHAR_PROPERTIES beyond the vector during initialization in both the default LSTM and legacy engines, causing heap corruption, a crash, or potentially controlled corruption. No fixed release is available as of this review.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88052">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>77c11da6fd9251ece54cd880b6f694b4</td>
+       <td>CVE-2026-88031</td>
+       <td>2026-09-10 18:18:13 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of special elements in data query logic in the GridFS component of the MongoDB Go Driver can cause a caller-supplied structured file identifier to be interpreted as a query condition rather than as a literal identifier. An authenticated user who can influence the identifier passed by an affected application may cause all GridFS file chunks in the affected bucket to be removed, rendering stored file content unreadable.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88031">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7271af19ca259af73dc662ccd1dffd95</td>
+       <td>CVE-2026-88030</td>
+       <td>2026-09-10 18:18:13 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of special elements in data query logic in the GridFS component of the MongoDB Ruby Driver can cause a caller-supplied structured file identifier to be interpreted as a query condition rather than as a literal identifier. An authenticated user who can influence the identifier passed by an affected application may obtain stored file content beyond the intended target or cause all GridFS file chunks in the affected bucket to be removed, rendering stored file content unreadable.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88030">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>487062bdf9ad07f3a48ef0131a5c99a0</td>
+       <td>CVE-2026-88029</td>
+       <td>2026-09-10 18:18:13 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of special elements in data query logic in the GridFS component of the MongoDB Python Driver can cause a caller-supplied structured file identifier to be interpreted as a query condition rather than as a literal identifier. An authenticated user who can influence the identifier passed by an affected application may obtain stored file content beyond the intended target or cause all GridFS file chunks in the affected bucket to be removed, rendering stored file content unreadable. The affected rename operation may also rename a stored file other than the intended target.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88029">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>1f7fa25ff97ea3f09b559df864d95c61</td>
+       <td>CVE-2026-88028</td>
+       <td>2026-09-10 18:18:13 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of special elements in data query logic in the polymorphic relation handling of the MongoDB integration for Laravel can cause a caller-supplied relation identifier to be interpreted as a query condition rather than as a literal identifier. An authenticated user who can influence a stored relation identifier may cause an affected application to return a document other than the intended relation target.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-88028">详情</a></td>
+      </tr>
+
+      <tr>
        <td>c2049ffac8a5dc967bd1b6c3d894ab7b</td>
        <td>CVE-2026-85103</td>
        <td>2026-09-09 13:20:43 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>12c4b481781766c58368fcd72880dc1f</td>
        <td>CVE-2026-9215</td>
-       <td>2026-09-08 18:33:40 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:40</td>
        <td>A cross site request forgery (CSRF) vulnerability in the listed NETGEAR models allows an attacker...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-9215">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>5444b23c04337e3b24009f0521575e9e</td>
        <td>CVE-2026-85875</td>
-       <td>2026-09-08 18:33:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:39</td>
        <td>Out-of-bounds read in Microsoft Office Excel allows an unauthorized attacker to disclose...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85875">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>26d91336088cbdd475686f7f0e4d9c08</td>
        <td>CVE-2026-84003</td>
-       <td>2026-09-08 18:33:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:39</td>
        <td>Authentication bypass by capture-replay in Microsoft Authentication Library (MSAL) for Node.js...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-84003">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>c132ddac0ccc943ed8261d7933269ffe</td>
        <td>CVE-2026-83998</td>
-       <td>2026-09-08 18:33:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:39</td>
        <td>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83998">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>cfe60caa3612937dbb06cf6fe4e16835</td>
        <td>CVE-2026-83986</td>
-       <td>2026-09-08 18:33:38 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:38</td>
        <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83986">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>6758c377e769abfabf1af51dd57cdd4d</td>
        <td>CVE-2026-83985</td>
-       <td>2026-09-08 18:33:38 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:38</td>
        <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83985">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>c66efd36b8b6e3730862cb165931b27f</td>
        <td>CVE-2026-83978</td>
-       <td>2026-09-08 18:33:36 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:36</td>
        <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83978">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>ab28f1e7b8014476dd865b815073d013</td>
        <td>CVE-2026-83968</td>
-       <td>2026-09-08 18:33:36 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:36</td>
        <td>Use after free in Windows Biometric Service allows an authorized attacker to elevate privileges...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83968">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>f5b0451518844abcaaa36e61bd280654</td>
        <td>CVE-2026-83949</td>
-       <td>2026-09-08 18:33:35 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:35</td>
        <td>Buffer over-read in Microsoft Office Word allows an unauthorized attacker to disclose information...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83949">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>6797667835e930fa58a062fa973b043f</td>
        <td>CVE-2026-83939</td>
-       <td>2026-09-08 18:33:35 <img src="imgs/new.gif" /></td>
+       <td>2026-09-08 18:33:35</td>
        <td>Untrusted pointer dereference in Windows Secure Kernel Mode allows an authorized attacker to...</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83939">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ba8198df5395e4e28cc55b7a89d4fd0d</td>
-       <td>CVE-2026-86451</td>
-       <td>2026-09-07 13:20:43</td>
-       <td>Affected versions of MISP allow authenticated users to retrieve object-reference records by UUID through EventGraphTool::get_reference_data() without first checking whether the requester is authorized to view the object the reference belongs to. The vulnerable code queried ObjectReference.uuid directly and returned the matching row whenever it existed. Because no parent-object ACL was applied, a user who knew or obtained a reference UUID could retrieve information associated with an object outside their normal access scope. The commit explicitly states that any object reference could be returned by UUID without authorizing its parent object. The fix retrieves the referenced object's object_id and calls fetchObjectSimple() with the current user. If the user cannot access that parent object, MISP now returns NotFoundException instead of exposing the reference. Version affected: ≤2.5.45</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86451">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>80657d989b7ac1922179f7e1fbb6264d</td>
-       <td>CVE-2026-86441</td>
-       <td>2026-09-07 13:20:43</td>
-       <td>Affected versions of MISP contain inconsistent authorization checks across dashboard widgets that display organisation information. Several organisation-related widgets did not honor Security.hide_organisation_index_from_users. As a result, authenticated users without the perm_sharing_group permission could enumerate organisations even though the normal organisation index was intentionally hidden from them. The affected widgets included paths that: * returned organisation names and identifiers; * could expose additional organisation database fields through JSON export because unrestricted find('all') queries fetched full rows; * accepted limit=0 or negative values in a way that could effectively remove the result limit and return the entire organisation table. A related organisation-contributor leaderboard also ignored the same visibility setting. Its handler counted Event.orgc_id across the entire event table and mapped those IDs to organisation names, revealing every organisation with events regardless of whether the caller could see any of those events. The fix withdraws this widget entirely for users who lack organisation-index visibility. Version affected: ≤2.5.45</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86441">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f29d0c5dd9d44b94f67562671c935e1e</td>
-       <td>CVE-2026-86440</td>
-       <td>2026-09-07 13:20:43</td>
-       <td>Affected versions of MISP insufficiently validate URLs used by dashboard widgets, particularly the Button widget. The widget's URL is stored configuration controlled by a user. The previous renderer considered a URL safe if it appeared relative or if its parsed hostname matched the configured MISP hostname. That logic failed to reject dangerous schemes and URL forms that browsers normalize differently from PHP's URL parsing. As a result, values such as javascript: URLs or backslash-based authority forms could reach the generated anchor's href and execute script or navigate to an attacker-controlled origin when another user interacted with the widget. The upstream commit describes the issue as: “javascript: and backslash URLs reached the href (stored XSS)”. The fix routes widget URLs through a shared DashboardURLValidator, rejects dangerous schemes, raw backslashes, control characters, and unauthorized absolute origins, and validates the URL both in the widget handler and renderer. Version affected: ≤2.5.45</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86440">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>288bbf57721cdee2c056dde197c07fc4</td>
-       <td>CVE-2026-86435</td>
-       <td>2026-09-07 13:20:43</td>
-       <td>commonmark versions from 1.5.0 before 2.8.4 contain a denial of service vulnerability in the Footnote extension that fails to deduplicate footnote definitions. Attackers can craft documents with duplicate footnote definitions and references to create quadratic output expansion, consuming excessive memory and CPU to exhaust server resources.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86435">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>023da92a144667379e69e9e93b51c840</td>
-       <td>CVE-2026-8279</td>
-       <td>2026-09-07 13:20:43</td>
-       <td>The Masteriyo LMS plugin for WordPress is vulnerable to unauthorized data deletion due to a missing capability check on the 'delete_item_permissions_check' function in the CourseProgressItemsController in all versions up to, and including, 2.2.0. This makes it possible for unauthenticated attackers to delete arbitrary course progress records belonging to any student.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-8279">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f45f5d5d7984e98305f4cdf65f2cdf7f</td>
-       <td>CVE-2026-86434</td>
-       <td>2026-09-07 13:20:42</td>
-       <td>league/commonmark versions >= 2.0.0 and < 2.8.4 (patched in 2.9.0) contain a denial of service vulnerability in UniqueSlugNormalizer::normalize(), which restarts its numeric-suffix search from 1 on every slug collision, resulting in O(K^2) time complexity for K headings that collapse to the same base slug. The vulnerable path is reached when HeadingPermalinkExtension, FootnoteExtension, or TableOfContentsExtension is registered. An unauthenticated attacker can force many headings onto a single base slug (e.g., via empty ATX headings, identical heading text, or punctuation-only headings) in a small Markdown document, consuming excessive CPU and denying service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86434">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fad0f10cce094991a7ffe172d03acb8a</td>
-       <td>CVE-2026-86433</td>
-       <td>2026-09-07 13:20:42</td>
-       <td>commonmark versions from 1.5.0 before 2.8.4 contain a denial of service vulnerability in the Attributes extension where AttributesListener::findTargetAndDirection() performs quadratic-time sibling list scanning. Unauthenticated attackers can submit approximately 32 KB of repeated attribute blocks to cause parsing to take over 5 seconds, exhausting server resources.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86433">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>a9daecbcf06eddd870338ef18ffad74c</td>
-       <td>CVE-2026-86432</td>
-       <td>2026-09-07 13:20:42</td>
-       <td>commonmark versions from 2.0.0 before 2.8.4 contain a denial of service vulnerability in XmlRenderer that emits depth-proportional indentation for every XML tag. Attackers can provide deeply nested Markdown or AST structures to cause quadratic memory consumption and output amplification, exhausting server resources.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86432">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>01b8917fa9e1036941e9f29aa0f5556b</td>
-       <td>CVE-2026-86431</td>
-       <td>2026-09-07 13:20:42</td>
-       <td>league/commonmark (thephpleague/commonmark) versions >= 2.7.0 and < 2.9.1 contain a cross-site scripting vulnerability in the AttributesExtension. Prefixing an attribute name with a single U+000C form feed byte (e.g. {\x0Conclick="alert(1)"}) bypasses the AttributesHelper::filterAttributes() 'on*' event-handler filter because PHP's trim() does not strip U+000C, causing the attribute to be written verbatim into the output where browsers parse it as a genuine event handler. The same prefix also defeats the allow_unsafe_links check, allowing javascript: URIs through href/src attributes even when allow_unsafe_links is false. Exploitation requires processing untrusted Markdown with the AttributesExtension enabled; the injected script executes when the rendered HTML is viewed. Fixed in 2.9.1.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86431">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>55594bb5f2187429cf7e9b41d3c5946c</td>
-       <td>CVE-2026-86430</td>
-       <td>2026-09-07 13:20:42</td>
-       <td>league/commonmark versions before 2.9.1 contain multiple denial of service vulnerabilities in fenced code block detection, reference link label lookup, and emphasis delimiter processing that perform super-linear work on crafted input. Attackers can submit specially crafted Markdown with long backtick runs, nested brackets, or delimiter sequences to consume disproportionate CPU time and prevent legitimate requests from completing.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86430">详情</a></td>
       </tr>
 
      </tbody>
