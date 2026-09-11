@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-09-10 22:52:54 -->
+<!-- RELEASE TIME : 2026-09-11 22:55:06 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>0c09a1948cc5f20c710c38e40099ef51</td>
+       <td>CVE-2026-89265</td>
+       <td>2026-09-11 16:17:51 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 contains an authorization bypass vulnerability in the POST /pictureSort/getPictureSortByUid endpoint, which omits the @AuthorityVerify annotation required to enforce role-based permissions. Authenticated back-office users without image-category permissions can supply a category uid to retrieve restricted image-category records including metadata such as name, cover file uid, sort order and timestamps.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89265">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>91cbd66b3e338ff669351e911e821b94</td>
+       <td>CVE-2026-89264</td>
+       <td>2026-09-11 16:17:51 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 fails to validate the comment author identity in the POST /web/comment/add endpoint, allowing authenticated users to post comments attributed to any other user. Attackers can supply arbitrary userUid values in the request body to impersonate other accounts including administrators.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89264">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>712290b09d82aed992ac0bde364bca46</td>
+       <td>CVE-2026-89263</td>
+       <td>2026-09-11 16:17:51 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 fails to authenticate requests to the /web/comment/closeEmailNotification endpoint, allowing unauthenticated attackers to disable email notifications for arbitrary users. Remote callers can modify the startEmailNotification flag in Redis cache for any user identifier to suppress reply notifications without authorization.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89263">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>59c619c79b6143159df297d4531716b3</td>
+       <td>CVE-2026-8304</td>
+       <td>2026-09-11 16:17:51 <img src="imgs/new.gif" /></td>
+       <td>Missing Authorization vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus About allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Pardus About: from 1.2.1 before 1.2.5.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-8304">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>477ba44a93a43971d96daebf54c5b527</td>
+       <td>CVE-2026-89262</td>
+       <td>2026-09-11 16:17:50 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 contains an authorization bypass vulnerability in the comment deletion endpoint that performs ownership checks against request-body fields instead of the authenticated principal. Attackers can delete arbitrary comments and their replies by supplying comment UIDs and author UIDs obtained from unauthenticated listing endpoints.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89262">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>7892a4eb30d1b1ed24dbe3fd8274a32b</td>
+       <td>CVE-2026-89261</td>
+       <td>2026-09-11 16:17:50 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 exposes Elasticsearch index management endpoints in the mogu_search service without authentication, allowing remote attackers to delete, recreate, or alter the blog search index. Attackers can invoke POST endpoints to wipe the entire search index, delete specific documents, or inject malicious index entries, causing search functionality to return incorrect or no results.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89261">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>96a4e9f3acce3bbe6ecf61dee4d9b08b</td>
+       <td>CVE-2026-89260</td>
+       <td>2026-09-11 16:17:50 <img src="imgs/new.gif" /></td>
+       <td>MoguBlog through 6.2 contains an XML external entity injection vulnerability in the WeChat callback handler at POST /wechat/wechatCheck. The WechatRestApi.index() method passes the raw request body to SignUtil.xmlToMap(), which uses an unhardened dom4j SAXReader without DTD or external-entity restrictions. Unauthenticated remote attackers can submit DOCTYPE declarations with external parameter entities to read arbitrary local files or trigger outbound HTTP requests, with resolved entities reflected in error responses.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89260">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>354032fc907ca31059d3d42eace94a20</td>
+       <td>CVE-2026-89066</td>
+       <td>2026-09-11 16:17:49 <img src="imgs/new.gif" /></td>
+       <td>Improper neutralization of special elements used in an OS command in the task synthesis component in projen before 0.103.0 might allow context-dependent attackers to execute arbitrary commands on a developer workstation or continuous integration runner via shell metacharacters in project configuration values and repository file names that are interpolated into generated task definitions. To remediate this issue, users should upgrade to version 0.103.0 and then re-synthesize the project so that .projen/tasks.json is regenerated with the corrected task definitions. Upgrading alone is not sufficient because the generated task definition file is committed to the repository.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89066">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>a52e0c87de31dd04f5249902cd562d20</td>
+       <td>CVE-2026-89065</td>
+       <td>2026-09-11 16:17:49 <img src="imgs/new.gif" /></td>
+       <td>Relative path traversal in the generated file manifest cleanup component in projen before 0.101.37 might allow context-dependent attackers to recursively delete files and directories outside the project directory that are writable by the environment running projen, via crafted entries in the version-controlled generated file manifest that is consumed during project synthesis. To remediate this issue, users should upgrade to version 0.101.37. The corrected containment check is automatically applied by the projen runtime next time you run it.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89065">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>43b0870a28994c0b4be3ccc94e5ded74</td>
+       <td>CVE-2026-89013</td>
+       <td>2026-09-11 16:17:48 <img src="imgs/new.gif" /></td>
+       <td>Dolibarr 23.0.4 before 24.0.1 ontains an authorization bypass vulnerability that allows unauthenticated attackers to read arbitrary files through the document storage endpoints by supplying a crafted hashp parameter value. Attackers can send a request with hashp=shared to skip token validation while satisfying the authorization condition in htdocs/document.php and htdocs/viewimage.php, gaining access to application logs, uploaded business documents, database backups containing password hashes, and files belonging to other multicompany entities.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89013">详情</a></td>
+      </tr>
+
+      <tr>
        <td>a2b51100acb62437fc061d7ccd005ad1</td>
        <td>CVE-2026-89044</td>
        <td>2026-09-10 18:18:16 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>c2049ffac8a5dc967bd1b6c3d894ab7b</td>
        <td>CVE-2026-85103</td>
-       <td>2026-09-09 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:43</td>
        <td>A heap-based buffer overflow in VPN certificate ASN.1 decoding may allow an unauthenticated remote attacker to execute arbitrary code on Check Point Quantum Security Management and Quantum Security Gateway systems.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85103">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>2e9f0134225019be56b2fcf6cd16290d</td>
        <td>CVE-2026-85102</td>
-       <td>2026-09-09 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:43</td>
        <td>Improper certificate trust validation during VPN negotiation in Check Point Quantum Security Gateway may allow an unauthenticated remote attacker to execute arbitrary code on the Gateway.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85102">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>09aa827230e6077d79d6d1785f01f584</td>
        <td>CVE-2026-80169</td>
-       <td>2026-09-09 13:20:43 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:43</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-80169">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>9b26c8fd546ae3be080c1ac78a75753b</td>
        <td>CVE-2026-79969</td>
-       <td>2026-09-09 13:20:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:39</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains a Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79969">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>ed25f502c706e19bb1d548f58942fa8d</td>
        <td>CVE-2026-79968</td>
-       <td>2026-09-09 13:20:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:39</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains a Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79968">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>8603aa17fafe7f1db4fc890a89eaa18c</td>
        <td>CVE-2026-79966</td>
-       <td>2026-09-09 13:20:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:39</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79966">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>95310d8ddc58a72f307e40e2c175bea8</td>
        <td>CVE-2026-79965</td>
-       <td>2026-09-09 13:20:39 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:39</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains an External Control of Critical State Data vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79965">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>932fd7f8388db023854cce6eeca2ee8b</td>
        <td>CVE-2026-79962</td>
-       <td>2026-09-09 13:20:38 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:38</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains a Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79962">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>795ec31554499c3c8d6f4265d4e3f2ee</td>
        <td>CVE-2026-79961</td>
-       <td>2026-09-09 13:20:38 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:38</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79961">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>1fc1f91ce7319b9565db527b86f7da26</td>
        <td>CVE-2026-79728</td>
-       <td>2026-09-09 13:20:38 <img src="imgs/new.gif" /></td>
+       <td>2026-09-09 13:20:38</td>
        <td>Dell SCG 5.0 Appliance versions prior to 5.36.00.16 and Dell SCG 5.0 Application versions prior to 5.36.00.00, contains a Relative Path Traversal vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to filesystem access for attacker.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-79728">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>12c4b481781766c58368fcd72880dc1f</td>
-       <td>CVE-2026-9215</td>
-       <td>2026-09-08 18:33:40</td>
-       <td>A cross site request forgery (CSRF) vulnerability in the listed NETGEAR models allows an attacker...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-9215">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5444b23c04337e3b24009f0521575e9e</td>
-       <td>CVE-2026-85875</td>
-       <td>2026-09-08 18:33:39</td>
-       <td>Out-of-bounds read in Microsoft Office Excel allows an unauthorized attacker to disclose...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-85875">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>26d91336088cbdd475686f7f0e4d9c08</td>
-       <td>CVE-2026-84003</td>
-       <td>2026-09-08 18:33:39</td>
-       <td>Authentication bypass by capture-replay in Microsoft Authentication Library (MSAL) for Node.js...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-84003">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c132ddac0ccc943ed8261d7933269ffe</td>
-       <td>CVE-2026-83998</td>
-       <td>2026-09-08 18:33:39</td>
-       <td>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83998">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>cfe60caa3612937dbb06cf6fe4e16835</td>
-       <td>CVE-2026-83986</td>
-       <td>2026-09-08 18:33:38</td>
-       <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83986">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6758c377e769abfabf1af51dd57cdd4d</td>
-       <td>CVE-2026-83985</td>
-       <td>2026-09-08 18:33:38</td>
-       <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83985">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c66efd36b8b6e3730862cb165931b27f</td>
-       <td>CVE-2026-83978</td>
-       <td>2026-09-08 18:33:36</td>
-       <td>Heap-based buffer overflow in Windows Biometric Service allows an authorized attacker to elevate...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83978">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ab28f1e7b8014476dd865b815073d013</td>
-       <td>CVE-2026-83968</td>
-       <td>2026-09-08 18:33:36</td>
-       <td>Use after free in Windows Biometric Service allows an authorized attacker to elevate privileges...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83968">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f5b0451518844abcaaa36e61bd280654</td>
-       <td>CVE-2026-83949</td>
-       <td>2026-09-08 18:33:35</td>
-       <td>Buffer over-read in Microsoft Office Word allows an unauthorized attacker to disclose information...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83949">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6797667835e930fa58a062fa973b043f</td>
-       <td>CVE-2026-83939</td>
-       <td>2026-09-08 18:33:35</td>
-       <td>Untrusted pointer dereference in Windows Secure Kernel Mode allows an authorized attacker to...</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-83939">详情</a></td>
       </tr>
 
      </tbody>
