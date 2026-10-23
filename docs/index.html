@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-10-23 02:49:34 -->
+<!-- RELEASE TIME : 2026-10-23 08:09:04 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>33f04257868992e296832b4bba0329d3</td>
+       <td>CVE-2026-86055</td>
+       <td>2026-10-23 05:17:19 <img src="imgs/new.gif" /></td>
+       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.3, Part-DB builds the absolute URL of the password-reset link it emails to a user from the client-supplied HTTP Host header, with no trusted-host validation. An unauthenticated attacker who submits a forgot-password request for a known account while sending a spoofed Host header causes Part-DB to email that account a reset link whose hostname is attacker-controlled, while still embedding the genuine reset token. When the victim opens the link (or an automated inbound mail-security scanner dereferences it), the valid token is disclosed to the attacker, who replays it against the real instance to set a new password and take over the account. Because the seeded admin account can be targeted, this yields full pre-authentication administrative account takeover. This issue has been patched in version 2.13.3.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86055">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>378814eff23c9ff0315f8d2b78c7accf</td>
+       <td>CVE-2026-86020</td>
+       <td>2026-10-23 05:17:18 <img src="imgs/new.gif" /></td>
+       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB contains a spreadsheet formula injection vulnerability in the part import/export workflow. An authenticated user with permission to import parts can import a CSV file containing formula-prefixed values, such as =1+1, into user-controlled part fields. When the affected part is later exported as an XLSX spreadsheet, Part-DB writes the attacker-controlled value using PhpSpreadsheet's setCellValue() method without neutralising spreadsheet formula characters. As a result, the exported XLSX file contains an executable spreadsheet formula cell rather than a plain text value. If another user exports and opens the spreadsheet, the formula may be evaluated by their spreadsheet software. This issue has been patched in version 2.13.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86020">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5bce4fcad56e00d2a02fc67b800a7f1d</td>
+       <td>CVE-2026-86019</td>
+       <td>2026-10-23 05:17:18 <img src="imgs/new.gif" /></td>
+       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB allows authenticated API users to bypass the configured maximum attachment file size by uploading attachments through the API using base64-encoded file data. The application enforces the configured attachment size limit for normal browser-based file uploads, but the API base64 upload path does not apply the same size validation. As a result, an authenticated user with API access and permission to create attachments can upload files larger than the configured maximum attachment size, potentially exhausting disk space and causing a denial of service. This issue has been patched in version 2.13.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86019">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f757affee301ae1761fcbf071e756e26</td>
+       <td>CVE-2026-86018</td>
+       <td>2026-10-23 05:17:18 <img src="imgs/new.gif" /></td>
+       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB allows authenticated users to bypass the configured maximum attachment file size when using the server-side “Download external file” attachment feature. When server-side attachment downloads are enabled, Part-DB downloads the remote file and streams it directly to disk without enforcing the configured MAX_ATTACHMENT_FILE_SIZE limit. As a result, an authenticated user who can create or edit attachments can cause Part-DB to store files larger than the configured maximum attachment size, potentially exhausting disk space and causing a denial of service. This issue has been patched in version 2.13.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86018">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5548b9728000baabecec2d0cc120ed42</td>
+       <td>CVE-2026-59188</td>
+       <td>2026-10-23 05:17:17 <img src="imgs/new.gif" /></td>
+       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.12.3, Part-DB-server sanitizes SVG files based solely on the user-controlled filename extension rather than actual file content type. An authenticated attacker can upload a malicious SVG with JavaScript payload using a non-SVG extension (e.g., .jpg), bypassing sanitization entirely. When any user views the attachment inline, the browser receives Content-Type: image/svg+xml and executes the embedded script in the Part-DB origin. This issue has been patched in version 2.12.3.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59188">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>f804b4820ccb97b9396afaa5c159803c</td>
+       <td>CVE-2026-55835</td>
+       <td>2026-10-23 05:17:15 <img src="imgs/new.gif" /></td>
+       <td>Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to version 1.39.4, an unauthenticated user can trigger Lookyloo's "report a capture" email on demand (this is expected). The /json/<uuid>/report API endpoint (CaptureReport) is incorrectly passing the email and comment parameters, overwriting as_admin. When True, as_admin will trigger a search query on a MISP instance (if configured) and add a list of matching URLs in the email sent to the analyst (not the submitter, so there is no risk of leaking information) . It could potentially cause a DoS on the MISP instance. This issue has been patched in version 1.39.4.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-55835">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>28c9c4ad4b9b590fa3378a11761a3e10</td>
+       <td>CVE-2026-115497</td>
+       <td>2026-10-23 05:17:15 <img src="imgs/new.gif" /></td>
+       <td>The Music Store – WordPress eCommerce plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.4.7 via the 'f' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. Exploitation requires a valid purchase_id token, which any user can obtain by making a single low-cost purchase or receiving a shared download link.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115497">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>0d9fd38cbb73ef2690080e38ba2630ae</td>
+       <td>CVE-2026-109198</td>
+       <td>2026-10-23 05:17:14 <img src="imgs/new.gif" /></td>
+       <td>The Anti-Spam by CleanTalk – Spam Protection Without CAPTCHA plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'user_email' parameter in all versions up to, and including, 6.89.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires user registration to be open on the site, and script execution is triggered when an Administrator subsequently runs the plugin's user-spam scan and views the resulting Non-checkable users or Spam users tab — the plugin's own documented workflow.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-109198">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5aa735882b0239ff003cbf655feccbf9</td>
+       <td>CVE-2026-90458</td>
+       <td>2026-10-23 04:18:19 <img src="imgs/new.gif" /></td>
+       <td>OpenStack Ironic before 39.0.1 allows DELETE and GET via vendor_passthru, e.g., to delete accounts from the BMC's Redfish service.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90458">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b85c8242e38fc1217a5556259c1a18ac</td>
+       <td>CVE-2026-89419</td>
+       <td>2026-10-23 04:18:19 <img src="imgs/new.gif" /></td>
+       <td>OpenStack Ironic before 39.0.1 sometimes allows a user to change the maintenance setting on a node via PATCH to /v1/nodes/{ident} - in other words, not using the specific maintenance endpoint.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89419">详情</a></td>
+      </tr>
+
+      <tr>
        <td>21c78c9b3e8790a302a9259b02d19b95</td>
        <td>CVE-2026-92450</td>
        <td>2026-10-22 23:20:33 <img src="imgs/new.gif" /></td>
@@ -442,86 +522,6 @@
        <td>2026-10-21 21:20:31</td>
        <td>Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-96636">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>d92d91acbf483f0f5eeee1136c370f44</td>
-       <td>CVE-2026-9825</td>
-       <td>2026-10-20 22:21:08</td>
-       <td>IBM Cyber Fraud 1.0.0 through 1.0.2 has a missing secure attribute allowing sensitive cookies to be transmitted over unencrypted connections, potentially enabling an attacker to intercept session data through network-based attacks.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-9825">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c23fb1fd1ed9e60ae1cf15c68d2138a4</td>
-       <td>CVE-2026-94402</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM Carbon Charts 0.4.0 through 1.27.19 is vulnerable to cross-site scripting. The MeterChart component's Title.truncateTitle() function re-inserts a substring of user-supplied label text into the DOM via an unsanitized innerHTML write when the title exceeds the available container width. A remote attacker could exploit this vulnerability to execute arbitrary JavaScript in the victim's browser session.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-94402">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>cdf3cfdec4d3b32f26382836cef0af59</td>
-       <td>CVE-2026-93888</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM Sterling Connect Direct for Unix 6.4.0.0 through 6.4.0.6 and 6.3.0.0 through 6.3.0.7 apnotify utility is vulnerable to a code injection due to insufficient validation of user input.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-93888">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0a040cd72b4ac157b7a569ace2c20333</td>
-       <td>CVE-2026-93744</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM i 7.3, 7.4, 7.5, and 7.6 could allow an unathenticated remote attacker to bypass security restrictions due to improper access control. By sending a specially crafted HTTP request to any URL within the Navigator application prior to authentication, a bad actor could exploit this vulnerability to alter server-side session security state.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-93744">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>de024b638aeb068d2d5ab6eaaf8e7089</td>
-       <td>CVE-2026-93442</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM QRadar SIEM 7.6.0.0 through 7.6.0.4, and 7.5.0 through 7.5.0 Update Package 16 Interim Fix 001 could allow a remote attacker to cause a denial of service or obtain sensitive information due to an out-of-bounds read.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-93442">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>36f3ac17f1b1110de5b89b812e9a756b</td>
-       <td>CVE-2026-93441</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM QRadar SIEM could allow a remote attacker to cause a denial of service due to uncontrolled resource consumption.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-93441">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>71d12e3ea4bbae9949fef2e54b58823e</td>
-       <td>CVE-2026-92559</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2 could allow a remote attacker to obtain sensitive information due to binding to an unrestricted IP address.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-92559">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7adbfd3be424cbc7969679a964638c5d</td>
-       <td>CVE-2026-91668</td>
-       <td>2026-10-20 22:21:07</td>
-       <td>Vulnerability in the Oracle Data Integrator product of Oracle Fusion Middleware (component: Dictionary Repository). Supported versions that are affected are 12.2.1.4.0 and 14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via SQL to compromise Oracle Data Integrator. Successful attacks of this vulnerability can result in takeover of Oracle Data Integrator. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-91668">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>55db6de1fe4c296058085db7a770df4c</td>
-       <td>CVE-2026-91665</td>
-       <td>2026-10-20 22:21:06</td>
-       <td>Vulnerability in Oracle Essbase (component: Security). The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Essbase. Successful attacks of this vulnerability can result in takeover of Oracle Essbase. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-91665">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>ea5ce3c566caedc0a9c97745dbb95e73</td>
-       <td>CVE-2026-91664</td>
-       <td>2026-10-20 22:21:06</td>
-       <td>Vulnerability in Oracle Essbase (component: Security). The supported version that is affected is 21.8.3.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Essbase. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle Essbase. CVSS 3.1 Base Score 7.5 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H).</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-91664">详情</a></td>
       </tr>
 
      </tbody>
