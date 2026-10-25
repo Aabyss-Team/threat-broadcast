@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-10-25 07:59:09 -->
+<!-- RELEASE TIME : 2026-10-25 13:29:22 -->
 <html lang="zh-cn">
 
  <head>
@@ -365,6 +365,46 @@
       </tr>
 
       <tr>
+       <td>b2eef239c02f3dfbd0c4e74184e5ebb7</td>
+       <td>CVE-2026-109111</td>
+       <td>2026-10-24 23:16:57 <img src="imgs/new.gif" /></td>
+       <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-109111">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5869cabce6d6128b11a5a196124da771</td>
+       <td>CVE-2026-115982</td>
+       <td>2026-10-24 22:16:27 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was detected in phpIPAM up to 1.8.3. Affected by this issue is the function create_rack_link of the file app/tools/racks/show-rack-popup.php of the component Rack Link Creation. Performing a manipulation of the argument deviceid results in cross site scripting. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115982">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>b2186e6954035243010ebe62638e0a0a</td>
+       <td>CVE-2026-115981</td>
+       <td>2026-10-24 22:16:27 <img src="imgs/new.gif" /></td>
+       <td>A security vulnerability has been detected in phpIPAM up to 1.8.3. Affected by this vulnerability is an unknown functionality of the file upgrade/index.php. Such manipulation of the argument REQUEST_URI leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115981">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>4362166b349ffb25e84a69408e608bc4</td>
+       <td>CVE-2026-115973</td>
+       <td>2026-10-24 19:17:04 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was identified in FaveoSuite Faveo Helpdesk 2.0.3. Affected by this issue is the function ForgotPasswordController::sendResetLinkEmail/PasswordController::reset of the file app/Http/Controllers/Auth/ForgotPasswordController.php. The manipulation leads to weak password recovery. The attack may be initiated remotely. The vendor was contacted early about this disclosure.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115973">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>bd9fd908dce8f324f5c8b7b35a1d7c8e</td>
+       <td>CVE-2026-114820</td>
+       <td>2026-10-24 19:17:04 <img src="imgs/new.gif" /></td>
+       <td>Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JSSE). Supported versions that are affected are Oracle Java SE: 8u511-b32, 8u511-perf-b32, 11.0.33.0.2, 17.0.21.0.2, 21.0.13.0.2, 25.0.5.0.2, 27.0.1.0.2; Oracle GraalVM for JDK: 17.0.21.0.2 and 21.0.13.0.2; Oracle GraalVM Enterprise Edition: 21.3.20.0.2. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data as well as unauthorized access to critical data or complete access to all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data. Note: This vulnerability can be exploited by using APIs in the specified Component, e.g., through a web service which supplies data to the APIs. This vulnerability also applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-114820">详情</a></td>
+      </tr>
+
+      <tr>
        <td>ce54b9002d765ab3076a3750c4c133ce</td>
        <td>CVE-2026-115931</td>
        <td>2026-10-23 23:17:43</td>
@@ -482,46 +522,6 @@
        <td>2026-10-23 05:17:17</td>
        <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.12.3, Part-DB-server sanitizes SVG files based solely on the user-controlled filename extension rather than actual file content type. An authenticated attacker can upload a malicious SVG with JavaScript payload using a non-SVG extension (e.g., .jpg), bypassing sanitization entirely. When any user views the attachment inline, the browser receives Content-Type: image/svg+xml and executes the embedded script in the Part-DB origin. This issue has been patched in version 2.12.3.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59188">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f804b4820ccb97b9396afaa5c159803c</td>
-       <td>CVE-2026-55835</td>
-       <td>2026-10-23 05:17:15</td>
-       <td>Lookyloo is a web interface that allows users to capture a website page and then display a tree of domains that call each other. Prior to version 1.39.4, an unauthenticated user can trigger Lookyloo's "report a capture" email on demand (this is expected). The /json/<uuid>/report API endpoint (CaptureReport) is incorrectly passing the email and comment parameters, overwriting as_admin. When True, as_admin will trigger a search query on a MISP instance (if configured) and add a list of matching URLs in the email sent to the analyst (not the submitter, so there is no risk of leaking information) . It could potentially cause a DoS on the MISP instance. This issue has been patched in version 1.39.4.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-55835">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>28c9c4ad4b9b590fa3378a11761a3e10</td>
-       <td>CVE-2026-115497</td>
-       <td>2026-10-23 05:17:15</td>
-       <td>The Music Store – WordPress eCommerce plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.4.7 via the 'f' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. Exploitation requires a valid purchase_id token, which any user can obtain by making a single low-cost purchase or receiving a shared download link.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115497">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>0d9fd38cbb73ef2690080e38ba2630ae</td>
-       <td>CVE-2026-109198</td>
-       <td>2026-10-23 05:17:14</td>
-       <td>The Anti-Spam by CleanTalk – Spam Protection Without CAPTCHA plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'user_email' parameter in all versions up to, and including, 6.89.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires user registration to be open on the site, and script execution is triggered when an Administrator subsequently runs the plugin's user-spam scan and views the resulting Non-checkable users or Spam users tab — the plugin's own documented workflow.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-109198">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5aa735882b0239ff003cbf655feccbf9</td>
-       <td>CVE-2026-90458</td>
-       <td>2026-10-23 04:18:19</td>
-       <td>OpenStack Ironic before 39.0.1 allows DELETE and GET via vendor_passthru, e.g., to delete accounts from the BMC's Redfish service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90458">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b85c8242e38fc1217a5556259c1a18ac</td>
-       <td>CVE-2026-89419</td>
-       <td>2026-10-23 04:18:19</td>
-       <td>OpenStack Ironic before 39.0.1 sometimes allows a user to change the maintenance setting on a node via PATCH to /v1/nodes/{ident} - in other words, not using the specific maintenance endpoint.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89419">详情</a></td>
       </tr>
 
      </tbody>
