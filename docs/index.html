@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-10-25 13:29:22 -->
+<!-- RELEASE TIME : 2026-10-26 08:21:10 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>5af673daba6cd013606263836706021c</td>
+       <td>CVE-2026-116099</td>
+       <td>2026-10-26 00:17:14 <img src="imgs/new.gif" /></td>
+       <td>A flaw has been found in Fusion Creators Studio SCP Containment Breach Multiplayer up to 1.295. This issue affects the function BlitzBanks of the component Skynet++ Virtual Machine. Executing a manipulation can lead to out-of-bounds write. The attack can be executed remotely. The exploit has been published and may be used. Upgrading to version 1.3R is capable of addressing this issue. It is recommended to upgrade the affected component.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116099">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>17c4f9a0c79840fc74a1916103928b2b</td>
+       <td>CVE-2026-116098</td>
+       <td>2026-10-26 00:17:14 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was detected in SteelRaven7 Ravenfield 25407073. This vulnerability affects the function cacheCoverPoints of the component RFL Custom Map Handler/RFLD Custom Map Handler. Performing a manipulation results in deserialization. Remote exploitation of the attack is possible. The patch is named EA39 Security Patch. Applying a patch is the recommended action to fix this issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116098">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>dca97e37e173b272ccf322481108033a</td>
+       <td>CVE-2026-116097</td>
+       <td>2026-10-26 00:17:14 <img src="imgs/new.gif" /></td>
+       <td>A security vulnerability has been detected in CloudClassroom-PHP-Project. This affects an unknown part of the file addnewstudent.php. Such manipulation of the argument fname leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The vendor was contacted early about this disclosure but did not respond in any way.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116097">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8d9320e2037151bba1649ceb47a597d5</td>
+       <td>CVE-2026-116096</td>
+       <td>2026-10-25 23:17:41 <img src="imgs/new.gif" /></td>
+       <td>A weakness has been identified in ggml-org llama.cpp. Affected by this issue is the function list_pockettts_state_slots of the file tools/mtmd/models/pockettts-gen.cpp of the component Pocket-TTS. This manipulation of the argument mmproj causes out-of-bounds write. The attack requires local access. The exploit has been made available to the public and could be used for attacks. Upgrading to version b11796 can resolve this issue. Patch name: 0a1ef309cdbb9f2024f58a38fb4c42352c5db569. The affected component should be upgraded. The reported heap out‑of‑bounds write (gen‑audio / pocket‑tts state_out path) is no longer a silent exploitable heap write on current master and the latest release b11871 - a malicious mmproj that previously triggered it now trips a release‑active GGML_ASSERT and aborts. But the submitter's recommended by‑construction fix (PR #29360 "prevent OOB accesses from malformed mmproj files") is still open. So the root cause is detected‑and‑aborted, not prevented‑by‑design.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116096">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>461bc93b174a44efcc4b2784685bda73</td>
+       <td>CVE-2026-116095</td>
+       <td>2026-10-25 23:17:41 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was identified in smg-project smg 1.7.0/1.8.0/1.9.0/1.10.0/1.10.1. Affected is the function jpeg_turbo::decode_jpeg_rgb of the file crates/multimodal/src/jpeg_turbo.rs of the component llm-multimodal. The manipulation leads to uncontrolled memory allocation. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 1.11.0 is able to address this issue. The identifier of the patch is 8f51b57e219a914089e345b704c3c8de37a3bb8e. It is advisable to upgrade the affected component.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116095">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>02f48520625aaad4b4b2542b099fd161</td>
+       <td>CVE-2026-116094</td>
+       <td>2026-10-25 22:16:29 <img src="imgs/new.gif" /></td>
+       <td>A vulnerability was determined in EyouCMS up to 1.8.3. This impacts the function remote_file_to_local of the file application/function.php. Executing a manipulation can lead to server-side request forgery. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116094">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>518d7b739729e34216fa752ecc663726</td>
+       <td>CVE-2026-115635</td>
+       <td>2026-10-25 20:16:32 <img src="imgs/new.gif" /></td>
+       <td>Incorrect Authorization vulnerability in ash-project ash_postgres allows a user to read another tenant's record through a skipped upsert. When Ash.bulk_create/4 or a single create runs as an upsert with return_skipped_upsert?: true and the upsert is skipped (for example because its upsert_condition does not hold), AshPostgres.DataLayer reads the existing row back by the upsert identity in do_bulk_create/3 and upsert/4. That lookup did not apply the resource's attribute multitenancy, so on a resource using strategy :attribute it could match and return the row of another tenant with the same identity values, exposing its fields to the caller. This issue affects ash_postgres: from 2.6.22 before 2.15.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115635">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>6755e8a8ad499a3ac7f3133462e02345</td>
+       <td>CVE-2026-115627</td>
+       <td>2026-10-25 20:16:32 <img src="imgs/new.gif" /></td>
+       <td>Incorrect Authorization vulnerability in ash-project ash_postgres allows a user to load destination records linked to a source record only through another tenant's join rows. When a many_to_many relationship, or a through relationship, is loaded with a lateral join (for example with a per-record limit or sort), AshPostgres.DataLayer builds the query for the join resource, and for each resource along a through path, in lateral_join_query/3 and through_step_queries/4 without running that resource's read action, which is where attribute multitenancy is applied. When those resources use strategy :attribute multitenancy, rows belonging to other tenants were joined, so the load returned destination records that the caller's tenant is not related to. This issue affects ash_postgres: from 0.38.0 before 2.15.2.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115627">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>45c5725c502db16ed5c66558eeb61951</td>
+       <td>CVE-2026-114214</td>
+       <td>2026-10-25 20:16:31 <img src="imgs/new.gif" /></td>
+       <td>Incorrect Authorization vulnerability in ash-project ash allows a client to read destination records unrelated to the source record through a through relationship. When a has_many relationship declared with through: was loaded for a single record with a limit of 1, or an unsorted has_one through relationship was loaded with a limit of 1, lateral_join?/4 in lib/ash/actions/read/relationships.ex chose the path that reads the destination without any filter linking it to the source. The load returned the first destination record by sort, or any other record with an offset. The read still runs the destination's policies but carries the relationship as accessing_from, so a client paging such a field (for example teachers(limit: 1, offset: n) through AshGraphql) can enumerate destination records that policies allow only when reached through that relationship. This issue affects ash: from 3.24.0 before 3.37.1.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-114214">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>041fd0ce6ab95e75be17d9ecab542395</td>
+       <td>CVE-2026-116063</td>
+       <td>2026-10-25 18:16:47 <img src="imgs/new.gif" /></td>
+       <td>A weakness has been identified in DedeCMS up to 5.7.118. Impacted is the function require_once of the file dede/update_guide.php. This manipulation of the argument vtime causes code injection. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-116063">详情</a></td>
+      </tr>
+
+      <tr>
        <td>e6a29b781bebc6cdab1099ebe285fa07</td>
        <td>CVE-2026-116007</td>
        <td>2026-10-25 04:17:34 <img src="imgs/new.gif" /></td>
@@ -335,7 +415,7 @@
       <tr>
        <td>45af41ecf1480d67410ff3034aa8f506</td>
        <td>CVE-2026-89284</td>
-       <td>2026-10-24 23:16:59 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 23:16:59</td>
        <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-89284">详情</a></td>
       </tr>
@@ -343,7 +423,7 @@
       <tr>
        <td>2805cbeb9b1ccedac48f2f99c339d4a8</td>
        <td>CVE-2026-115996</td>
-       <td>2026-10-24 23:16:58 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 23:16:58</td>
        <td>A vulnerability was detected in Unitree Robotics Unitree Go2 up to 1.1.13/1.1.14.1/1.1.15.1. This affects the function WebSocketClient.connect of the file websocket.py of the component chat_go. Performing a manipulation results in improper certificate validation. The attack may be initiated remotely. The attack's complexity is rated as high. The exploitability is reported as difficult. The vendor confirmed early: "These issues were previously submitted by the researcher through our Security Response Center platform and are tracked internally as follows: Submission 990504 corresponds to our internal ticket #616 (Go2 chat_go WSS client disabled TLS server certificate validation, CWE-295)."</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115996">详情</a></td>
       </tr>
@@ -351,7 +431,7 @@
       <tr>
        <td>1592924d3000b3a72181dd0d8099d688</td>
        <td>CVE-2026-115995</td>
-       <td>2026-10-24 23:16:58 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 23:16:58</td>
        <td>A security vulnerability has been detected in Unitree Robotics Unitree Go2 up to 1.1.11.4. The impacted element is the function set_volume of the file gpt_thread.py of the component chat_go. Such manipulation of the argument Value leads to os command injection. The attack can be launched remotely. Upgrading to version 1.1.11.5 is sufficient to resolve this issue. You should upgrade the affected component. The vendor confirmed early: "Submission 990502 corresponds to our internal ticket #474 (Go2 chat_go set_volume OS command injection, CWE-78)."</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115995">详情</a></td>
       </tr>
@@ -359,7 +439,7 @@
       <tr>
        <td>36db8b0b5abdb4d78389c44f3e5d5f8c</td>
        <td>CVE-2026-111326</td>
-       <td>2026-10-24 23:16:58 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 23:16:58</td>
        <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-111326">详情</a></td>
       </tr>
@@ -367,7 +447,7 @@
       <tr>
        <td>b2eef239c02f3dfbd0c4e74184e5ebb7</td>
        <td>CVE-2026-109111</td>
-       <td>2026-10-24 23:16:57 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 23:16:57</td>
        <td>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-109111">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>5869cabce6d6128b11a5a196124da771</td>
        <td>CVE-2026-115982</td>
-       <td>2026-10-24 22:16:27 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 22:16:27</td>
        <td>A vulnerability was detected in phpIPAM up to 1.8.3. Affected by this issue is the function create_rack_link of the file app/tools/racks/show-rack-popup.php of the component Rack Link Creation. Performing a manipulation of the argument deviceid results in cross site scripting. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115982">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>b2186e6954035243010ebe62638e0a0a</td>
        <td>CVE-2026-115981</td>
-       <td>2026-10-24 22:16:27 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 22:16:27</td>
        <td>A security vulnerability has been detected in phpIPAM up to 1.8.3. Affected by this vulnerability is an unknown functionality of the file upgrade/index.php. Such manipulation of the argument REQUEST_URI leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115981">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>4362166b349ffb25e84a69408e608bc4</td>
        <td>CVE-2026-115973</td>
-       <td>2026-10-24 19:17:04 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 19:17:04</td>
        <td>A vulnerability was identified in FaveoSuite Faveo Helpdesk 2.0.3. Affected by this issue is the function ForgotPasswordController::sendResetLinkEmail/PasswordController::reset of the file app/Http/Controllers/Auth/ForgotPasswordController.php. The manipulation leads to weak password recovery. The attack may be initiated remotely. The vendor was contacted early about this disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115973">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>bd9fd908dce8f324f5c8b7b35a1d7c8e</td>
        <td>CVE-2026-114820</td>
-       <td>2026-10-24 19:17:04 <img src="imgs/new.gif" /></td>
+       <td>2026-10-24 19:17:04</td>
        <td>Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JSSE). Supported versions that are affected are Oracle Java SE: 8u511-b32, 8u511-perf-b32, 11.0.33.0.2, 17.0.21.0.2, 21.0.13.0.2, 25.0.5.0.2, 27.0.1.0.2; Oracle GraalVM for JDK: 17.0.21.0.2 and 21.0.13.0.2; Oracle GraalVM Enterprise Edition: 21.3.20.0.2. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data as well as unauthorized access to critical data or complete access to all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data. Note: This vulnerability can be exploited by using APIs in the specified Component, e.g., through a web service which supplies data to the APIs. This vulnerability also applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-114820">详情</a></td>
       </tr>
@@ -442,86 +522,6 @@
        <td>2026-10-23 22:16:59</td>
        <td>Craft CMS allows any authenticated control panel user to submit an element-search condition whose element selector is evaluated as a sandboxed Twig object template. Craft’s allowed column filter delegates property lookup to Yii ArrayHelper, outside Twig’s SecurityPolicy. Repeated single-segment lookups therefore bypass the sandbox’s empty property/method allowlists. The vulnerable condition value is ultimately cast to an integer. That does not protect the secret: the template can return author ID 1 when a guessed key character is correct and an impossible ID otherwise. The JSON endpoint returns entries for the first case and an empty array for the second, forming a stable remote character oracle. After recovering GeneralConfig::securityKey, the same user can compute Craft’s generic HMAC wire format offline. Signed parameters such as redirect are then accepted and passed to unsandboxed View::renderObjectTemplate(), where Twig’s string-callable form can invoke native PHP callables. The regression proof uses the harmless substr() callback and observes abcdef becoming cdef; it does not execute an OS command.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115938">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9934155f171f70104cc4cb776241971b</td>
-       <td>CVE-2026-115937</td>
-       <td>2026-10-23 22:16:59</td>
-       <td>The Mollie webhook endpoint accepts two independent, attacker-controlled parameters and never verifies that they belong together: * commerceTransactionHash — selects which Craft Commerce transaction is completed * id — selects which Mollie payment is queried for its status An unauthenticated attacker holding any paid Mollie payment ID from the merchant’s account can pair it with any transaction hash. Commerce queries Mollie, sees status: paid, and marks the target transaction successful for that transaction’s full amount, regardless of how much was actually paid.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115937">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>25211a6d87390c4ec951273b5b80074a</td>
-       <td>CVE-2026-115935</td>
-       <td>2026-10-23 22:16:59</td>
-       <td>The app/process-api-response-headers action accepts fake Craft API response headers from any authenticated control panel user. A non-admin user with only accessCp can place newline characters in X-Craft-Plugin-Licenses. Craft passes this value to its .env writer without removing the newlines. This lets the user insert a new attacker-known CRAFT_SECURITY_KEY into .env. After Craft loads that key, the user can forge a signed login redirect containing a Twig system() callback. This is different from the previous report. That report reads the existing key through a Twig sandbox bypass. This report replaces the key through fake API headers and CRLF injection. Fixing either source does not fix the other.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115935">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>fa6419594d2a1f1bd22917016ebae6fd</td>
-       <td>CVE-2026-115897</td>
-       <td>2026-10-23 22:16:59</td>
-       <td>Serialize JavaScript serializes JavaScript values to a superset of JSON that includes regular expressions and functions. Prior to 7.1.3, the function-source escaping logic does not neutralize a bare closing-script prefix when attacker-influenced function source text ends exactly at that prefix. Because each function body is escaped independently, a delimiter supplied by surrounding serialized output can terminate an HTML script element, and a later serialized value supplies injected markup that becomes a live element in the page. Exploitation requires control of a serialized function's source text, such as through a spoofed toString(). This issue is fixed in version 7.1.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115897">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>b92bdfce35e00c1dbc534323a882e3d0</td>
-       <td>CVE-2026-115895</td>
-       <td>2026-10-23 22:16:58</td>
-       <td>Happy DOM is a JavaScript implementation of a web browser without its graphical user interface. From 17.0.0 until 21.0.4, packages/happy-dom/src/module/ECMAScriptModuleCompiler.ts accepts a named ESM import alias without validating that it is a JavaScript binding identifier before inserting it into a generated destructuring binding. With enableJavaScriptEvaluation enabled, attacker-controlled HTML or module source can use an invalid alias that becomes a valid default initializer after compilation, causing the generated JavaScript to execute in the Node.js host process. The demonstrated reachable path uses a JSON module import attribute, which prevents the malicious alias from being emitted again in a later ESM circular-import assignment and keeps the generated function syntactically valid. This incomplete fix for CVE-2026-33943 is a distinct residual path because the earlier remediation validated the local export importName path but not the named-import alias. This issue is fixed in version 21.0.4.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115895">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>139a483618041e90a5b59e1e2252b6cc</td>
-       <td>CVE-2026-115893</td>
-       <td>2026-10-23 22:16:58</td>
-       <td>Wasmtime is a runtime for WebAssembly. Prior to 36.0.19, 48.0.7, and 49.0.4, the Cranelift compiler backend on aarch64 can compile a Wasm br_table instruction with more than approximately 256,000 targets so that it has an incorrect conditional branch target. The branch can then jump to arbitrary other code at a user-controlled offset, allowing a user-controlled Wasm module to escape the sandbox on aarch64 engines using the default Cranelift backend. This issue is fixed in versions 36.0.19, 48.0.7, and 49.0.4.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115893">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>33f04257868992e296832b4bba0329d3</td>
-       <td>CVE-2026-86055</td>
-       <td>2026-10-23 05:17:19</td>
-       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.3, Part-DB builds the absolute URL of the password-reset link it emails to a user from the client-supplied HTTP Host header, with no trusted-host validation. An unauthenticated attacker who submits a forgot-password request for a known account while sending a spoofed Host header causes Part-DB to email that account a reset link whose hostname is attacker-controlled, while still embedding the genuine reset token. When the victim opens the link (or an automated inbound mail-security scanner dereferences it), the valid token is disclosed to the attacker, who replays it against the real instance to set a new password and take over the account. Because the seeded admin account can be targeted, this yields full pre-authentication administrative account takeover. This issue has been patched in version 2.13.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86055">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>378814eff23c9ff0315f8d2b78c7accf</td>
-       <td>CVE-2026-86020</td>
-       <td>2026-10-23 05:17:18</td>
-       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB contains a spreadsheet formula injection vulnerability in the part import/export workflow. An authenticated user with permission to import parts can import a CSV file containing formula-prefixed values, such as =1+1, into user-controlled part fields. When the affected part is later exported as an XLSX spreadsheet, Part-DB writes the attacker-controlled value using PhpSpreadsheet's setCellValue() method without neutralising spreadsheet formula characters. As a result, the exported XLSX file contains an executable spreadsheet formula cell rather than a plain text value. If another user exports and opens the spreadsheet, the formula may be evaluated by their spreadsheet software. This issue has been patched in version 2.13.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86020">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5bce4fcad56e00d2a02fc67b800a7f1d</td>
-       <td>CVE-2026-86019</td>
-       <td>2026-10-23 05:17:18</td>
-       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB allows authenticated API users to bypass the configured maximum attachment file size by uploading attachments through the API using base64-encoded file data. The application enforces the configured attachment size limit for normal browser-based file uploads, but the API base64 upload path does not apply the same size validation. As a result, an authenticated user with API access and permission to create attachments can upload files larger than the configured maximum attachment size, potentially exhausting disk space and causing a denial of service. This issue has been patched in version 2.13.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86019">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>f757affee301ae1761fcbf071e756e26</td>
-       <td>CVE-2026-86018</td>
-       <td>2026-10-23 05:17:18</td>
-       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.2, Part-DB allows authenticated users to bypass the configured maximum attachment file size when using the server-side “Download external file” attachment feature. When server-side attachment downloads are enabled, Part-DB downloads the remote file and streams it directly to disk without enforcing the configured MAX_ATTACHMENT_FILE_SIZE limit. As a result, an authenticated user who can create or edit attachments can cause Part-DB to store files larger than the configured maximum attachment size, potentially exhausting disk space and causing a denial of service. This issue has been patched in version 2.13.2.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86018">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>5548b9728000baabecec2d0cc120ed42</td>
-       <td>CVE-2026-59188</td>
-       <td>2026-10-23 05:17:17</td>
-       <td>Part-DB is an open source inventory management system for electronic components. Prior to version 2.12.3, Part-DB-server sanitizes SVG files based solely on the user-controlled filename extension rather than actual file content type. An authenticated attacker can upload a malicious SVG with JavaScript payload using a non-SVG extension (e.g., .jpg), bypassing sanitization entirely. When any user views the attachment inline, the browser receives Content-Type: image/svg+xml and executes the embedded script in the Part-DB origin. This issue has been patched in version 2.12.3.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59188">详情</a></td>
       </tr>
 
      </tbody>
