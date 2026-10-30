@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2026-10-29 20:00:24 -->
+<!-- RELEASE TIME : 2026-10-30 17:33:36 -->
 <html lang="zh-cn">
 
  <head>
@@ -285,6 +285,86 @@
        <th width="5%">URL</th>
       </tr>
       <tr>
+       <td>855f32d08018efcfe970855703edd336</td>
+       <td>CVE-2026-97209</td>
+       <td>2026-10-30 09:17:15 <img src="imgs/new.gif" /></td>
+       <td>Insecure Temporary File vulnerability in Mix deps.partition in Elixir allows a local user to execute code as another user via a swapped partition config file. Partitioned dependency compilation passes the project configuration to each partition VM through a file in a fixed-name directory under the shared system temporary directory, and the partition trusts what it reads back. Another local user on the same host can exploit this during a mix deps.compile run that uses partitioned compilation. Mix.Tasks.Deps.Partition.server/4 in lib/mix/lib/mix/tasks/deps.partition.ex creates the directory with File.mkdir_p/1, which accepts an existing directory without checking its owner, so a user who created it first can replace the file before client/0 reads it. This issue affects mix: from 1.20.0-rc.4 before 1.20.5.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-97209">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>5dfaedad66b0c8b311af407a014444d2</td>
+       <td>CVE-2026-65874</td>
+       <td>2026-10-30 09:17:15 <img src="imgs/new.gif" /></td>
+       <td>This issue affects Apache Fineract versions up to and including 1.15.0. The Center read endpoint (GET /api/v1/centers) and the datatable entry read endpoints (GET /api/v1/datatables/{datatable}/{apptableId} and GET /api/v1/datatables/{datatable}/{apptableId}/{datatableId}) concatenate caller-supplied ordering parameters (orderBy, sortOrder, order) directly into the SQL ORDER BY clause. The existing regex-based input validation can be bypassed, allowing time-based blind SQL injection by any authenticated user with read access to centers or to the targeted datatable. Users are recommended to upgrade to 1.16.1 which fixes the issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-65874">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>8ef10a3abc76a17d6d486b618c7c1914</td>
+       <td>CVE-2026-64618</td>
+       <td>2026-10-30 09:17:15 <img src="imgs/new.gif" /></td>
+       <td>Improper Neutralization of Special Elements used in an SQL Command ("SQL Injection") vulnerability exists in Apache Fineract (through version 1.15.0). The vulnerability affects the outStandingAmountPercentageCondition parameter of the /fineract-provider/api/v1/search/advance HTTP API endpoint, allowing SQL injection due to insufficient input neutralization. Users are recommended to upgrade to version 1.16.1, which will fix the issue.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-64618">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>93fedd0cb2c1af0f19923b27206a3fb8</td>
+       <td>CVE-2026-59396</td>
+       <td>2026-10-30 09:17:15 <img src="imgs/new.gif" /></td>
+       <td>A denial-of-service vulnerability exists in UAA's private_key_jwt client-authentication mechanism. When UAA retrieves a remote JWKS URI, it caches the response. Invalid authentication attempts can trigger full deserialization of this cached data. An attacker with prerequisites (write access to clients or a compromised endpoint) can send anonymous requests that force repeated parsing of large cached objects, causing excessive CPU usage and potential Java heap exhaustion via OutOfMemoryError, resulting in service unavailability.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59396">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c5078e3f74274fb141fea2fd9d149e5e</td>
+       <td>CVE-2026-59388</td>
+       <td>2026-10-30 09:17:15 <img src="imgs/new.gif" /></td>
+       <td>Cloud Controller (CAPI) leaks sensitive data into audit logs in multiple instances: custom buildpack credentials are exposed in audit events for app manifest application, creation, and updates; syslog drain URL credentials are exposed in user-provided service instance audit events; and service binding parameters are leaked in app manifest and service binding audit events.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59388">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>9e905cacb4a28b8885b4559f9de825b5</td>
+       <td>CVE-2026-59387</td>
+       <td>2026-10-30 09:17:14 <img src="imgs/new.gif" /></td>
+       <td>The Nginx routing configuration for Cloud Controller blocks unauthenticated access to /internal/v4/ and /internal/v5/ endpoints but omits an equivalent deny rule for /internal/v3/. As a result, the staging callback endpoints /internal/v3/staging/:guid/droplet_completed and /internal/v3/staging/:guid/build_completed are reachable from the public API listener without OAuth or mutual TLS. An attacker with a valid build or droplet GUID can submit a forged staging callback, transition a droplet to STAGED, and persist arbitrary process metadata and sidecar data with no associated package or actor. A SpaceAuditor can enumerate GUIDs without write permissions, making this an effective privilege escalation beyond the intended role boundary.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59387">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>102ea23a1701ce78e99f352becd3620d</td>
+       <td>CVE-2026-59386</td>
+       <td>2026-10-30 09:17:14 <img src="imgs/new.gif" /></td>
+       <td>A SpaceSupporter could improperly modify an application's start command and buildpack—actions requiring SpaceDeveloper privileges. This privilege escalation enables unauthorized retrieval of service credentials through malicious start commands or custom buildpacks.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59386">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>926a05c62b466a6ffbe1a5eac40ad9ca</td>
+       <td>CVE-2026-59385</td>
+       <td>2026-10-30 09:17:14 <img src="imgs/new.gif" /></td>
+       <td>A user with SpaceDeveloper privileges could modify the URL of a space-scoped broker without altering its credentials, enabling extraction of existing broker credentials by redirecting them to a broker under their control. The CF API does not permit direct reading of broker credentials, making this an indirect extraction method.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-59385">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>803ca65e5d2d8a3120a2ba0afbf580a9</td>
+       <td>CVE-2026-115456</td>
+       <td>2026-10-30 09:17:14 <img src="imgs/new.gif" /></td>
+       <td>A flaw was found in gcc. An attacker could cause a Denial of Service (DoS) by passing a string that is not null-terminated to the std::from_chars() function in the libstdc++ library. This issue triggers an out-of-bounds read beyond the allocated buffer, potentially leading to invalid data parsing or an application crash.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115456">详情</a></td>
+      </tr>
+
+      <tr>
+       <td>c29d0bee09c0f8b3275339a7451a9ed3</td>
+       <td>CVE-2026-115274</td>
+       <td>2026-10-30 09:17:14 <img src="imgs/new.gif" /></td>
+       <td>Improper Validation of Specified Quantity in Input vulnerability in the Elixir standard library's JSON module allows an unauthenticated attacker who supplies a JSON document to cause a denial of service through CPU and memory exhaustion. JSON.decode/1 and JSON.decode!/1 convert each integer literal with erlang:binary_to_integer/1 and do not bound its length. A literal of one million digits decodes successfully but costs 100 to 300 times as much CPU as a string of the same length, so one request body of a few megabytes holds a scheduler for about a second. A literal of more than about 1.29 million digits raises SystemLimitError. Applications generated by phx.new decode request bodies with JSON in Plug.Parsers, before routing and authentication. This issue affects elixir: from 1.18.0-rc.0 before 1.18.6, from 1.19.0-rc.0 before 1.19.7, and from 1.20.0-rc.0 before 1.20.5.</td>
+       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-115274">详情</a></td>
+      </tr>
+
+      <tr>
        <td>8f091b3023f917e5a2cba5a5c2436fc2</td>
        <td>CVE-2026-85498</td>
        <td>2026-10-29 09:17:08 <img src="imgs/new.gif" /></td>
@@ -367,7 +447,7 @@
       <tr>
        <td>0875baab7fee9f7d9303019d6e645f1c</td>
        <td>CVE-2026-90724</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain Management Center, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90724">详情</a></td>
       </tr>
@@ -375,7 +455,7 @@
       <tr>
        <td>25715b36826ce82143f91ee83775b2d4</td>
        <td>CVE-2026-90723</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain Management Center, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90723">详情</a></td>
       </tr>
@@ -383,7 +463,7 @@
       <tr>
        <td>adad0c07cd5e57113cf8be88880bf93c</td>
        <td>CVE-2026-90721</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Path Traversal vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Denial of service.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90721">详情</a></td>
       </tr>
@@ -391,7 +471,7 @@
       <tr>
        <td>9036d8d48538c44bf0230ce5aeffc15b</td>
        <td>CVE-2026-90720</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Validation of Integrity Check Value vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90720">详情</a></td>
       </tr>
@@ -399,7 +479,7 @@
       <tr>
        <td>0d4c625b26d21c78902ab9375c76cbdb</td>
        <td>CVE-2026-90719</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain Management Center, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90719">详情</a></td>
       </tr>
@@ -407,7 +487,7 @@
       <tr>
        <td>0f3decf42bb5796c1d929864650e83a9</td>
        <td>CVE-2026-90717</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain Management Center, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Authentication Bypass by Spoofing vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges. This vulnerability could impact other managed Data Domain systems.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90717">详情</a></td>
       </tr>
@@ -415,7 +495,7 @@
       <tr>
        <td>9ba8ae68a3e2aab46e3c2bed7c4bbb1c</td>
        <td>CVE-2026-86401</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain Management Center, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Information exposure.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86401">详情</a></td>
       </tr>
@@ -423,7 +503,7 @@
       <tr>
        <td>ede2466da9c8b37b47bf7c458f828bf1</td>
        <td>CVE-2026-86400</td>
-       <td>2026-10-28 09:17:08 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:08</td>
        <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to arbitrary command execution with root privileges. This is a critical severity vulnerability as it allows an attacker to take complete control of the system. Dell recommends customers to upgrade at the earliest opportunity.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86400">详情</a></td>
       </tr>
@@ -431,7 +511,7 @@
       <tr>
        <td>dde9477b40499b877d1ddac8c5a57a1c</td>
        <td>CVE-2026-86399</td>
-       <td>2026-10-28 09:17:07 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:07</td>
        <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86399">详情</a></td>
       </tr>
@@ -439,89 +519,9 @@
       <tr>
        <td>c08c2698f5b4f04f8367bdca57d5b89f</td>
        <td>CVE-2026-86398</td>
-       <td>2026-10-28 09:17:07 <img src="imgs/new.gif" /></td>
+       <td>2026-10-28 09:17:07</td>
        <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.8, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to filesystem access for attacker.</td>
        <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-86398">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>c0e334a4ee385d450b139d00dd723e57</td>
-       <td>CVE-2026-90732</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through LTS 2026, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Stack-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90732">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>7e581e108e07d6574824816d46e64f22</td>
-       <td>CVE-2026-90731</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.7, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Stack-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90731">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>889beaca2602c30a58364f43b72cb03c</td>
-       <td>CVE-2026-90730</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.7, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Access Control vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to denial of service.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90730">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>01603cedb4c7897eb8996415246498d5</td>
-       <td>CVE-2026-90729</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.7, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Privilege Management vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90729">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>8060b575b6f7d72f0fe9423f21f4bf0d</td>
-       <td>CVE-2026-90728</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.7, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain an Improper Privilege Management vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-90728">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>6eb6cdf0b31764c9992ba9e2bf730e45</td>
-       <td>CVE-2026-56084</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through 8.7, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Server-Side Request Forgery (SSRF) vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Server-side request forgery.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-56084">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>e2e1dd4de992243675dc70419c789232</td>
-       <td>CVE-2026-4337</td>
-       <td>2026-10-27 12:17:08</td>
-       <td>Unrestricted Upload of File with Dangerous Type vulnerability in the PuMuKIT application allows a unauthenticated user to upload any type of file to the server, and to any path where the web server user has write permissions. This could also allow them to delete files.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-4337">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>9f10b636ef80ce67f023896e73b5a902</td>
-       <td>CVE-2026-41022</td>
-       <td>2026-10-27 12:17:07</td>
-       <td>Eaton easySoft improperly validates TLS certificates presented by easyE4 devices. A network-adjacent attacker could exploit this weakness to perform a man-in-the-middle attack and potentially intercept or modify communications between easySoft and easyE4.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-41022">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>66cfac5d11304ab5e9ac8c90e297e80c</td>
-       <td>CVE-2026-41021</td>
-       <td>2026-10-27 12:17:07</td>
-       <td>Eaton easyE4 uses an insufficiently strong password policy. An attacker who obtains a password hash, including through CVE-2026-41020, could perform an offline password-guessing attack and potentially recover user credentials.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-41021">详情</a></td>
-      </tr>
-
-      <tr>
-       <td>4ef52cd0e42900f0151c7e787efbcc02</td>
-       <td>CVE-2026-41020</td>
-       <td>2026-10-27 12:17:07</td>
-       <td>Eaton easyE4 uses a static nonce during authentication, which could allow an unauthenticated attacker with access to captured authentication traffic to replay a valid authentication exchange and gain unauthorized access to the device.</td>
-       <td><a target="_blank" href="https://www.tenable.com/cve/CVE-2026-41020">详情</a></td>
       </tr>
 
      </tbody>
